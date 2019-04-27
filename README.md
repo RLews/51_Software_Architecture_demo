@@ -3,9 +3,9 @@
 
 软件架构主要分为以下几个部分：
 
-                  application layer
+                    application layer
                   
- hardware abstract layer and complex driver layer 
+    hardware abstract layer and complex driver layer 
  
                     driver layer 
 
