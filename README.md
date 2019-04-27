@@ -5,7 +5,7 @@
 
                     application layer
                   
-    hardware abstract layer and complex driver layer 
+                  hardware abstract layer  
  
-                    driver layer 
+            driver layer and complex driver layer
 
