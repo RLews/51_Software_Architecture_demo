@@ -1,0 +1,13 @@
+"..\output\main.obj",
+"..\output\drv_gpio.obj",
+"..\output\drv_timer.obj",
+"..\output\drv_paltform.obj",
+"..\output\hal_gpio.obj",
+"..\output\hal_timer.obj",
+"..\output\hal_display.obj",
+"..\output\hal_calendar.obj",
+"..\output\hal_paltform.obj",
+"..\output\drv_ds1302.obj",
+"..\output\drv_lcd.obj" 
+TO "..\output\1" 
+PRINT(".\1.m51")
