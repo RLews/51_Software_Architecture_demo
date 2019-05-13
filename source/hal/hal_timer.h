@@ -7,14 +7,10 @@
 #include "hal_paltform.h"
 
 
-typedef struct _HAL_TIMER_INTERFACE_T
-{
-	void (*TimerInit)(void);
-	uint32_t (*GetSysCnt)(void);
-	uint32_t (*DiffTimerCnt)(uint32_t last);
-}halTimerInterface_t;
 
-extern D_SOFTWARE_INTERFACE halTimerInterface_t halTimerInterface;
+void HalSysTimerInit(void);
+uint32_t HalGetCurSysTimerCnt(void);
+uint32_t HalDiffTimerCnt(uint32_t last);
 
 
 #endif

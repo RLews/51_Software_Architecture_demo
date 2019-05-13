@@ -4,26 +4,18 @@
 
 static const uint8_t code initTimerDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
 
-static void DrvDs1302Init(void);
 static void DrvDs1302ByteWrite(uint8_t dat);
 static uint8_t DrvDs1302ByteRead(void);
 static void DrvDs1302WriteReg(uint8_t reg, uint8_t dat);
 static uint8_t DrvDs1302ReadReg(uint8_t reg);
-static void DrvDs1302BurstWrite(uint8_t dat[]);
-static void DrvDs1302BurstRead(uint8_t dat[]);
 
-D_SOFTWARE_INTERFACE drvDs1302Interface_t code drvDs1302Interface = {
-	DrvDs1302Init,
-	DrvDs1302BurstWrite,
-	DrvDs1302BurstRead
-};
 
-static void DrvDs1302Init(void)
+void DrvDs1302Init(void)
 {
 	uint8_t dat = 0;
 	
-	drvGpioInterface.NameOut(EN_DS1302_CE, 0);
-	drvGpioInterface.NameOut(EN_DS1302_CK, 0);
+	DrvNameOut(EN_DS1302_CE, 0);
+	DrvNameOut(EN_DS1302_CK, 0);
 	dat = DrvDs1302ReadReg(0);
 	if ( (dat & 0x80) != 0 )
 	{
@@ -40,17 +32,17 @@ static void DrvDs1302ByteWrite(uint8_t dat)
 	{
 		if ( (mask&dat) != 0 )
 		{
-			drvGpioInterface.NameOut(EN_DS1302_IO, 1);
+			DrvNameOut(EN_DS1302_IO, 1);
 		}
 		else
 		{
-			drvGpioInterface.NameOut(EN_DS1302_IO, 0);
+			DrvNameOut(EN_DS1302_IO, 0);
 		}
-		drvGpioInterface.NameOut(EN_DS1302_CK, 1);
-		drvGpioInterface.NameOut(EN_DS1302_CK, 0);
+		DrvNameOut(EN_DS1302_CK, 1);
+		DrvNameOut(EN_DS1302_CK, 0);
 	}
 	
-	drvGpioInterface.NameOut(EN_DS1302_IO, 1);	// Õ∑≈IOΩ≈
+	DrvNameOut(EN_DS1302_IO, 1);	// Õ∑≈IOΩ≈
 }
 
 static uint8_t DrvDs1302ByteRead(void)
@@ -60,12 +52,12 @@ static uint8_t DrvDs1302ByteRead(void)
 
 	for (mask = 0x01; mask != 0; mask <<= 1)
 	{
-		if (drvGpioInterface.NameIn(EN_DS1302_IO) != 0)
+		if (DrvNameIn(EN_DS1302_IO) != 0)
 		{
 			dat |= mask;
 		}
-		drvGpioInterface.NameOut(EN_DS1302_CK, 1);
-		drvGpioInterface.NameOut(EN_DS1302_CK, 0);
+		DrvNameOut(EN_DS1302_CK, 1);
+		DrvNameOut(EN_DS1302_CK, 0);
 	}
 
 	return dat;
@@ -73,29 +65,29 @@ static uint8_t DrvDs1302ByteRead(void)
 
 static void DrvDs1302WriteReg(uint8_t reg, uint8_t dat)
 {
-	drvGpioInterface.NameOut(EN_DS1302_CE, 1);
+	DrvNameOut(EN_DS1302_CE, 1);
 	DrvDs1302ByteWrite((reg<<1) | 0x80);		//∑¢ÀÕ–¥÷∏¡Ó
 	DrvDs1302ByteWrite(dat);
-	drvGpioInterface.NameOut(EN_DS1302_CE, 0);
+	DrvNameOut(EN_DS1302_CE, 0);
 }
 
 static uint8_t DrvDs1302ReadReg(uint8_t reg)
 {
 	uint8_t dat = 0;
 	
-	drvGpioInterface.NameOut(EN_DS1302_CE, 1);
+	DrvNameOut(EN_DS1302_CE, 1);
 	DrvDs1302ByteWrite((reg<<1) | 0x81);		//∑¢ÀÕ∂¡÷∏¡Ó
 	dat = DrvDs1302ByteRead();
-	drvGpioInterface.NameOut(EN_DS1302_CE, 0);
+	DrvNameOut(EN_DS1302_CE, 0);
 	
 	return dat;	
 }
 
-static void DrvDs1302BurstWrite(uint8_t dat[])
+void DrvDs1302BurstWrite(uint8_t dat[])
 {
 	uint8_t i = 0;
 
-	drvGpioInterface.NameOut(EN_DS1302_CE, 1);
+	DrvNameOut(EN_DS1302_CE, 1);
 	DrvDs1302ByteWrite(0xBE);		//∑¢ÀÕÕª∑¢–¥ºƒ¥Ê∆˜÷∏¡Ó
 	
 	for (i = 0; i < 8; i++)
@@ -103,14 +95,14 @@ static void DrvDs1302BurstWrite(uint8_t dat[])
 		DrvDs1302ByteWrite(dat[i]);
 	}
 	
-	drvGpioInterface.NameOut(EN_DS1302_CE, 0);
+	DrvNameOut(EN_DS1302_CE, 0);
 }
 
-static void DrvDs1302BurstRead(uint8_t dat[])
+void DrvDs1302BurstRead(uint8_t dat[])
 {
 	uint8_t i = 0;
 	
-	drvGpioInterface.NameOut(EN_DS1302_CE, 1);
+	DrvNameOut(EN_DS1302_CE, 1);
 	DrvDs1302ByteWrite(0xBF);
 	
 	for (i=0;i<8;i++)
@@ -118,6 +110,6 @@ static void DrvDs1302BurstRead(uint8_t dat[])
 		dat[i] = DrvDs1302ByteRead();
 	}
 	
-	drvGpioInterface.NameOut(EN_DS1302_CE, 0);
+	DrvNameOut(EN_DS1302_CE, 0);
 }
 

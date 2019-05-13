@@ -18,13 +18,11 @@ typedef struct __CALENDAR_T
 	uint8_t week;
 }calendar_t;
 
-typedef struct __HAL_CALENDAR_INTERFACE_T
-{
-	void (*CalendarInit)(void);
-	void (*UpdateCalendar)(void);
-}halCalendarInterface_t;
 
-extern D_SOFTWARE_INTERFACE halCalendarInterface_t halCalendarInterface;
+void HalCalendarInit(void);
+void HalUpdateSysTime(void);
+void HalGetSysTime(calendar_t *pSysTmr);
+
 
 #endif
 

@@ -12,30 +12,30 @@
 #include "hal_calendar.h"
 
 
-static uint32_t sysTim = 0;
+static volatile uint32_t sysTim = 0;
 static bool_t ioCtrl = 0;
 
 void main()
 {
 
 	bool_t sta = D_SYSTEM_ENTER_CRITICAL();
-	halDisplayInterface.DisplayInit();
-	halCalendarInterface.CalendarInit();
-	halTimerInterface.TimerInit();
+	HalDisplayInit();
+	HalCalendarInit();
+	HalSysTimerInit();
 	D_SYSTEM_EXIT_CRITICAL(sta);
 	
-	sysTim = halTimerInterface.GetSysCnt();
+	sysTim = HalGetCurSysTimerCnt();
 
 	while(1)
 	{
-		if (halTimerInterface.DiffTimerCnt(sysTim) >= (uint32_t)D_SYS_TIME_100MS)
+		if (HalDiffTimerCnt(sysTim) >= (uint32_t)D_SYS_TIME_100MS)
 		{
-			sysTim = halTimerInterface.GetSysCnt();
-			halCalendarInterface.UpdateCalendar();
-			halDisplayInterface.FlashCalendar();
-			halGpioManage.DebugIOCtrl(ioCtrl);
+			sysTim = HalGetCurSysTimerCnt();
+			HalFlashCalendar();
+			HalDebugIOCtrl(ioCtrl);
 			ioCtrl = (ioCtrl == 0)?(1):(0);
 		}
+		HalUpdateSysTime();
 	}
 }
 

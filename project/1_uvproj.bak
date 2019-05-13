@@ -386,6 +386,16 @@
               <FileType>5</FileType>
               <FilePath>..\source\driver\drv_timer.h</FilePath>
             </File>
+            <File>
+              <FileName>drv_paltform.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\driver\drv_paltform.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_paltform.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\driver\drv_paltform.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -430,6 +440,16 @@
               <FileName>hal_calendar.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\hal\hal_calendar.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal_paltform.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\hal\hal_paltform.h</FilePath>
+            </File>
+            <File>
+              <FileName>hal_paltform.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\hal\hal_paltform.c</FilePath>
             </File>
           </Files>
         </Group>

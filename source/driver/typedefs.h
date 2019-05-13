@@ -10,7 +10,7 @@ typedef unsigned int uint16_t;
 typedef unsigned long uint32_t;
 
 
-#define D_SOFTWARE_INTERFACE		const
+//#define D_SOFTWARE_INTERFACE		const
 
 
 

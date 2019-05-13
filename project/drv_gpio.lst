@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   DRV_GPIO                                                              04/27/2019 10:35:05 PAGE 1   
+C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 21:02:20 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE DRV_GPIO
@@ -19,224 +19,208 @@ line level    source
    9                  D_USED_GPIO_CONFIG
   10          };
   11          
-  12          static uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits);
-  13          static uint8_t DrvGroupGpioIn(portGroup_t group);
+  12          
+  13          
   14          
-  15          static void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig);
-  16          static void DrvGroupGpioOut(portGroup_t group, uint8_t sig);
-  17          static void DrvNameOut(gpioName_t name, uint8_t sig);
-  18          static uint8_t DrvNameIn(gpioName_t name);
-  19          
-  20          
-  21          D_SOFTWARE_INTERFACE drvGpioInterface_t code drvGpioInterface = {
-  22                  gpioConfigArry,
-  23                  DrvSingleGpioIn,
-  24                  DrvGroupGpioIn,
-  25                  DrvSingleGpioOut,
-  26                  DrvGroupGpioOut,
-  27                  DrvNameOut,
-  28                  DrvNameIn
-  29          };
-  30          
-  31          
-  32          static uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits)
-  33          {
-  34   1              uint8_t inTtl = 0;
-  35   1              
-  36   1              switch (group)
-  37   1              {
-  38   2                      case EN_PORT_0:
-  39   2                              if ( 0 != ( P0 & (0x01 << bits) ) )
-  40   2                              {
-  41   3                                      inTtl = 1;
-  42   3                              }
-  43   2                              break;
+  15          
+  16          uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits)
+  17          {
+  18   1              uint8_t inTtl = 0;
+  19   1              
+  20   1              switch (group)
+  21   1              {
+  22   2                      case EN_PORT_0:
+  23   2                              if ( 0 != ( P0 & (0x01 << bits) ) )
+  24   2                              {
+  25   3                                      inTtl = 1;
+  26   3                              }
+  27   2                              break;
+  28   2                              
+  29   2                      case EN_PORT_1:
+  30   2                              
+  31   2                              if ( 0 != ( P1 & (0x01 << bits) ) )
+  32   2                              {
+  33   3                                      inTtl = 1;
+  34   3                              }
+  35   2                              
+  36   2                              break;
+  37   2                              
+  38   2                      case EN_PORT_2:
+  39   2                              
+  40   2                              if ( 0 != ( P2 & (0x01 << bits) ) )
+  41   2                              {
+  42   3                                      inTtl = 1;
+  43   3                              }
   44   2                              
-  45   2                      case EN_PORT_1:
+  45   2                              break;
   46   2                              
-  47   2                              if ( 0 != ( P1 & (0x01 << bits) ) )
-  48   2                              {
-  49   3                                      inTtl = 1;
-  50   3                              }
-  51   2                              
-  52   2                              break;
+  47   2                      case EN_PORT_3:
+  48   2                              
+  49   2                              if ( 0 != ( P3 & (0x01 << bits) ) )
+  50   2                              {
+  51   3                                      inTtl = 1;
+  52   3                              }
   53   2                              
-  54   2                      case EN_PORT_2:
-C51 COMPILER V9.00   DRV_GPIO                                                              04/27/2019 10:35:05 PAGE 2   
+  54   2                              break;
+C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 21:02:20 PAGE 2   
 
   55   2                              
-  56   2                              if ( 0 != ( P2 & (0x01 << bits) ) )
-  57   2                              {
-  58   3                                      inTtl = 1;
-  59   3                              }
-  60   2                              
-  61   2                              break;
-  62   2                              
-  63   2                      case EN_PORT_3:
-  64   2                              
-  65   2                              if ( 0 != ( P3 & (0x01 << bits) ) )
-  66   2                              {
-  67   3                                      inTtl = 1;
-  68   3                              }
-  69   2                              
+  56   2                      default:
+  57   2                              break;
+  58   2              }
+  59   1              return inTtl;
+  60   1      }
+  61          
+  62          uint8_t DrvGroupGpioIn(portGroup_t group)
+  63          {
+  64   1              uint8_t inTtl = 0;
+  65   1              
+  66   1              switch (group)
+  67   1              {
+  68   2                      case EN_PORT_0:
+  69   2                              inTtl = P0;
   70   2                              break;
   71   2                              
-  72   2                      default:
-  73   2                              break;
-  74   2              }
-  75   1              return inTtl;
-  76   1      }
-  77          
-  78          static uint8_t DrvGroupGpioIn(portGroup_t group)
-  79          {
-  80   1              uint8_t inTtl = 0;
-  81   1              
-  82   1              switch (group)
-  83   1              {
-  84   2                      case EN_PORT_0:
-  85   2                              inTtl = P0;
-  86   2                              break;
-  87   2                              
-  88   2                      case EN_PORT_1:
-  89   2                              inTtl = P1;
-  90   2                              
-  91   2                              break;
-  92   2                              
-  93   2                      case EN_PORT_2:
-  94   2                              inTtl = P2;
-  95   2                              
-  96   2                              break;
-  97   2                              
-  98   2                      case EN_PORT_3:
-  99   2                              inTtl = P3;
- 100   2                              
- 101   2                              break;
- 102   2                              
- 103   2                      default:
- 104   2                              break;
- 105   2              }
- 106   1              return inTtl;
- 107   1      }
- 108          
- 109          static void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
- 110          {
- 111   1              switch (group)
- 112   1              {
- 113   2                      case EN_PORT_0:
- 114   2                              if (sig == 0)
- 115   2                              {
- 116   3                                      D_BYTE_CLR_BITS(P0,bits);
-C51 COMPILER V9.00   DRV_GPIO                                                              04/27/2019 10:35:05 PAGE 3   
+  72   2                      case EN_PORT_1:
+  73   2                              inTtl = P1;
+  74   2                              
+  75   2                              break;
+  76   2                              
+  77   2                      case EN_PORT_2:
+  78   2                              inTtl = P2;
+  79   2                              
+  80   2                              break;
+  81   2                              
+  82   2                      case EN_PORT_3:
+  83   2                              inTtl = P3;
+  84   2                              
+  85   2                              break;
+  86   2                              
+  87   2                      default:
+  88   2                              break;
+  89   2              }
+  90   1              return inTtl;
+  91   1      }
+  92          
+  93          void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
+  94          {
+  95   1              switch (group)
+  96   1              {
+  97   2                      case EN_PORT_0:
+  98   2                              if (sig == 0)
+  99   2                              {
+ 100   3                                      D_BYTE_CLR_BITS(P0,bits);
+ 101   3                              }
+ 102   2                              else
+ 103   2                              {
+ 104   3                                      D_BYTE_SET_BITS(P0,bits);
+ 105   3                              }
+ 106   2                              break;
+ 107   2                              
+ 108   2                      case EN_PORT_1:
+ 109   2                              if (sig == 0)
+ 110   2                              {
+ 111   3                                      D_BYTE_CLR_BITS(P1,bits);
+ 112   3                              }
+ 113   2                              else
+ 114   2                              {
+ 115   3                                      D_BYTE_SET_BITS(P1,bits);
+ 116   3                              }
+C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 21:02:20 PAGE 3   
 
- 117   3                              }
- 118   2                              else
- 119   2                              {
- 120   3                                      D_BYTE_SET_BITS(P0,bits);
- 121   3                              }
- 122   2                              break;
- 123   2                              
- 124   2                      case EN_PORT_1:
- 125   2                              if (sig == 0)
- 126   2                              {
- 127   3                                      D_BYTE_CLR_BITS(P1,bits);
- 128   3                              }
- 129   2                              else
- 130   2                              {
- 131   3                                      D_BYTE_SET_BITS(P1,bits);
- 132   3                              }
- 133   2                              break;
- 134   2                              
- 135   2                      case EN_PORT_2:
- 136   2                              if (sig == 0)
- 137   2                              {
- 138   3                                      D_BYTE_CLR_BITS(P2,bits);
- 139   3                              }
- 140   2                              else
- 141   2                              {
- 142   3                                      D_BYTE_SET_BITS(P2,bits);
- 143   3                              }
- 144   2                              break;
- 145   2                              
- 146   2                      case EN_PORT_3:
- 147   2                              if (sig == 0)
- 148   2                              {
- 149   3                                      D_BYTE_CLR_BITS(P3,bits);
- 150   3                              }
- 151   2                              else
- 152   2                              {
- 153   3                                      D_BYTE_SET_BITS(P3,bits);
- 154   3                              }
- 155   2                              break;
- 156   2                              
- 157   2                      default:
- 158   2                              break;
- 159   2              }
- 160   1      }
- 161          
- 162          static void DrvGroupGpioOut(portGroup_t group, uint8_t sig)
- 163          {
- 164   1              
- 165   1              switch (group)
- 166   1              {
- 167   2                      case EN_PORT_0:
- 168   2                              P0 = sig;
- 169   2                              break;
- 170   2                              
- 171   2                      case EN_PORT_1:
- 172   2                              P1 = sig;
- 173   2                              break;
- 174   2                              
- 175   2                      case EN_PORT_2:
- 176   2                              P2 = sig;
- 177   2                              break;
- 178   2                              
-C51 COMPILER V9.00   DRV_GPIO                                                              04/27/2019 10:35:05 PAGE 4   
+ 117   2                              break;
+ 118   2                              
+ 119   2                      case EN_PORT_2:
+ 120   2                              if (sig == 0)
+ 121   2                              {
+ 122   3                                      D_BYTE_CLR_BITS(P2,bits);
+ 123   3                              }
+ 124   2                              else
+ 125   2                              {
+ 126   3                                      D_BYTE_SET_BITS(P2,bits);
+ 127   3                              }
+ 128   2                              break;
+ 129   2                              
+ 130   2                      case EN_PORT_3:
+ 131   2                              if (sig == 0)
+ 132   2                              {
+ 133   3                                      D_BYTE_CLR_BITS(P3,bits);
+ 134   3                              }
+ 135   2                              else
+ 136   2                              {
+ 137   3                                      D_BYTE_SET_BITS(P3,bits);
+ 138   3                              }
+ 139   2                              break;
+ 140   2                              
+ 141   2                      default:
+ 142   2                              break;
+ 143   2              }
+ 144   1      }
+ 145          
+ 146          void DrvGroupGpioOut(portGroup_t group, uint8_t sig)
+ 147          {
+ 148   1              
+ 149   1              switch (group)
+ 150   1              {
+ 151   2                      case EN_PORT_0:
+ 152   2                              P0 = sig;
+ 153   2                              break;
+ 154   2                              
+ 155   2                      case EN_PORT_1:
+ 156   2                              P1 = sig;
+ 157   2                              break;
+ 158   2                              
+ 159   2                      case EN_PORT_2:
+ 160   2                              P2 = sig;
+ 161   2                              break;
+ 162   2                              
+ 163   2                      case EN_PORT_3:
+ 164   2                              P3 = sig;
+ 165   2                              break;
+ 166   2                              
+ 167   2                      default:
+ 168   2                              break;
+ 169   2              }
+ 170   1      }
+ 171          
+ 172          void DrvNameOut(gpioName_t name, uint8_t sig)
+ 173          {
+ 174   1      
+ 175   1              if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+ 176   1              {
+ 177   2                      DrvSingleGpioOut(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit, sig);
+ 178   2              }
+C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 21:02:20 PAGE 4   
 
- 179   2                      case EN_PORT_3:
- 180   2                              P3 = sig;
- 181   2                              break;
- 182   2                              
- 183   2                      default:
- 184   2                              break;
- 185   2              }
- 186   1      }
- 187          
- 188          static void DrvNameOut(gpioName_t name, uint8_t sig)
- 189          {
- 190   1      
- 191   1              if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
- 192   1              {
- 193   2                      DrvSingleGpioOut(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit, sig);
- 194   2              }
- 195   1              else
- 196   1              {
- 197   2                      DrvGroupGpioOut(gpioConfigArry[(uint8_t)name].portGroup, sig);
- 198   2              }
+ 179   1              else
+ 180   1              {
+ 181   2                      DrvGroupGpioOut(gpioConfigArry[(uint8_t)name].portGroup, sig);
+ 182   2              }
+ 183   1      }
+ 184          
+ 185          uint8_t DrvNameIn(gpioName_t name)
+ 186          {
+ 187   1              uint8_t inTtl = 0;
+ 188   1              
+ 189   1              if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+ 190   1              {
+ 191   2                      inTtl = DrvSingleGpioIn(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit);
+ 192   2              }
+ 193   1              else
+ 194   1              {
+ 195   2                      inTtl = DrvGroupGpioIn(gpioConfigArry[(uint8_t)name].portGroup);
+ 196   2              }
+ 197   1      
+ 198   1              return inTtl;
  199   1      }
  200          
- 201          static uint8_t DrvNameIn(gpioName_t name)
- 202          {
- 203   1              uint8_t inTtl = 0;
- 204   1              
- 205   1              if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
- 206   1              {
- 207   2                      inTtl = DrvSingleGpioIn(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit);
- 208   2              }
- 209   1              else
- 210   1              {
- 211   2                      inTtl = DrvGroupGpioIn(gpioConfigArry[(uint8_t)name].portGroup);
- 212   2              }
- 213   1      
- 214   1              return inTtl;
- 215   1      }
- 216          
- 217          
- 218          
+ 201          
+ 202          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =    468    ----
-   CONSTANT SIZE    =     45    ----
+   CONSTANT SIZE    =     24    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----

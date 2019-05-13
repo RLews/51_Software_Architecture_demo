@@ -10,4 +10,4 @@
 "..\output\drv_ds1302.obj",
 "..\output\drv_lcd.obj" 
 TO "..\output\1" 
-PRINT(".\1.m51")
+PRINT(".\1.m51") RAMSIZE(256) 

@@ -1,0 +1,1 @@
+"..\source\hal\hal_timer.c" BROWSE INCDIR(..\source\app;..\source\complex_driver;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_timer.lst) OBJECT(..\output\hal_timer.obj)

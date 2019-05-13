@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   DRV_LCD                                                               04/27/2019 10:35:07 PAGE 1   
+C51 COMPILER V9.00   DRV_LCD                                                               05/13/2019 21:02:22 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE DRV_LCD
@@ -14,73 +14,64 @@ line level    source
    4          
    5          #include "drv_lcd.h"
    6          
-   7          static void DrvLcdInit(void);
-   8          static void DrvLcdWaitReady(void);
-   9          static void DrvLcdWriteCmd(uint8_t cmd);
-  10          static void DrvLcdWriteDat(uint8_t dat);
-  11          
-  12          
-  13          D_SOFTWARE_INTERFACE drvLcdInterface_t code drvLcdInterface = {
-  14                  DrvLcdInit,
-  15                  DrvLcdWriteCmd,
-  16                  DrvLcdWriteDat
-  17          };
+   7          static void DrvLcdWaitReady(void);
+   8          
+   9          
+  10          
+  11          void DrvLcdInit(void)
+  12          {
+  13   1              DrvLcdWriteCmd(0x38); //16*2 显示，5*7 点阵，8 位数据接口
+  14   1              DrvLcdWriteCmd(0x0C); //显示器开，光标关闭
+  15   1              DrvLcdWriteCmd(0x06); //文字不动，地址自动+1
+  16   1              DrvLcdWriteCmd(0x01); //清屏
+  17   1      }
   18          
-  19          
-  20          static void DrvLcdInit(void)
-  21          {
-  22   1              DrvLcdWriteCmd(0x38); //16*2 显示，5*7 点阵，8 位数据接口
-  23   1              DrvLcdWriteCmd(0x0C); //显示器开，光标关闭
-  24   1              DrvLcdWriteCmd(0x06); //文字不动，地址自动+1
-  25   1              DrvLcdWriteCmd(0x01); //清屏
-  26   1      }
-  27          
-  28          static void DrvLcdWaitReady(void)
-  29          {
-  30   1              uint8_t sta = 0;
-  31   1              uint16_t tryCnt = 0;
-  32   1      
-  33   1              drvGpioInterface.NameOut(EN_LCD_DATA_BUS, 0xFF);
-  34   1              drvGpioInterface.NameOut(EN_LCD_RS, 0);
-  35   1              drvGpioInterface.NameOut(EN_LCD_RW, 1);
-  36   1              
-  37   1              do
-  38   1              {
-  39   2                      drvGpioInterface.NameOut(EN_LCD_E, 1);
-  40   2                      sta = drvGpioInterface.NameIn(EN_LCD_DATA_BUS);
-  41   2                      drvGpioInterface.NameOut(EN_LCD_E, 0);
-  42   2                      tryCnt++;
-  43   2              } while ((tryCnt < 10000) && (sta & 0x80)); //bit7 等于 1 表示液晶正忙，重复检测直到其等于 0 为止
-  44   1      }
-  45          
-  46          static void DrvLcdWriteCmd(uint8_t cmd)
-  47          {
-  48   1              DrvLcdWaitReady();
-  49   1              drvGpioInterface.NameOut(EN_LCD_RS, 0);
-  50   1              drvGpioInterface.NameOut(EN_LCD_RW, 0);
-  51   1              drvGpioInterface.NameOut(EN_LCD_DATA_BUS, cmd);
-  52   1              drvGpioInterface.NameOut(EN_LCD_E, 1);
-  53   1              drvGpioInterface.NameOut(EN_LCD_E, 0);
-  54   1      }
-C51 COMPILER V9.00   DRV_LCD                                                               04/27/2019 10:35:07 PAGE 2   
+  19          static void DrvLcdWaitReady(void)
+  20          {
+  21   1              uint8_t sta = 0;
+  22   1              uint16_t tryCnt = 0;
+  23   1      
+  24   1              DrvNameOut(EN_LCD_DATA_BUS, 0xFF);
+  25   1              DrvNameOut(EN_LCD_RS, 0);
+  26   1              DrvNameOut(EN_LCD_RW, 1);
+  27   1              
+  28   1              do
+  29   1              {
+  30   2                      DrvNameOut(EN_LCD_E, 1);
+  31   2                      sta = DrvNameIn(EN_LCD_DATA_BUS);
+  32   2                      DrvNameOut(EN_LCD_E, 0);
+  33   2                      tryCnt++;
+  34   2              } while ((tryCnt < 10000) && (sta & 0x80)); //bit7 等于 1 表示液晶正忙，重复检测直到其等于 0 为止
+  35   1      }
+  36          
+  37          void DrvLcdWriteCmd(uint8_t cmd)
+  38          {
+  39   1              DrvLcdWaitReady();
+  40   1              DrvNameOut(EN_LCD_RS, 0);
+  41   1              DrvNameOut(EN_LCD_RW, 0);
+  42   1              DrvNameOut(EN_LCD_DATA_BUS, cmd);
+  43   1              DrvNameOut(EN_LCD_E, 1);
+  44   1              DrvNameOut(EN_LCD_E, 0);
+  45   1      }
+  46          
+  47          void DrvLcdWriteDat(uint8_t dat)
+  48          {
+  49   1              DrvLcdWaitReady();
+  50   1              DrvNameOut(EN_LCD_RS, 1);
+  51   1              DrvNameOut(EN_LCD_RW, 0);
+  52   1              DrvNameOut(EN_LCD_DATA_BUS, dat);
+  53   1              DrvNameOut(EN_LCD_E, 1);
+  54   1              DrvNameOut(EN_LCD_E, 0);
+C51 COMPILER V9.00   DRV_LCD                                                               05/13/2019 21:02:22 PAGE 2   
 
-  55          
-  56          static void DrvLcdWriteDat(uint8_t dat)
-  57          {
-  58   1              DrvLcdWaitReady();
-  59   1              drvGpioInterface.NameOut(EN_LCD_RS, 1);
-  60   1              drvGpioInterface.NameOut(EN_LCD_RW, 0);
-  61   1              drvGpioInterface.NameOut(EN_LCD_DATA_BUS, dat);
-  62   1              drvGpioInterface.NameOut(EN_LCD_E, 1);
-  63   1              drvGpioInterface.NameOut(EN_LCD_E, 0);
-  64   1      }
-  65          
-  66          
+  55   1      }
+  56          
+  57          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    396    ----
-   CONSTANT SIZE    =      9    ----
+   CODE SIZE        =    172    ----
+   CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----       5

@@ -9,27 +9,11 @@ static const gpioConfig_t code gpioConfigArry[EN_ALL_GPIO_COUNTER] = {
 	D_USED_GPIO_CONFIG
 };
 
-static uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits);
-static uint8_t DrvGroupGpioIn(portGroup_t group);
-
-static void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig);
-static void DrvGroupGpioOut(portGroup_t group, uint8_t sig);
-static void DrvNameOut(gpioName_t name, uint8_t sig);
-static uint8_t DrvNameIn(gpioName_t name);
 
 
-D_SOFTWARE_INTERFACE drvGpioInterface_t code drvGpioInterface = {
-	gpioConfigArry,
-	DrvSingleGpioIn,
-	DrvGroupGpioIn,
-	DrvSingleGpioOut,
-	DrvGroupGpioOut,
-	DrvNameOut,
-	DrvNameIn
-};
 
 
-static uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits)
+uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits)
 {
 	uint8_t inTtl = 0;
 	
@@ -75,7 +59,7 @@ static uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits)
 	return inTtl;
 }
 
-static uint8_t DrvGroupGpioIn(portGroup_t group)
+uint8_t DrvGroupGpioIn(portGroup_t group)
 {
 	uint8_t inTtl = 0;
 	
@@ -106,7 +90,7 @@ static uint8_t DrvGroupGpioIn(portGroup_t group)
 	return inTtl;
 }
 
-static void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
+void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
 {
 	switch (group)
 	{
@@ -159,7 +143,7 @@ static void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
 	}
 }
 
-static void DrvGroupGpioOut(portGroup_t group, uint8_t sig)
+void DrvGroupGpioOut(portGroup_t group, uint8_t sig)
 {
 	
 	switch (group)
@@ -185,7 +169,7 @@ static void DrvGroupGpioOut(portGroup_t group, uint8_t sig)
 	}
 }
 
-static void DrvNameOut(gpioName_t name, uint8_t sig)
+void DrvNameOut(gpioName_t name, uint8_t sig)
 {
 
 	if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
@@ -198,7 +182,7 @@ static void DrvNameOut(gpioName_t name, uint8_t sig)
 	}
 }
 
-static uint8_t DrvNameIn(gpioName_t name)
+uint8_t DrvNameIn(gpioName_t name)
 {
 	uint8_t inTtl = 0;
 	

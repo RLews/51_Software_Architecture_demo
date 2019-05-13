@@ -6,23 +6,15 @@
 
 static volatile uint32_t halSysTimerOverflowCnt = 0;
 
-static void HalSysTimerInit(void);
-static uint32_t HalGetCurSysTimerCnt(void);
-static uint32_t HalDiffTimerCnt(uint32_t last);
-
-D_SOFTWARE_INTERFACE halTimerInterface_t halTimerInterface = {
-	HalSysTimerInit,
-	HalGetCurSysTimerCnt,
-	HalDiffTimerCnt
-};
 
 
-static void HalSysTimerInit(void)
+
+void HalSysTimerInit(void)
 {
-	drvTimerInterface.SysTimerInit();
+	DrvSysTimerInit();
 }
 
-static uint32_t HalGetCurSysTimerCnt(void)
+uint32_t HalGetCurSysTimerCnt(void)
 {
 	uint32_t cnt = 0;
 	bool_t sta = D_SYSTEM_ENTER_CRITICAL();
@@ -33,7 +25,7 @@ static uint32_t HalGetCurSysTimerCnt(void)
 	return cnt;
 }
 
-static uint32_t HalDiffTimerCnt(uint32_t last)
+uint32_t HalDiffTimerCnt(uint32_t last)
 {
 	uint32_t tim = HalGetCurSysTimerCnt;
 
@@ -52,7 +44,7 @@ static uint32_t HalDiffTimerCnt(uint32_t last)
 
 void HalSysTimerIsr()	interrupt	1
 {
-	drvTimerInterface.ReloadSysTimerCnt();
+	DrvReloadSysTimerCnt();
 	halSysTimerOverflowCnt++;
 }
 
@@ -60,48 +52,39 @@ void HalSysTimerIsr()	interrupt	1
 #else
 static volatile uint16_t halSysTimerOverflowCnt = 0;
 
-static void HalSysTimerInit(void);
 static uint16_t HalGetSysOverflowCnt(void);
-static uint32_t HalGetCurSysTimerCnt(void);
-static uint32_t HalDiffTimerCnt(uint32_t last);
 
 
-D_SOFTWARE_INTERFACE halTimerInterface_t halTimerInterface = {
-	HalSysTimerInit,
-	HalGetCurSysTimerCnt,
-	HalDiffTimerCnt
-};
 
-
-static void HalSysTimerInit(void)
+void HalSysTimerInit(void)
 {
-	drvTimerInterface.SysTimerInit();
+	DrvSysTimerInit();
 }
 
 static uint16_t HalGetSysOverflowCnt(void)
 {
 	uint16_t cnt = 0;
 	
-	drvTimerInterface.DisableSysTimerInt();
+	DrvDisableSysTimerInt();
 	cnt = halSysTimerOverflowCnt;
-	drvTimerInterface.EnableSysTimerInt();
+	DrvEnableSysTimerInt();
 
 	return cnt;
 }
 
 
-static uint32_t HalGetCurSysTimerCnt(void)
+uint32_t HalGetCurSysTimerCnt(void)
 {
 	uint32_t calcCnt = 0;
 	uint16_t tOverflowCnt = 0;
 	uint16_t tTimerCnt = 0;
 	
 	D_DISABLE_INTERRUPT();
-	tTimerCnt = drvTimerInterface.GetSysTimerCnt();	/* maybe overflow */
+	tTimerCnt = DrvGetSysTimerCnt();	/* maybe overflow */
 	tOverflowCnt = HalGetSysOverflowCnt();
-	if (drvTimerInterface.GetSysTimerOverflowFlag())
+	if (DrvGetSysTimerIntFlag())
 	{
-		tTimerCnt = drvTimerInterface.GetSysTimerCnt();	
+		tTimerCnt = DrvGetSysTimerCnt();	
 		tOverflowCnt++;
 	}
 	calcCnt = tTimerCnt;
@@ -112,7 +95,7 @@ static uint32_t HalGetCurSysTimerCnt(void)
 	return calcCnt;
 }
 
-static uint32_t HalDiffTimerCnt(uint32_t last)
+uint32_t HalDiffTimerCnt(uint32_t last)
 {
 	uint32_t tim = 0;
 
@@ -131,7 +114,7 @@ static uint32_t HalDiffTimerCnt(uint32_t last)
 
 void HalSysTimerIsr()	interrupt	1
 {
-	drvTimerInterface.ReloadSysTimerCnt();
+	DrvReloadSysTimerCnt();
 	halSysTimerOverflowCnt++;
 }
 

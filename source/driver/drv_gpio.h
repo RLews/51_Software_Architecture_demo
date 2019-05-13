@@ -55,16 +55,6 @@ typedef struct __GPIO_CONFIG_T
 	gpioBit_t gpioBit;
 }gpioConfig_t;
 
-typedef struct __DRV_GPIO_INTERFACE_T
-{
-	const gpioConfig_t *gpioConfig;
-	uint8_t (*SingleIn)(portGroup_t group, gpioBit_t bits);
-	uint8_t (*GroupIn)(portGroup_t group);
-	void (*SingleOut)(portGroup_t group, gpioBit_t bits, uint8_t sig);
-	void (*GroupOut)(portGroup_t group, uint8_t sig);
-	void (*NameOut)(gpioName_t name, uint8_t sig);
-	uint8_t (*NameIn)(gpioName_t name);
-}drvGpioInterface_t;
 
 
 #define D_USED_GPIO_CONFIG		\
@@ -79,7 +69,14 @@ typedef struct __DRV_GPIO_INTERFACE_T
 
 
 
-extern D_SOFTWARE_INTERFACE drvGpioInterface_t code drvGpioInterface;
+uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits);
+uint8_t DrvGroupGpioIn(portGroup_t group);
+void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig);
+void DrvGroupGpioOut(portGroup_t group, uint8_t sig);
+void DrvNameOut(gpioName_t name, uint8_t sig);
+uint8_t DrvNameIn(gpioName_t name);
+
+
 
 #endif
 

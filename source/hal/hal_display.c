@@ -5,26 +5,17 @@
 extern calendar_t sysCalendar;
 
 
-static void HalDisplayInit(void);
-static void HalFlashCalendar(void);
-static void HalDisplayStr(uint8_t x, uint8_t y, const uint8_t *str);
-static void HalDisplayCalendar(void);
+static void HalDisplayCalendar(const calendar_t * pCalendar);
 
 
-D_SOFTWARE_INTERFACE halDisplayInterface_t halDisplayInterface = {
-	HalDisplayInit,
-	HalDisplayStr,
-	HalFlashCalendar
-};
 
-static void HalDisplayInit(void)
+void HalDisplayInit(void)
 {
-	drvLcdInterface.LcdInit();
+	DrvLcdInit();
 }
 
-static void HalDisplayCalendar(void)
+static void HalDisplayCalendar(const calendar_t * pCalendar)
 {
-	calendar_t * pCalendar = &(sysCalendar);
 	uint8_t str[11] = {0};
 	
 	str[0] = '2';
@@ -57,20 +48,22 @@ static void HalDisplayCalendar(void)
 	HalDisplayStr(4, 1, str); //显示到液晶的第二行
 }
 
-static void HalFlashCalendar(void)
+void HalFlashCalendar(void)
 {
 	static uint8_t secBak = 0;
-	calendar_t * pCalendar = &(sysCalendar);
+	calendar_t tCalendar = {0};
 
-	if (secBak != pCalendar->sec)
+	HalGetSysTime(&tCalendar);
+
+	if (secBak != tCalendar.sec)
 	{
-		secBak = pCalendar->sec;
-		HalDisplayCalendar();
+		secBak = tCalendar.sec;
+		HalDisplayCalendar(&tCalendar);
 	}
 }
 
 
-static void HalDisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
+void HalDisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
 {
 	uint8_t addr = 0;
 	//由输入的显示坐标计算显示 RAM 的地址
@@ -83,10 +76,10 @@ static void HalDisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
 		addr = 0x40 + x; //第二行字符地址从 0x40 起始
 	}
 	//由起始显示 RAM 地址连续写入字符串
-	drvLcdInterface.LcdWriteCmd(addr | 0x80); //写入起始地址
+	DrvLcdWriteCmd(addr | 0x80); //写入起始地址
 	while (*str != '\0') //连续写入字符串数据，直到检测到结束符
 	{
-		drvLcdInterface.LcdWriteDat(*str);
+		DrvLcdWriteDat(*str);
 		str++;
 	}
 }
