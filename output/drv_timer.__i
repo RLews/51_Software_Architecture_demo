@@ -1,1 +1,1 @@
-"..\source\driver\drv_timer.c" BROWSE INCDIR(..\source\app;..\source\complex_driver;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\drv_timer.lst) OBJECT(..\output\drv_timer.obj)
+"..\source\driver\drv_timer.c" OPTIMIZE (2,SPEED) BROWSE INCDIR(..\source\app;..\source\complex_driver;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\drv_timer.lst) OBJECT(..\output\drv_timer.obj)

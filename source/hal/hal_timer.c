@@ -27,7 +27,7 @@ uint32_t HalGetCurSysTimerCnt(void)
 
 uint32_t HalDiffTimerCnt(uint32_t last)
 {
-	uint32_t tim = HalGetCurSysTimerCnt;
+	uint32_t tim = HalGetCurSysTimerCnt();
 
 	if (tim >= last)
 	{

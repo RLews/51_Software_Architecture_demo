@@ -1,10 +1,11 @@
-C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 21:05:42 PAGE 1   
+C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 22:41:32 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE HAL_TIMER
 OBJECT MODULE PLACED IN ..\output\hal_timer.obj
-COMPILER INVOKED BY: D:\Keil\C51\C51\BIN\C51.EXE ..\source\hal\hal_timer.c BROWSE INCDIR(..\source\app;..\source\complex
-                    -_driver;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_timer.lst) OBJECT(..\output\hal_timer.obj)
+COMPILER INVOKED BY: D:\Keil\C51\C51\BIN\C51.EXE ..\source\hal\hal_timer.c OPTIMIZE(2,SPEED) BROWSE INCDIR(..\source\app
+                    -;..\source\complex_driver;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_timer.lst) OBJECT(..\output\hal
+                    -_timer.obj)
 
 line level    source
 
@@ -13,9 +14,58 @@ line level    source
    3          #include "hal_timer.h"
    4          
    5          #ifdef D_USE_ONEMS_INTRRUPET_MODE
+   6          
+   7          static volatile uint32_t halSysTimerOverflowCnt = 0;
+   8          
+   9          
+  10          
+  11          
+  12          void HalSysTimerInit(void)
+  13          {
+  14   1              DrvSysTimerInit();
+  15   1      }
+  16          
+  17          uint32_t HalGetCurSysTimerCnt(void)
+  18          {
+  19   1              uint32_t cnt = 0;
+  20   1              bool_t sta = D_SYSTEM_ENTER_CRITICAL();
+  21   1              
+  22   1              cnt = halSysTimerOverflowCnt;
+  23   1              D_SYSTEM_EXIT_CRITICAL(sta);
+  24   1      
+  25   1              return cnt;
+  26   1      }
+  27          
+  28          uint32_t HalDiffTimerCnt(uint32_t last)
+  29          {
+  30   1              uint32_t tim = HalGetCurSysTimerCnt();
+  31   1      
+  32   1              if (tim >= last)
+  33   1              {
+  34   2                      tim -= last;
+  35   2              }
+  36   1              else
+  37   1              {
+  38   2                      tim += ((0xFFFFFFFFu - last) + 1);
+  39   2              }
+  40   1      
+  41   1              return tim;
+  42   1      }
+  43          
+  44          
+  45          void HalSysTimerIsr()   interrupt       1
+  46          {
+  47   1              DrvReloadSysTimerCnt();
+  48   1              halSysTimerOverflowCnt++;
+  49   1      }
+  50          
+  51          
+  52          #else
+              static volatile uint16_t halSysTimerOverflowCnt = 0;
+C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 22:41:32 PAGE 2   
+
               
-              static volatile uint32_t halSysTimerOverflowCnt = 0;
-              
+              static uint16_t HalGetSysOverflowCnt(void);
               
               
               
@@ -24,21 +74,45 @@ line level    source
                       DrvSysTimerInit();
               }
               
-              uint32_t HalGetCurSysTimerCnt(void)
+              static uint16_t HalGetSysOverflowCnt(void)
               {
-                      uint32_t cnt = 0;
-                      bool_t sta = D_SYSTEM_ENTER_CRITICAL();
+                      uint16_t cnt = 0;
                       
+                      DrvDisableSysTimerInt();
                       cnt = halSysTimerOverflowCnt;
-                      D_SYSTEM_EXIT_CRITICAL(sta);
+                      DrvEnableSysTimerInt();
               
                       return cnt;
               }
               
+              
+              uint32_t HalGetCurSysTimerCnt(void)
+              {
+                      uint32_t calcCnt = 0;
+                      uint16_t tOverflowCnt = 0;
+                      uint16_t tTimerCnt = 0;
+                      
+                      D_DISABLE_INTERRUPT();
+                      tTimerCnt = DrvGetSysTimerCnt();        /* maybe overflow */
+                      tOverflowCnt = HalGetSysOverflowCnt();
+                      if (DrvGetSysTimerIntFlag())
+                      {
+                              tTimerCnt = DrvGetSysTimerCnt();        
+                              tOverflowCnt++;
+                      }
+                      calcCnt = tTimerCnt;
+                      calcCnt |= (((uint32_t)tOverflowCnt) << 16);
+                      
+                      D_ENABLE_INTERRUPT();
+              
+                      return calcCnt;
+              }
+              
               uint32_t HalDiffTimerCnt(uint32_t last)
               {
-                      uint32_t tim = HalGetCurSysTimerCnt;
+                      uint32_t tim = 0;
               
+                      tim = HalGetCurSysTimerCnt();
                       if (tim >= last)
                       {
                               tim -= last;
@@ -51,97 +125,24 @@ line level    source
                       return tim;
               }
               
-              
               void HalSysTimerIsr()   interrupt       1
+C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 22:41:32 PAGE 3   
+
               {
                       DrvReloadSysTimerCnt();
                       halSysTimerOverflowCnt++;
               }
               
-              
-              #else
-  53          static volatile uint16_t halSysTimerOverflowCnt = 0;
-  54          
-C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 21:05:42 PAGE 2   
-
-  55          static uint16_t HalGetSysOverflowCnt(void);
-  56          
-  57          
-  58          
-  59          void HalSysTimerInit(void)
-  60          {
-  61   1              DrvSysTimerInit();
-  62   1      }
-  63          
-  64          static uint16_t HalGetSysOverflowCnt(void)
-  65          {
-  66   1              uint16_t cnt = 0;
-  67   1              
-  68   1              DrvDisableSysTimerInt();
-  69   1              cnt = halSysTimerOverflowCnt;
-  70   1              DrvEnableSysTimerInt();
-  71   1      
-  72   1              return cnt;
-  73   1      }
-  74          
-  75          
-  76          uint32_t HalGetCurSysTimerCnt(void)
-  77          {
-  78   1              uint32_t calcCnt = 0;
-  79   1              uint16_t tOverflowCnt = 0;
-  80   1              uint16_t tTimerCnt = 0;
-  81   1              
-  82   1              D_DISABLE_INTERRUPT();
-  83   1              tTimerCnt = DrvGetSysTimerCnt();        /* maybe overflow */
-  84   1              tOverflowCnt = HalGetSysOverflowCnt();
-  85   1              if (DrvGetSysTimerIntFlag())
-  86   1              {
-  87   2                      tTimerCnt = DrvGetSysTimerCnt();        
-  88   2                      tOverflowCnt++;
-  89   2              }
-  90   1              calcCnt = tTimerCnt;
-  91   1              calcCnt |= (((uint32_t)tOverflowCnt) << 16);
-  92   1              
-  93   1              D_ENABLE_INTERRUPT();
-  94   1      
-  95   1              return calcCnt;
-  96   1      }
-  97          
-  98          uint32_t HalDiffTimerCnt(uint32_t last)
-  99          {
- 100   1              uint32_t tim = 0;
- 101   1      
- 102   1              tim = HalGetCurSysTimerCnt();
- 103   1              if (tim >= last)
- 104   1              {
- 105   2                      tim -= last;
- 106   2              }
- 107   1              else
- 108   1              {
- 109   2                      tim += ((0xFFFFFFFFu - last) + 1);
- 110   2              }
- 111   1      
- 112   1              return tim;
- 113   1      }
- 114          
- 115          void HalSysTimerIsr()   interrupt       1
- 116          {
-C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 21:05:42 PAGE 3   
-
- 117   1              DrvReloadSysTimerCnt();
- 118   1              halSysTimerOverflowCnt++;
- 119   1      }
- 120          
- 121          #endif
+              #endif
  122          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    314    ----
+   CODE SIZE        =    250    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      2      18
+   DATA SIZE        =      4      13
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.

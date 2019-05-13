@@ -12,23 +12,23 @@
 #include "hal_calendar.h"
 
 
-static volatile uint32_t sysTim = 0;
+static uint32_t sysTim = 0;
 static bool_t ioCtrl = 0;
 
 void main()
 {
 
-	bool_t sta = D_SYSTEM_ENTER_CRITICAL();
+	(void)D_SYSTEM_ENTER_CRITICAL();
 	HalDisplayInit();
 	HalCalendarInit();
 	HalSysTimerInit();
-	D_SYSTEM_EXIT_CRITICAL(sta);
+	D_SYSTEM_EXIT_CRITICAL(1);
 	
 	sysTim = HalGetCurSysTimerCnt();
 
 	while(1)
 	{
-		if (HalDiffTimerCnt(sysTim) >= (uint32_t)D_SYS_TIME_100MS)
+		if (HalDiffTimerCnt(sysTim) >= (uint32_t)D_SYS_TIME_50MS)
 		{
 			sysTim = HalGetCurSysTimerCnt();
 			HalFlashCalendar();
