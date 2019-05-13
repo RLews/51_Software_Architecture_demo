@@ -17,10 +17,10 @@ void HalSysTimerInit(void)
 uint32_t HalGetCurSysTimerCnt(void)
 {
 	uint32_t cnt = 0;
-	bool_t sta = D_SYSTEM_ENTER_CRITICAL();
+	D_DRV_DISABLE_SYSTIME_INT();
 	
 	cnt = halSysTimerOverflowCnt;
-	D_SYSTEM_EXIT_CRITICAL(sta);
+	D_DRV_ENABLE_SYSTIME_INT();
 
 	return cnt;
 }
@@ -44,7 +44,7 @@ uint32_t HalDiffTimerCnt(uint32_t last)
 
 void HalSysTimerIsr()	interrupt	1
 {
-	DrvReloadSysTimerCnt();
+	D_DRV_RELOAD_SYSTIME_CNT();
 	halSysTimerOverflowCnt++;
 }
 
@@ -65,9 +65,9 @@ static uint16_t HalGetSysOverflowCnt(void)
 {
 	uint16_t cnt = 0;
 	
-	DrvDisableSysTimerInt();
+	D_DRV_DISABLE_SYSTIME_INT();
 	cnt = halSysTimerOverflowCnt;
-	DrvEnableSysTimerInt();
+	D_DRV_ENABLE_SYSTIME_INT();
 
 	return cnt;
 }
@@ -80,11 +80,11 @@ uint32_t HalGetCurSysTimerCnt(void)
 	uint16_t tTimerCnt = 0;
 	
 	D_DISABLE_INTERRUPT();
-	tTimerCnt = DrvGetSysTimerCnt();	/* maybe overflow */
+	D_DRV_GET_SYSTIME_COUNT(tTimerCnt);	/* maybe overflow */
 	tOverflowCnt = HalGetSysOverflowCnt();
-	if (DrvGetSysTimerIntFlag())
+	if (D_DRV_GET_SYSTIME_INT_FLAG())
 	{
-		tTimerCnt = DrvGetSysTimerCnt();	
+		D_DRV_GET_SYSTIME_COUNT(tTimerCnt);	
 		tOverflowCnt++;
 	}
 	calcCnt = tTimerCnt;
@@ -114,7 +114,7 @@ uint32_t HalDiffTimerCnt(uint32_t last)
 
 void HalSysTimerIsr()	interrupt	1
 {
-	DrvReloadSysTimerCnt();
+	D_DRV_RELOAD_SYSTIME_CNT();
 	halSysTimerOverflowCnt++;
 }
 

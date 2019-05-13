@@ -167,7 +167,7 @@
         <aSer4>0</aSer4>
         <StkLoc>0</StkLoc>
         <TrcWin>0</TrcWin>
-        <newCpu>1</newCpu>
+        <newCpu>0</newCpu>
         <uProt>0</uProt>
       </DebugFlag>
       <LintExecutable></LintExecutable>
@@ -193,10 +193,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>30</ColumnNumber>
+      <ColumnNumber>20</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>11</TopLine>
-      <CurrentLine>27</CurrentLine>
+      <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\app\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -230,8 +230,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>109</TopLine>
-      <CurrentLine>115</CurrentLine>
+      <TopLine>79</TopLine>
+      <CurrentLine>93</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_gpio.c</PathWithFileName>
       <FilenameWithoutPath>drv_gpio.c</FilenameWithoutPath>
@@ -272,8 +272,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>24</TopLine>
-      <CurrentLine>33</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>20</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_timer.c</PathWithFileName>
       <FilenameWithoutPath>drv_timer.c</FilenameWithoutPath>
@@ -361,10 +361,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>42</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>37</TopLine>
-      <CurrentLine>48</CurrentLine>
+      <TopLine>12</TopLine>
+      <CurrentLine>33</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\hal\hal_timer.c</PathWithFileName>
       <FilenameWithoutPath>hal_timer.c</FilenameWithoutPath>
@@ -1878,20 +1878,20 @@
         <Doc>
           <Name>..\source\driver\drv_timer.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>24</TopLine>
-          <CurrentLine>33</CurrentLine>
+          <TopLine>1</TopLine>
+          <CurrentLine>20</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\source\driver\drv_gpio.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>109</TopLine>
-          <CurrentLine>115</CurrentLine>
+          <TopLine>79</TopLine>
+          <CurrentLine>93</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\source\hal\hal_timer.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>37</TopLine>
-          <CurrentLine>48</CurrentLine>
+          <ColumnNumber>42</ColumnNumber>
+          <TopLine>12</TopLine>
+          <CurrentLine>33</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\SOURCE\APP\MAIN.H</Name>
@@ -1901,9 +1901,9 @@
         </Doc>
         <Doc>
           <Name>..\SOURCE\DRIVER\DRV_TIMER.H</Name>
-          <ColumnNumber>40</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>13</CurrentLine>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>22</TopLine>
+          <CurrentLine>45</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\source\complex_driver\drv_lcd.c</Name>
@@ -1926,7 +1926,7 @@
         <Doc>
           <Name>..\SOURCE\DRIVER\DRV_GPIO.H</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>58</TopLine>
+          <TopLine>50</TopLine>
           <CurrentLine>58</CurrentLine>
         </Doc>
         <Doc>
@@ -1943,9 +1943,9 @@
         </Doc>
         <Doc>
           <Name>..\source\app\main.c</Name>
-          <ColumnNumber>30</ColumnNumber>
+          <ColumnNumber>20</ColumnNumber>
           <TopLine>11</TopLine>
-          <CurrentLine>27</CurrentLine>
+          <CurrentLine>30</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\SOURCE\COMPLEX_DRIVER\DRV_LCD.H</Name>
