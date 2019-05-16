@@ -11,9 +11,11 @@
 #include "hal_display.h"
 #include "hal_calendar.h"
 
+#define D_SYS_ABSOLUTE_EXIT_CRITICAL			1
 
-static uint32_t sysTim = 0;
-static bool_t ioCtrl = 0;
+static void SysUpdateCalendar(void);
+static void SysIoCtrl(void);
+
 
 void main()
 {
@@ -22,22 +24,40 @@ void main()
 	HalDisplayInit();
 	HalCalendarInit();
 	HalSysTimerInit();
-	D_SYSTEM_EXIT_CRITICAL(1);
-	
-	sysTim = HalGetCurSysTimerCnt();
+	D_SYSTEM_EXIT_CRITICAL(D_SYS_ABSOLUTE_EXIT_CRITICAL);
 
 	while(1)
 	{
-		if (HalDiffTimerCnt(sysTim) >= (uint32_t)D_SYS_TIME_50MS)
-		{
-			sysTim = HalGetCurSysTimerCnt();
-			HalFlashCalendar();
-			HalDebugIOCtrl(ioCtrl);
-			ioCtrl = (ioCtrl == 0)?(1):(0);
-		}
-		HalUpdateSysTime();
+		SysUpdateCalendar();
+		
+		SysIoCtrl();
 	}
 }
 
+static void SysUpdateCalendar(void)
+{
+	static uint32_t updateTim = 0;
+
+	if (HalDiffTimerCnt(updateTim) >= (uint32_t)D_SYS_TIME_10MS)
+	{
+		updateTim = HalGetCurSysTimerCnt();
+		HalUpdateSysTime();
+	}
+	
+	HalFlashCalendar();
+}
+
+static void SysIoCtrl(void)
+{
+	static uint32_t ctrlTim = 0;
+	static bool_t ioCtrl = 0;
+
+	if (HalDiffTimerCnt(ctrlTim) >= (uint32_t)D_SYS_TIME_100MS)
+	{
+		ctrlTim = HalGetCurSysTimerCnt();
+		HalDebugIOCtrl(ioCtrl);
+		ioCtrl = (ioCtrl == 0)?(1):(0);
+	}
+}
 
 
