@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 23:01:21 PAGE 1   
+C51 COMPILER V9.00   DRV_GPIO                                                              05/30/2019 19:01:14 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE DRV_GPIO
@@ -24,7 +24,7 @@ line level    source
   13          
   14          
   15          
-  16          uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits)
+  16          uint8_t Drv_SingleGpioIn(portGroup_t group, gpioBit_t bits)
   17          {
   18   1              uint8_t inTtl = 0;
   19   1              
@@ -62,7 +62,7 @@ line level    source
   51   3                                      inTtl = 1;
   52   3                              }
   53   2                              
-C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 23:01:21 PAGE 2   
+C51 COMPILER V9.00   DRV_GPIO                                                              05/30/2019 19:01:14 PAGE 2   
 
   54   2                              break;
   55   2                              
@@ -72,7 +72,7 @@ line level    source
   59   1              return inTtl;
   60   1      }
   61          
-  62          uint8_t DrvGroupGpioIn(portGroup_t group)
+  62          uint8_t Drv_GroupGpioIn(portGroup_t group)
   63          {
   64   1              uint8_t inTtl = 0;
   65   1              
@@ -103,7 +103,7 @@ line level    source
   90   1              return inTtl;
   91   1      }
   92          
-  93          void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
+  93          void Drv_SingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
   94          {
   95   1              switch (group)
   96   1              {
@@ -126,7 +126,7 @@ line level    source
  113   2                              else
  114   2                              {
  115   3                                      D_BYTE_SET_BITS(P1,bits);
-C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 23:01:21 PAGE 3   
+C51 COMPILER V9.00   DRV_GPIO                                                              05/30/2019 19:01:14 PAGE 3   
 
  116   3                              }
  117   2                              break;
@@ -158,7 +158,7 @@ line level    source
  143   2              }
  144   1      }
  145          
- 146          void DrvGroupGpioOut(portGroup_t group, uint8_t sig)
+ 146          void Drv_GroupGpioOut(portGroup_t group, uint8_t sig)
  147          {
  148   1              
  149   1              switch (group)
@@ -184,32 +184,33 @@ line level    source
  169   2              }
  170   1      }
  171          
- 172          void DrvNameOut(gpioName_t name, uint8_t sig)
+ 172          void Drv_NameOut(gpioName_t name, uint8_t sig)
  173          {
  174   1      
  175   1              if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
  176   1              {
- 177   2                      DrvSingleGpioOut(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit, sig);
-C51 COMPILER V9.00   DRV_GPIO                                                              05/13/2019 23:01:21 PAGE 4   
+ 177   2                      Drv_SingleGpioOut(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit, sig);
+C51 COMPILER V9.00   DRV_GPIO                                                              05/30/2019 19:01:14 PAGE 4   
 
  178   2              }
  179   1              else
  180   1              {
- 181   2                      DrvGroupGpioOut(gpioConfigArry[(uint8_t)name].portGroup, sig);
+ 181   2                      Drv_GroupGpioOut(gpioConfigArry[(uint8_t)name].portGroup, sig);
  182   2              }
  183   1      }
  184          
- 185          uint8_t DrvNameIn(gpioName_t name)
+ 185          uint8_t Drv_NameIn(gpioName_t name)
  186          {
  187   1              uint8_t inTtl = 0;
  188   1              
  189   1              if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
  190   1              {
- 191   2                      inTtl = DrvSingleGpioIn(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit);
+ 191   2                      inTtl = Drv_SingleGpioIn(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit)
+             -;
  192   2              }
  193   1              else
  194   1              {
- 195   2                      inTtl = DrvGroupGpioIn(gpioConfigArry[(uint8_t)name].portGroup);
+ 195   2                      inTtl = Drv_GroupGpioIn(gpioConfigArry[(uint8_t)name].portGroup);
  196   2              }
  197   1      
  198   1              return inTtl;

@@ -21,9 +21,9 @@ void main()
 {
 
 	(void)D_SYSTEM_ENTER_CRITICAL();
-	HalDisplayInit();
-	HalCalendarInit();
-	HalSysTimerInit();
+	Hal_DisplayInit();
+	Hal_CalendarInit();
+	Hal_SysTimerInit();
 	D_SYSTEM_EXIT_CRITICAL(D_SYS_ABSOLUTE_EXIT_CRITICAL);
 
 	while(1)
@@ -38,13 +38,13 @@ static void SysUpdateCalendar(void)
 {
 	static uint32_t updateTim = 0;
 
-	if (HalDiffTimerCnt(updateTim) >= (uint32_t)D_SYS_TIME_10MS)
+	if (Hal_DiffTimerCnt(updateTim) >= (uint32_t)D_SYS_TIME_10MS)
 	{
-		updateTim = HalGetCurSysTimerCnt();
-		HalUpdateSysTime();
+		updateTim = Hal_GetCurSysTimerCnt();
+		Hal_UpdateSysTime();
 	}
 	
-	HalFlashCalendar();
+	Hal_FlashCalendar();
 }
 
 static void SysIoCtrl(void)
@@ -52,10 +52,10 @@ static void SysIoCtrl(void)
 	static uint32_t ctrlTim = 0;
 	static bool_t ioCtrl = 0;
 
-	if (HalDiffTimerCnt(ctrlTim) >= (uint32_t)D_SYS_TIME_100MS)
+	if (Hal_DiffTimerCnt(ctrlTim) >= (uint32_t)D_SYS_TIME_100MS)
 	{
-		ctrlTim = HalGetCurSysTimerCnt();
-		HalDebugIOCtrl(ioCtrl);
+		ctrlTim = Hal_GetCurSysTimerCnt();
+		Hal_DebugIOCtrl(ioCtrl);
 		ioCtrl = (ioCtrl == 0)?(1):(0);
 	}
 }

@@ -137,13 +137,6 @@
           <Name>(98=1120,445,1562,794,1)(82=-1,-1,-1,-1,0)(83=-1,-1,-1,-1,0)(84=-1,-1,-1,-1,0)(85=1557,720,1819,849,1)(99=-1,-1,-1,-1,0)(91=1562,396,1826,721,1)(92=-1,-1,-1,-1,0)(93=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <WatchWindow1>
-        <Ww>
-          <count>0</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>sysTim</ItemText>
-        </Ww>
-      </WatchWindow1>
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
@@ -193,9 +186,9 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>20</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>11</TopLine>
+      <TopLine>17</TopLine>
       <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\app\main.c</PathWithFileName>
@@ -1943,8 +1936,8 @@
         </Doc>
         <Doc>
           <Name>..\source\app\main.c</Name>
-          <ColumnNumber>20</ColumnNumber>
-          <TopLine>11</TopLine>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>17</TopLine>
           <CurrentLine>30</CurrentLine>
         </Doc>
         <Doc>
@@ -1970,12 +1963,6 @@
           <ColumnNumber>0</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>7</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>\KEIL WORKSPACE\51\LCD1602万年历 - V1.6\SOURCE\HAL\HAL_CALENDAR.H</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>27</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\source\hal\hal_calendar.c</Name>

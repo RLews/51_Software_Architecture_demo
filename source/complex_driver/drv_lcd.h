@@ -6,9 +6,9 @@
 #include "drv_gpio.h"
 
 
-void DrvLcdInit(void);
-void DrvLcdWriteCmd(uint8_t cmd);
-void DrvLcdWriteDat(uint8_t dat);
+void Drv_LcdInit(void);
+void Drv_LcdWriteCmd(uint8_t cmd);
+void Drv_LcdWriteDat(uint8_t dat);
 
 
 #endif

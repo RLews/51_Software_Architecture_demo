@@ -48,7 +48,7 @@
 }while (0)
 
 
-void DrvSysTimerInit(void);
+void Drv_SysTimerInit(void);
 
 
 

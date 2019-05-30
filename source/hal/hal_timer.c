@@ -9,12 +9,12 @@ static volatile uint32_t halSysTimerOverflowCnt = 0;
 
 
 
-void HalSysTimerInit(void)
+void Hal_SysTimerInit(void)
 {
-	DrvSysTimerInit();
+	Drv_SysTimerInit();
 }
 
-uint32_t HalGetCurSysTimerCnt(void)
+uint32_t Hal_GetCurSysTimerCnt(void)
 {
 	uint32_t cnt = 0;
 	D_DRV_DISABLE_SYSTIME_INT();
@@ -25,9 +25,9 @@ uint32_t HalGetCurSysTimerCnt(void)
 	return cnt;
 }
 
-uint32_t HalDiffTimerCnt(uint32_t last)
+uint32_t Hal_DiffTimerCnt(uint32_t last)
 {
-	uint32_t tim = HalGetCurSysTimerCnt();
+	uint32_t tim = Hal_GetCurSysTimerCnt();
 
 	if (tim >= last)
 	{
@@ -42,7 +42,7 @@ uint32_t HalDiffTimerCnt(uint32_t last)
 }
 
 
-void HalSysTimerIsr()	interrupt	1
+void Hal_SysTimerIsr()	interrupt	1
 {
 	D_DRV_RELOAD_SYSTIME_CNT();
 	halSysTimerOverflowCnt++;
@@ -52,16 +52,16 @@ void HalSysTimerIsr()	interrupt	1
 #else
 static volatile uint16_t halSysTimerOverflowCnt = 0;
 
-static uint16_t HalGetSysOverflowCnt(void);
+static uint16_t Hal_GetSysOverflowCnt(void);
 
 
 
-void HalSysTimerInit(void)
+void Hal_SysTimerInit(void)
 {
-	DrvSysTimerInit();
+	Drv_SysTimerInit();
 }
 
-static uint16_t HalGetSysOverflowCnt(void)
+static uint16_t Hal_GetSysOverflowCnt(void)
 {
 	uint16_t cnt = 0;
 	
@@ -73,7 +73,7 @@ static uint16_t HalGetSysOverflowCnt(void)
 }
 
 
-uint32_t HalGetCurSysTimerCnt(void)
+uint32_t Hal_GetCurSysTimerCnt(void)
 {
 	uint32_t calcCnt = 0;
 	uint16_t tOverflowCnt = 0;
@@ -81,7 +81,7 @@ uint32_t HalGetCurSysTimerCnt(void)
 	
 	D_DISABLE_INTERRUPT();
 	D_DRV_GET_SYSTIME_COUNT(tTimerCnt);	/* maybe overflow */
-	tOverflowCnt = HalGetSysOverflowCnt();
+	tOverflowCnt = Hal_GetSysOverflowCnt();
 	if (D_DRV_GET_SYSTIME_INT_FLAG())
 	{
 		D_DRV_GET_SYSTIME_COUNT(tTimerCnt);	
@@ -95,11 +95,11 @@ uint32_t HalGetCurSysTimerCnt(void)
 	return calcCnt;
 }
 
-uint32_t HalDiffTimerCnt(uint32_t last)
+uint32_t Hal_DiffTimerCnt(uint32_t last)
 {
 	uint32_t tim = 0;
 
-	tim = HalGetCurSysTimerCnt();
+	tim = Hal_GetCurSysTimerCnt();
 	if (tim >= last)
 	{
 		tim -= last;
@@ -112,7 +112,7 @@ uint32_t HalDiffTimerCnt(uint32_t last)
 	return tim;
 }
 
-void HalSysTimerIsr()	interrupt	1
+void Hal_SysTimerIsr()	interrupt	1
 {
 	D_DRV_RELOAD_SYSTIME_CNT();
 	halSysTimerOverflowCnt++;

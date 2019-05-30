@@ -1,0 +1,1 @@
+"..\source\hal\hal_paltform.c" OPTIMIZE (2,SPEED) BROWSE INCDIR(..\source\app;..\source\complex_driver;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_paltform.lst) OBJECT(..\output\hal_paltform.obj)

@@ -7,7 +7,7 @@
 
 
 
-void DrvSysTimerInit(void)
+void Drv_SysTimerInit(void)
 {
 	TMOD &= 0xF0; //清零 T0 的控制位
 	TMOD |= 0x01; //配置 T0 为模式 1

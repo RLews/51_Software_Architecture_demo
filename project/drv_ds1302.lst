@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   DRV_DS1302                                                            05/13/2019 22:14:15 PAGE 1   
+C51 COMPILER V9.00   DRV_DS1302                                                            05/30/2019 19:01:15 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE DRV_DS1302
@@ -15,27 +15,27 @@ line level    source
    4          
    5          static const uint8_t code initTimerDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
    6          
-   7          static void DrvDs1302ByteWrite(uint8_t dat);
-   8          static uint8_t DrvDs1302ByteRead(void);
-   9          static void DrvDs1302WriteReg(uint8_t reg, uint8_t dat);
-  10          static uint8_t DrvDs1302ReadReg(uint8_t reg);
+   7          static void Drv_Ds1302ByteWrite(uint8_t dat);
+   8          static uint8_t Drv_Ds1302ByteRead(void);
+   9          static void Drv_Ds1302WriteReg(uint8_t reg, uint8_t dat);
+  10          static uint8_t Drv_Ds1302ReadReg(uint8_t reg);
   11          
   12          
-  13          void DrvDs1302Init(void)
+  13          void Drv_Ds1302Init(void)
   14          {
   15   1              uint8_t dat = 0;
   16   1              
-  17   1              DrvNameOut(EN_DS1302_CE, 0);
-  18   1              DrvNameOut(EN_DS1302_CK, 0);
-  19   1              dat = DrvDs1302ReadReg(0);
+  17   1              Drv_NameOut(EN_DS1302_CE, 0);
+  18   1              Drv_NameOut(EN_DS1302_CK, 0);
+  19   1              dat = Drv_Ds1302ReadReg(0);
   20   1              if ( (dat & 0x80) != 0 )
   21   1              {
-  22   2                      DrvDs1302WriteReg(7, 0x00);/* undo write protect */
-  23   2                      DrvDs1302BurstWrite(initTimerDat);
+  22   2                      Drv_Ds1302WriteReg(7, 0x00);/* undo write protect */
+  23   2                      Drv_Ds1302BurstWrite(initTimerDat);
   24   2              }
   25   1      }
   26          
-  27          static void DrvDs1302ByteWrite(uint8_t dat)
+  27          static void Drv_Ds1302ByteWrite(uint8_t dat)
   28          {
   29   1              uint8_t mask = 0;
   30   1      
@@ -43,90 +43,90 @@ line level    source
   32   1              {
   33   2                      if ( (mask&dat) != 0 )
   34   2                      {
-  35   3                              DrvNameOut(EN_DS1302_IO, 1);
+  35   3                              Drv_NameOut(EN_DS1302_IO, 1);
   36   3                      }
   37   2                      else
   38   2                      {
-  39   3                              DrvNameOut(EN_DS1302_IO, 0);
+  39   3                              Drv_NameOut(EN_DS1302_IO, 0);
   40   3                      }
-  41   2                      DrvNameOut(EN_DS1302_CK, 1);
-  42   2                      DrvNameOut(EN_DS1302_CK, 0);
+  41   2                      Drv_NameOut(EN_DS1302_CK, 1);
+  42   2                      Drv_NameOut(EN_DS1302_CK, 0);
   43   2              }
   44   1              
-  45   1              DrvNameOut(EN_DS1302_IO, 1);    // Õ∑≈IOΩ≈
+  45   1              Drv_NameOut(EN_DS1302_IO, 1);   // Õ∑≈IOΩ≈
   46   1      }
   47          
-  48          static uint8_t DrvDs1302ByteRead(void)
+  48          static uint8_t Drv_Ds1302ByteRead(void)
   49          {
   50   1              uint8_t mask = 0;
   51   1              uint8_t dat = 0;
   52   1      
   53   1              for (mask = 0x01; mask != 0; mask <<= 1)
-C51 COMPILER V9.00   DRV_DS1302                                                            05/13/2019 22:14:15 PAGE 2   
+C51 COMPILER V9.00   DRV_DS1302                                                            05/30/2019 19:01:15 PAGE 2   
 
   54   1              {
-  55   2                      if (DrvNameIn(EN_DS1302_IO) != 0)
+  55   2                      if (Drv_NameIn(EN_DS1302_IO) != 0)
   56   2                      {
   57   3                              dat |= mask;
   58   3                      }
-  59   2                      DrvNameOut(EN_DS1302_CK, 1);
-  60   2                      DrvNameOut(EN_DS1302_CK, 0);
+  59   2                      Drv_NameOut(EN_DS1302_CK, 1);
+  60   2                      Drv_NameOut(EN_DS1302_CK, 0);
   61   2              }
   62   1      
   63   1              return dat;
   64   1      }
   65          
-  66          static void DrvDs1302WriteReg(uint8_t reg, uint8_t dat)
+  66          static void Drv_Ds1302WriteReg(uint8_t reg, uint8_t dat)
   67          {
-  68   1              DrvNameOut(EN_DS1302_CE, 1);
-  69   1              DrvDs1302ByteWrite((reg<<1) | 0x80);            //∑¢ÀÕ–¥÷∏¡Ó
-  70   1              DrvDs1302ByteWrite(dat);
-  71   1              DrvNameOut(EN_DS1302_CE, 0);
+  68   1              Drv_NameOut(EN_DS1302_CE, 1);
+  69   1              Drv_Ds1302ByteWrite((reg<<1) | 0x80);           //∑¢ÀÕ–¥÷∏¡Ó
+  70   1              Drv_Ds1302ByteWrite(dat);
+  71   1              Drv_NameOut(EN_DS1302_CE, 0);
   72   1      }
   73          
-  74          static uint8_t DrvDs1302ReadReg(uint8_t reg)
+  74          static uint8_t Drv_Ds1302ReadReg(uint8_t reg)
   75          {
   76   1              uint8_t dat = 0;
   77   1              
-  78   1              DrvNameOut(EN_DS1302_CE, 1);
-  79   1              DrvDs1302ByteWrite((reg<<1) | 0x81);            //∑¢ÀÕ∂¡÷∏¡Ó
-  80   1              dat = DrvDs1302ByteRead();
-  81   1              DrvNameOut(EN_DS1302_CE, 0);
+  78   1              Drv_NameOut(EN_DS1302_CE, 1);
+  79   1              Drv_Ds1302ByteWrite((reg<<1) | 0x81);           //∑¢ÀÕ∂¡÷∏¡Ó
+  80   1              dat = Drv_Ds1302ByteRead();
+  81   1              Drv_NameOut(EN_DS1302_CE, 0);
   82   1              
   83   1              return dat;     
   84   1      }
   85          
-  86          void DrvDs1302BurstWrite(uint8_t dat[])
+  86          void Drv_Ds1302BurstWrite(uint8_t dat[])
   87          {
   88   1              uint8_t i = 0;
   89   1      
-  90   1              DrvNameOut(EN_DS1302_CE, 1);
-  91   1              DrvDs1302ByteWrite(0xBE);               //∑¢ÀÕÕª∑¢–¥ºƒ¥Ê∆˜÷∏¡Ó
+  90   1              Drv_NameOut(EN_DS1302_CE, 1);
+  91   1              Drv_Ds1302ByteWrite(0xBE);              //∑¢ÀÕÕª∑¢–¥ºƒ¥Ê∆˜÷∏¡Ó
   92   1              
   93   1              for (i = 0; i < 8; i++)
   94   1              {
-  95   2                      DrvDs1302ByteWrite(dat[i]);
+  95   2                      Drv_Ds1302ByteWrite(dat[i]);
   96   2              }
   97   1              
-  98   1              DrvNameOut(EN_DS1302_CE, 0);
+  98   1              Drv_NameOut(EN_DS1302_CE, 0);
   99   1      }
  100          
- 101          void DrvDs1302BurstRead(uint8_t dat[])
+ 101          void Drv_Ds1302BurstRead(uint8_t dat[])
  102          {
  103   1              uint8_t i = 0;
  104   1              
- 105   1              DrvNameOut(EN_DS1302_CE, 1);
- 106   1              DrvDs1302ByteWrite(0xBF);
+ 105   1              Drv_NameOut(EN_DS1302_CE, 1);
+ 106   1              Drv_Ds1302ByteWrite(0xBF);
  107   1              
  108   1              for (i=0;i<8;i++)
  109   1              {
- 110   2                      dat[i] = DrvDs1302ByteRead();
+ 110   2                      dat[i] = Drv_Ds1302ByteRead();
  111   2              }
  112   1              
- 113   1              DrvNameOut(EN_DS1302_CE, 0);
+ 113   1              Drv_NameOut(EN_DS1302_CE, 0);
  114   1      }
  115          
-C51 COMPILER V9.00   DRV_DS1302                                                            05/13/2019 22:14:15 PAGE 3   
+C51 COMPILER V9.00   DRV_DS1302                                                            05/30/2019 19:01:15 PAGE 3   
 
 
 

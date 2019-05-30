@@ -2,7 +2,7 @@
 
 #include "hal_paltform.h"
 
-bool_t SysEnterCritical(void)
+bool_t Hal_SysEnterCritical(void)
 {
 	bool_t sta = EA;
 	EA = 0;
@@ -10,7 +10,7 @@ bool_t SysEnterCritical(void)
 	return sta;
 }
 
-void SysExitCritical(bool_t sta)
+void Hal_SysExitCritical(bool_t sta)
 {
 	EA = sta;
 }

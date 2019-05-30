@@ -10,12 +10,12 @@ static calendar_t sysCalendar = {
 
 
 
-void HalCalendarInit(void)
+void Hal_CalendarInit(void)
 {
-	DrvDs1302Init();
+	Drv_Ds1302Init();
 }
 
-void HalGetSysTime(calendar_t *pSysTmr)
+void Hal_GetSysTime(calendar_t *pSysTmr)
 {
 	const calendar_t * pCalendar = &sysCalendar;
 
@@ -28,12 +28,12 @@ void HalGetSysTime(calendar_t *pSysTmr)
 	pSysTmr->week = pCalendar->week;
 }
 
-void HalUpdateSysTime(void)
+void Hal_UpdateSysTime(void)
 {
 	uint8_t time[8] = {0};
 	calendar_t * pCalendar = &sysCalendar;
 
-	DrvDs1302BurstRead(time);
+	Drv_Ds1302BurstRead(time);
 	pCalendar->year = time[6] + 0x2000;
 	pCalendar->mon = time[4];
 	pCalendar->day = time[3];

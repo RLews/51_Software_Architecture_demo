@@ -4,8 +4,8 @@
 
 
 
-void HalDebugIOCtrl(uint8_t sig)
+void Hal_DebugIOCtrl(uint8_t sig)
 {
-	DrvNameOut(EN_DEBUG_IO, sig);
+	Drv_NameOut(EN_DEBUG_IO, sig);
 }
 

@@ -69,12 +69,12 @@ typedef struct __GPIO_CONFIG_T
 
 
 
-uint8_t DrvSingleGpioIn(portGroup_t group, gpioBit_t bits);
-uint8_t DrvGroupGpioIn(portGroup_t group);
-void DrvSingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig);
-void DrvGroupGpioOut(portGroup_t group, uint8_t sig);
-void DrvNameOut(gpioName_t name, uint8_t sig);
-uint8_t DrvNameIn(gpioName_t name);
+uint8_t Drv_SingleGpioIn(portGroup_t group, gpioBit_t bits);
+uint8_t Drv_GroupGpioIn(portGroup_t group);
+void Drv_SingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig);
+void Drv_GroupGpioOut(portGroup_t group, uint8_t sig);
+void Drv_NameOut(gpioName_t name, uint8_t sig);
+uint8_t Drv_NameIn(gpioName_t name);
 
 
 

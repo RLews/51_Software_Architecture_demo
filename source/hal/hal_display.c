@@ -5,16 +5,16 @@
 extern calendar_t sysCalendar;
 
 
-static void HalDisplayCalendar(const calendar_t * pCalendar);
+static void Hal_DisplayCalendar(const calendar_t * pCalendar);
 
 
 
-void HalDisplayInit(void)
+void Hal_DisplayInit(void)
 {
-	DrvLcdInit();
+	Drv_LcdInit();
 }
 
-static void HalDisplayCalendar(const calendar_t * pCalendar)
+static void Hal_DisplayCalendar(const calendar_t * pCalendar)
 {
 	uint8_t str[11] = {0};
 	
@@ -29,12 +29,12 @@ static void HalDisplayCalendar(const calendar_t * pCalendar)
 	str[8] = (pCalendar->day >> 4) + '0'; //“日”
 	str[9] = (pCalendar->day & 0x0F) + '0';
 	str[10] = '\0';
-	HalDisplayStr(0, 0, str); //显示到液晶的第一行
+	Hal_DisplayStr(0, 0, str); //显示到液晶的第一行
 
 	str[0] = (pCalendar->week & 0x0F) + '0'; //“星期”
 	str[1] = '\0';
-	HalDisplayStr(11, 0, "week");
-	HalDisplayStr(15, 0, str); //显示到液晶的第一行
+	Hal_DisplayStr(11, 0, "week");
+	Hal_DisplayStr(15, 0, str); //显示到液晶的第一行
 
 	str[0] = (pCalendar->hour >> 4) + '0'; //“时”
 	str[1] = (pCalendar->hour & 0x0F) + '0';
@@ -45,25 +45,25 @@ static void HalDisplayCalendar(const calendar_t * pCalendar)
 	str[6] = (pCalendar->sec >> 4) + '0'; //“秒”
 	str[7] = (pCalendar->sec & 0x0F) + '0';
 	str[8] = '\0';
-	HalDisplayStr(4, 1, str); //显示到液晶的第二行
+	Hal_DisplayStr(4, 1, str); //显示到液晶的第二行
 }
 
-void HalFlashCalendar(void)
+void Hal_FlashCalendar(void)
 {
 	static uint8_t secBak = 0;
 	calendar_t tCalendar = {0};
 
-	HalGetSysTime(&tCalendar);
+	Hal_GetSysTime(&tCalendar);
 
 	if (secBak != tCalendar.sec)
 	{
 		secBak = tCalendar.sec;
-		HalDisplayCalendar(&tCalendar);
+		Hal_DisplayCalendar(&tCalendar);
 	}
 }
 
 
-void HalDisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
+void Hal_DisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
 {
 	uint8_t addr = 0;
 	//由输入的显示坐标计算显示 RAM 的地址
@@ -76,10 +76,10 @@ void HalDisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
 		addr = 0x40 + x; //第二行字符地址从 0x40 起始
 	}
 	//由起始显示 RAM 地址连续写入字符串
-	DrvLcdWriteCmd(addr | 0x80); //写入起始地址
+	Drv_LcdWriteCmd(addr | 0x80); //写入起始地址
 	while (*str != '\0') //连续写入字符串数据，直到检测到结束符
 	{
-		DrvLcdWriteDat(*str);
+		Drv_LcdWriteDat(*str);
 		str++;
 	}
 }

@@ -8,9 +8,9 @@
 
 
 
-void HalSysTimerInit(void);
-uint32_t HalGetCurSysTimerCnt(void);
-uint32_t HalDiffTimerCnt(uint32_t last);
+void Hal_SysTimerInit(void);
+uint32_t Hal_GetCurSysTimerCnt(void);
+uint32_t Hal_DiffTimerCnt(uint32_t last);
 
 
 #endif

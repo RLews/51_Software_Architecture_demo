@@ -7,7 +7,7 @@
 #include "drv_gpio.h"
 
 
-void HalDebugIOCtrl(uint8_t sig);
+void Hal_DebugIOCtrl(uint8_t sig);
 
 
 #endif

@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   HAL_DISPLAY                                                           05/13/2019 22:14:15 PAGE 1   
+C51 COMPILER V9.00   HAL_DISPLAY                                                           05/30/2019 19:01:14 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE HAL_DISPLAY
@@ -16,16 +16,16 @@ line level    source
    5          extern calendar_t sysCalendar;
    6          
    7          
-   8          static void HalDisplayCalendar(const calendar_t * pCalendar);
+   8          static void Hal_DisplayCalendar(const calendar_t * pCalendar);
    9          
   10          
   11          
-  12          void HalDisplayInit(void)
+  12          void Hal_DisplayInit(void)
   13          {
-  14   1              DrvLcdInit();
+  14   1              Drv_LcdInit();
   15   1      }
   16          
-  17          static void HalDisplayCalendar(const calendar_t * pCalendar)
+  17          static void Hal_DisplayCalendar(const calendar_t * pCalendar)
   18          {
   19   1              uint8_t str[11] = {0};
   20   1              
@@ -40,12 +40,12 @@ line level    source
   29   1              str[8] = (pCalendar->day >> 4) + '0'; //“日”
   30   1              str[9] = (pCalendar->day & 0x0F) + '0';
   31   1              str[10] = '\0';
-  32   1              HalDisplayStr(0, 0, str); //显示到液晶的第一行
+  32   1              Hal_DisplayStr(0, 0, str); //显示到液晶的第一行
   33   1      
   34   1              str[0] = (pCalendar->week & 0x0F) + '0'; //“星期”
   35   1              str[1] = '\0';
-  36   1              HalDisplayStr(11, 0, "week");
-  37   1              HalDisplayStr(15, 0, str); //显示到液晶的第一行
+  36   1              Hal_DisplayStr(11, 0, "week");
+  37   1              Hal_DisplayStr(15, 0, str); //显示到液晶的第一行
   38   1      
   39   1              str[0] = (pCalendar->hour >> 4) + '0'; //“时”
   40   1              str[1] = (pCalendar->hour & 0x0F) + '0';
@@ -56,27 +56,27 @@ line level    source
   45   1              str[6] = (pCalendar->sec >> 4) + '0'; //“秒”
   46   1              str[7] = (pCalendar->sec & 0x0F) + '0';
   47   1              str[8] = '\0';
-  48   1              HalDisplayStr(4, 1, str); //显示到液晶的第二行
+  48   1              Hal_DisplayStr(4, 1, str); //显示到液晶的第二行
   49   1      }
   50          
-  51          void HalFlashCalendar(void)
+  51          void Hal_FlashCalendar(void)
   52          {
   53   1              static uint8_t secBak = 0;
-C51 COMPILER V9.00   HAL_DISPLAY                                                           05/13/2019 22:14:15 PAGE 2   
+C51 COMPILER V9.00   HAL_DISPLAY                                                           05/30/2019 19:01:14 PAGE 2   
 
   54   1              calendar_t tCalendar = {0};
   55   1      
-  56   1              HalGetSysTime(&tCalendar);
+  56   1              Hal_GetSysTime(&tCalendar);
   57   1      
   58   1              if (secBak != tCalendar.sec)
   59   1              {
   60   2                      secBak = tCalendar.sec;
-  61   2                      HalDisplayCalendar(&tCalendar);
+  61   2                      Hal_DisplayCalendar(&tCalendar);
   62   2              }
   63   1      }
   64          
   65          
-  66          void HalDisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
+  66          void Hal_DisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
   67          {
   68   1              uint8_t addr = 0;
   69   1              //由输入的显示坐标计算显示 RAM 的地址
@@ -89,10 +89,10 @@ line level    source
   76   2                      addr = 0x40 + x; //第二行字符地址从 0x40 起始
   77   2              }
   78   1              //由起始显示 RAM 地址连续写入字符串
-  79   1              DrvLcdWriteCmd(addr | 0x80); //写入起始地址
+  79   1              Drv_LcdWriteCmd(addr | 0x80); //写入起始地址
   80   1              while (*str != '\0') //连续写入字符串数据，直到检测到结束符
   81   1              {
-  82   2                      DrvLcdWriteDat(*str);
+  82   2                      Drv_LcdWriteDat(*str);
   83   2                      str++;
   84   2              }
   85   1      }

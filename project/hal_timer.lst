@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 23:17:50 PAGE 1   
+C51 COMPILER V9.00   HAL_TIMER                                                             05/30/2019 19:01:14 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE HAL_TIMER
@@ -20,12 +20,12 @@ line level    source
    9          
   10          
   11          
-  12          void HalSysTimerInit(void)
+  12          void Hal_SysTimerInit(void)
   13          {
-  14   1              DrvSysTimerInit();
+  14   1              Drv_SysTimerInit();
   15   1      }
   16          
-  17          uint32_t HalGetCurSysTimerCnt(void)
+  17          uint32_t Hal_GetCurSysTimerCnt(void)
   18          {
   19   1              uint32_t cnt = 0;
   20   1              D_DRV_DISABLE_SYSTIME_INT();
@@ -36,9 +36,9 @@ line level    source
   25   1              return cnt;
   26   1      }
   27          
-  28          uint32_t HalDiffTimerCnt(uint32_t last)
+  28          uint32_t Hal_DiffTimerCnt(uint32_t last)
   29          {
-  30   1              uint32_t tim = HalGetCurSysTimerCnt();
+  30   1              uint32_t tim = Hal_GetCurSysTimerCnt();
   31   1      
   32   1              if (tim >= last)
   33   1              {
@@ -53,7 +53,7 @@ line level    source
   42   1      }
   43          
   44          
-  45          void HalSysTimerIsr()   interrupt       1
+  45          void Hal_SysTimerIsr()  interrupt       1
   46          {
   47   1              D_DRV_RELOAD_SYSTIME_CNT();
   48   1              halSysTimerOverflowCnt++;
@@ -62,19 +62,19 @@ line level    source
   51          
   52          #else
               static volatile uint16_t halSysTimerOverflowCnt = 0;
-C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 23:17:50 PAGE 2   
+C51 COMPILER V9.00   HAL_TIMER                                                             05/30/2019 19:01:14 PAGE 2   
 
               
-              static uint16_t HalGetSysOverflowCnt(void);
+              static uint16_t Hal_GetSysOverflowCnt(void);
               
               
               
-              void HalSysTimerInit(void)
+              void Hal_SysTimerInit(void)
               {
-                      DrvSysTimerInit();
+                      Drv_SysTimerInit();
               }
               
-              static uint16_t HalGetSysOverflowCnt(void)
+              static uint16_t Hal_GetSysOverflowCnt(void)
               {
                       uint16_t cnt = 0;
                       
@@ -86,7 +86,7 @@ line level    source
               }
               
               
-              uint32_t HalGetCurSysTimerCnt(void)
+              uint32_t Hal_GetCurSysTimerCnt(void)
               {
                       uint32_t calcCnt = 0;
                       uint16_t tOverflowCnt = 0;
@@ -94,7 +94,7 @@ line level    source
                       
                       D_DISABLE_INTERRUPT();
                       D_DRV_GET_SYSTIME_COUNT(tTimerCnt);     /* maybe overflow */
-                      tOverflowCnt = HalGetSysOverflowCnt();
+                      tOverflowCnt = Hal_GetSysOverflowCnt();
                       if (D_DRV_GET_SYSTIME_INT_FLAG())
                       {
                               D_DRV_GET_SYSTIME_COUNT(tTimerCnt);     
@@ -108,11 +108,11 @@ line level    source
                       return calcCnt;
               }
               
-              uint32_t HalDiffTimerCnt(uint32_t last)
+              uint32_t Hal_DiffTimerCnt(uint32_t last)
               {
                       uint32_t tim = 0;
               
-                      tim = HalGetCurSysTimerCnt();
+                      tim = Hal_GetCurSysTimerCnt();
                       if (tim >= last)
                       {
                               tim -= last;
@@ -125,8 +125,8 @@ line level    source
                       return tim;
               }
               
-              void HalSysTimerIsr()   interrupt       1
-C51 COMPILER V9.00   HAL_TIMER                                                             05/13/2019 23:17:50 PAGE 3   
+              void Hal_SysTimerIsr()  interrupt       1
+C51 COMPILER V9.00   HAL_TIMER                                                             05/30/2019 19:01:14 PAGE 3   
 
               {
                       D_DRV_RELOAD_SYSTIME_CNT();

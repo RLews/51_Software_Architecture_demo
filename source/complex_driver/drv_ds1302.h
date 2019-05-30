@@ -8,9 +8,9 @@
 
 
 
-void DrvDs1302Init(void);
-void DrvDs1302BurstWrite(uint8_t dat[]);
-void DrvDs1302BurstRead(uint8_t dat[]);
+void Drv_Ds1302Init(void);
+void Drv_Ds1302BurstWrite(uint8_t dat[]);
+void Drv_Ds1302BurstRead(uint8_t dat[]);
 
 
 #endif

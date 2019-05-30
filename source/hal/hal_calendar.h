@@ -19,9 +19,9 @@ typedef struct __CALENDAR_T
 }calendar_t;
 
 
-void HalCalendarInit(void);
-void HalUpdateSysTime(void);
-void HalGetSysTime(calendar_t *pSysTmr);
+void Hal_CalendarInit(void);
+void Hal_UpdateSysTime(void);
+void Hal_GetSysTime(calendar_t *pSysTmr);
 
 
 #endif

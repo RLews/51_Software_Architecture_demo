@@ -1,0 +1,19 @@
+SET C51INC=D:\Keil\C51\C51\INC\Atmel\;D:\Keil\C51\C51\INC\
+SET C51LIB=D:\Keil\C51\C51\LIB
+SET CPU_TYPE=AT89C52
+SET CPU_VENDOR=Atmel
+SET UV2_TARGET=Target 1
+SET CPU_XTAL=0x00B71B00
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\main.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\drv_gpio.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\drv_timer.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\drv_paltform.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\hal_gpio.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\hal_timer.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\hal_display.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\hal_calendar.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\hal_paltform.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\drv_ds1302.__i
+"D:\Keil\C51\C51\BIN\C51.EXE" @..\output\drv_lcd.__i
+"D:\Keil\C51\C51\BIN\BL51.EXE" @..\output\1.lnp
+"D:\Keil\C51\C51\BIN\OH51.EXE" "..\output\1" 

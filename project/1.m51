@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        05/16/2019  21:40:16  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/30/2019  19:01:15  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -55,195 +55,195 @@ LINK MAP OF MODULE:  ..\output\1 (MAIN)
             CODE    0003H     0008H     UNIT         ?CO?HAL_CALENDAR
             CODE    000BH     0003H     ABSOLUTE     
             CODE    000EH     01EDH     UNIT         ?C?LIB_CODE
-            CODE    01FBH     01CBH     UNIT         ?PR?_HALDISPLAYCALENDAR?HAL_DISPLAY
-            CODE    03C6H     00EBH     UNIT         ?PR?_HALGETSYSTIME?HAL_CALENDAR
-            CODE    04B1H     00C7H     UNIT         ?PR?_DRVSINGLEGPIOOUT?DRV_GPIO
-            CODE    0578H     00B9H     UNIT         ?PR?HALUPDATESYSTIME?HAL_CALENDAR
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 2
+            CODE    01FBH     01CBH     UNIT         ?PR?_HAL_DISPLAYCALENDAR?HAL_DISPLAY
+            CODE    03C6H     00EBH     UNIT         ?PR?_HAL_GETSYSTIME?HAL_CALENDAR
+            CODE    04B1H     00C7H     UNIT         ?PR?_DRV_SINGLEGPIOOUT?DRV_GPIO
+            CODE    0578H     00B9H     UNIT         ?PR?HAL_UPDATESYSTIME?HAL_CALENDAR
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 2
 
 
-            CODE    0631H     00B5H     UNIT         ?PR?_DRVSINGLEGPIOIN?DRV_GPIO
+            CODE    0631H     00B5H     UNIT         ?PR?_DRV_SINGLEGPIOIN?DRV_GPIO
             CODE    06E6H     008CH     UNIT         ?C_C51STARTUP
-            CODE    0772H     006CH     UNIT         ?PR?_HALDIFFTIMERCNT?HAL_TIMER
-            CODE    07DEH     0065H     UNIT         ?PR?_DRVNAMEIN?DRV_GPIO
-            CODE    0843H     0061H     UNIT         ?PR?_DRVNAMEOUT?DRV_GPIO
-            CODE    08A4H     0052H     UNIT         ?PR?HALSYSTIMERISR?HAL_TIMER
-            CODE    08F6H     004CH     UNIT         ?PR?_HALDISPLAYSTR?HAL_DISPLAY
-            CODE    0942H     004CH     UNIT         ?PR?DRVLCDWAITREADY?DRV_LCD
-            CODE    098EH     0042H     UNIT         ?PR?_DRVDS1302BYTEWRITE?DRV_DS1302
-            CODE    09D0H     0041H     UNIT         ?PR?HALFLASHCALENDAR?HAL_DISPLAY
-            CODE    0A11H     003FH     UNIT         ?PR?_DRVDS1302BURSTWRITE?DRV_DS1302
-            CODE    0A50H     003FH     UNIT         ?PR?_DRVDS1302BURSTREAD?DRV_DS1302
+            CODE    0772H     006CH     UNIT         ?PR?_HAL_DIFFTIMERCNT?HAL_TIMER
+            CODE    07DEH     0065H     UNIT         ?PR?_DRV_NAMEIN?DRV_GPIO
+            CODE    0843H     0061H     UNIT         ?PR?_DRV_NAMEOUT?DRV_GPIO
+            CODE    08A4H     0052H     UNIT         ?PR?HAL_SYSTIMERISR?HAL_TIMER
+            CODE    08F6H     004CH     UNIT         ?PR?_HAL_DISPLAYSTR?HAL_DISPLAY
+            CODE    0942H     004CH     UNIT         ?PR?DRV_LCDWAITREADY?DRV_LCD
+            CODE    098EH     0042H     UNIT         ?PR?_DRV_DS1302BYTEWRITE?DRV_DS1302
+            CODE    09D0H     0041H     UNIT         ?PR?HAL_FLASHCALENDAR?HAL_DISPLAY
+            CODE    0A11H     003FH     UNIT         ?PR?_DRV_DS1302BURSTWRITE?DRV_DS1302
+            CODE    0A50H     003FH     UNIT         ?PR?_DRV_DS1302BURSTREAD?DRV_DS1302
             CODE    0A8FH     0036H     UNIT         ?PR?SYSIOCTRL?MAIN
-            CODE    0AC5H     0032H     UNIT         ?PR?DRVDS1302BYTEREAD?DRV_DS1302
-            CODE    0AF7H     002FH     UNIT         ?PR?_DRVGROUPGPIOIN?DRV_GPIO
-            CODE    0B26H     002EH     UNIT         ?PR?DRVDS1302INIT?DRV_DS1302
+            CODE    0AC5H     0032H     UNIT         ?PR?DRV_DS1302BYTEREAD?DRV_DS1302
+            CODE    0AF7H     002FH     UNIT         ?PR?_DRV_GROUPGPIOIN?DRV_GPIO
+            CODE    0B26H     002EH     UNIT         ?PR?DRV_DS1302INIT?DRV_DS1302
             CODE    0B54H     002BH     UNIT         ?PR?SYSUPDATECALENDAR?MAIN
-            CODE    0B7FH     0029H     UNIT         ?PR?_DRVGROUPGPIOOUT?DRV_GPIO
-            CODE    0BA8H     0029H     UNIT         ?PR?HALGETCURSYSTIMERCNT?HAL_TIMER
-            CODE    0BD1H     0029H     UNIT         ?PR?_DRVLCDWRITECMD?DRV_LCD
-            CODE    0BFAH     0029H     UNIT         ?PR?_DRVLCDWRITEDAT?DRV_LCD
-            CODE    0C23H     0027H     UNIT         ?PR?_DRVDS1302READREG?DRV_DS1302
-            CODE    0C4AH     0024H     UNIT         ?PR?_DRVDS1302WRITEREG?DRV_DS1302
+            CODE    0B7FH     0029H     UNIT         ?PR?_DRV_GROUPGPIOOUT?DRV_GPIO
+            CODE    0BA8H     0029H     UNIT         ?PR?HAL_GETCURSYSTIMERCNT?HAL_TIMER
+            CODE    0BD1H     0029H     UNIT         ?PR?_DRV_LCDWRITECMD?DRV_LCD
+            CODE    0BFAH     0029H     UNIT         ?PR?_DRV_LCDWRITEDAT?DRV_LCD
+            CODE    0C23H     0027H     UNIT         ?PR?_DRV_DS1302READREG?DRV_DS1302
+            CODE    0C4AH     0024H     UNIT         ?PR?_DRV_DS1302WRITEREG?DRV_DS1302
             CODE    0C6EH     0023H     UNIT         ?C_INITSEG
             CODE    0C91H     001AH     UNIT         ?PR?MAIN?MAIN
             CODE    0CABH     0018H     UNIT         ?CO?DRV_GPIO
             CODE    0CC3H     0018H     UNIT         ?CO?HAL_DISPLAY
-            CODE    0CDBH     0015H     UNIT         ?PR?DRVLCDINIT?DRV_LCD
-            CODE    0CF0H     0011H     UNIT         ?PR?DRVSYSTIMERINIT?DRV_TIMER
-            CODE    0D01H     000CH     UNIT         ?PR?SYSENTERCRITICAL?HAL_PALTFORM
-            CODE    0D0DH     000AH     UNIT         ?PR?_HALDEBUGIOCTRL?HAL_GPIO
-            CODE    0D17H     0009H     UNIT         ?PR?_SYSEXITCRITICAL?HAL_PALTFORM
+            CODE    0CDBH     0015H     UNIT         ?PR?DRV_LCDINIT?DRV_LCD
+            CODE    0CF0H     0011H     UNIT         ?PR?DRV_SYSTIMERINIT?DRV_TIMER
+            CODE    0D01H     000CH     UNIT         ?PR?HAL_SYSENTERCRITICAL?HAL_PALTFORM
+            CODE    0D0DH     000AH     UNIT         ?PR?_HAL_DEBUGIOCTRL?HAL_GPIO
+            CODE    0D17H     0009H     UNIT         ?PR?_HAL_SYSEXITCRITICAL?HAL_PALTFORM
             CODE    0D20H     0008H     UNIT         ?CO?DRV_DS1302
-            CODE    0D28H     0004H     UNIT         ?PR?HALSYSTIMERINIT?HAL_TIMER
-            CODE    0D2CH     0004H     UNIT         ?PR?HALDISPLAYINIT?HAL_DISPLAY
-            CODE    0D30H     0004H     UNIT         ?PR?HALCALENDARINIT?HAL_CALENDAR
+            CODE    0D28H     0004H     UNIT         ?PR?HAL_SYSTIMERINIT?HAL_TIMER
+            CODE    0D2CH     0004H     UNIT         ?PR?HAL_DISPLAYINIT?HAL_DISPLAY
+            CODE    0D30H     0004H     UNIT         ?PR?HAL_CALENDARINIT?HAL_CALENDAR
 
 
 
 OVERLAY MAP OF MODULE:   ..\output\1 (MAIN)
 
 
-SEGMENT                                       DATA_GROUP 
-  +--> CALLED SEGMENT                       START    LENGTH
------------------------------------------------------------
-?C_C51STARTUP                               -----    -----
+SEGMENT                                         DATA_GROUP 
+  +--> CALLED SEGMENT                         START    LENGTH
+-------------------------------------------------------------
+?C_C51STARTUP                                 -----    -----
   +--> ?PR?MAIN?MAIN
   +--> ?C_INITSEG
 
-?PR?MAIN?MAIN                               -----    -----
-  +--> ?PR?SYSENTERCRITICAL?HAL_PALTFORM
-  +--> ?PR?HALDISPLAYINIT?HAL_DISPLAY
-  +--> ?PR?HALCALENDARINIT?HAL_CALENDAR
-  +--> ?PR?HALSYSTIMERINIT?HAL_TIMER
-  +--> ?PR?_SYSEXITCRITICAL?HAL_PALTFORM
+?PR?MAIN?MAIN                                 -----    -----
+  +--> ?PR?HAL_SYSENTERCRITICAL?HAL_PALTFORM
+  +--> ?PR?HAL_DISPLAYINIT?HAL_DISPLAY
+  +--> ?PR?HAL_CALENDARINIT?HAL_CALENDAR
+  +--> ?PR?HAL_SYSTIMERINIT?HAL_TIMER
+  +--> ?PR?_HAL_SYSEXITCRITICAL?HAL_PALTFORM
   +--> ?PR?SYSUPDATECALENDAR?MAIN
   +--> ?PR?SYSIOCTRL?MAIN
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 3
 
 
 
-?PR?SYSENTERCRITICAL?HAL_PALTFORM           0008H    0001H
+?PR?HAL_SYSENTERCRITICAL?HAL_PALTFORM         0008H    0001H
 
-?PR?HALDISPLAYINIT?HAL_DISPLAY              -----    -----
-  +--> ?PR?DRVLCDINIT?DRV_LCD
+?PR?HAL_DISPLAYINIT?HAL_DISPLAY               -----    -----
+  +--> ?PR?DRV_LCDINIT?DRV_LCD
 
-?PR?DRVLCDINIT?DRV_LCD                      -----    -----
-  +--> ?PR?_DRVLCDWRITECMD?DRV_LCD
+?PR?DRV_LCDINIT?DRV_LCD                       -----    -----
+  +--> ?PR?_DRV_LCDWRITECMD?DRV_LCD
 
-?PR?_DRVLCDWRITECMD?DRV_LCD                 0024H    0001H
-  +--> ?PR?DRVLCDWAITREADY?DRV_LCD
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
+?PR?_DRV_LCDWRITECMD?DRV_LCD                  0024H    0001H
+  +--> ?PR?DRV_LCDWAITREADY?DRV_LCD
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
 
-?PR?DRVLCDWAITREADY?DRV_LCD                 0025H    0003H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
-  +--> ?PR?_DRVNAMEIN?DRV_GPIO
+?PR?DRV_LCDWAITREADY?DRV_LCD                  0025H    0003H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
+  +--> ?PR?_DRV_NAMEIN?DRV_GPIO
 
-?PR?_DRVNAMEOUT?DRV_GPIO                    0028H    0002H
+?PR?_DRV_NAMEOUT?DRV_GPIO                     0028H    0002H
   +--> ?CO?DRV_GPIO
-  +--> ?PR?_DRVSINGLEGPIOOUT?DRV_GPIO
-  +--> ?PR?_DRVGROUPGPIOOUT?DRV_GPIO
+  +--> ?PR?_DRV_SINGLEGPIOOUT?DRV_GPIO
+  +--> ?PR?_DRV_GROUPGPIOOUT?DRV_GPIO
 
-?PR?_DRVSINGLEGPIOOUT?DRV_GPIO              002AH    0003H
+?PR?_DRV_SINGLEGPIOOUT?DRV_GPIO               002AH    0003H
 
-?PR?_DRVGROUPGPIOOUT?DRV_GPIO               002AH    0002H
+?PR?_DRV_GROUPGPIOOUT?DRV_GPIO                002AH    0002H
 
-?PR?_DRVNAMEIN?DRV_GPIO                     0028H    0002H
+?PR?_DRV_NAMEIN?DRV_GPIO                      0028H    0002H
   +--> ?CO?DRV_GPIO
-  +--> ?PR?_DRVSINGLEGPIOIN?DRV_GPIO
-  +--> ?PR?_DRVGROUPGPIOIN?DRV_GPIO
+  +--> ?PR?_DRV_SINGLEGPIOIN?DRV_GPIO
+  +--> ?PR?_DRV_GROUPGPIOIN?DRV_GPIO
 
-?PR?_DRVSINGLEGPIOIN?DRV_GPIO               002AH    0003H
+?PR?_DRV_SINGLEGPIOIN?DRV_GPIO                002AH    0003H
 
-?PR?_DRVGROUPGPIOIN?DRV_GPIO                002AH    0002H
+?PR?_DRV_GROUPGPIOIN?DRV_GPIO                 002AH    0002H
 
-?PR?HALCALENDARINIT?HAL_CALENDAR            -----    -----
-  +--> ?PR?DRVDS1302INIT?DRV_DS1302
+?PR?HAL_CALENDARINIT?HAL_CALENDAR             -----    -----
+  +--> ?PR?DRV_DS1302INIT?DRV_DS1302
 
-?PR?DRVDS1302INIT?DRV_DS1302                0008H    0001H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
-  +--> ?PR?_DRVDS1302READREG?DRV_DS1302
-  +--> ?PR?_DRVDS1302WRITEREG?DRV_DS1302
+?PR?DRV_DS1302INIT?DRV_DS1302                 0008H    0001H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
+  +--> ?PR?_DRV_DS1302READREG?DRV_DS1302
+  +--> ?PR?_DRV_DS1302WRITEREG?DRV_DS1302
   +--> ?CO?DRV_DS1302
-  +--> ?PR?_DRVDS1302BURSTWRITE?DRV_DS1302
+  +--> ?PR?_DRV_DS1302BURSTWRITE?DRV_DS1302
 
-?PR?_DRVDS1302READREG?DRV_DS1302            0009H    0002H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
-  +--> ?PR?_DRVDS1302BYTEWRITE?DRV_DS1302
-  +--> ?PR?DRVDS1302BYTEREAD?DRV_DS1302
+?PR?_DRV_DS1302READREG?DRV_DS1302             0009H    0002H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
+  +--> ?PR?_DRV_DS1302BYTEWRITE?DRV_DS1302
+  +--> ?PR?DRV_DS1302BYTEREAD?DRV_DS1302
 
-?PR?_DRVDS1302BYTEWRITE?DRV_DS1302          0017H    0002H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
+?PR?_DRV_DS1302BYTEWRITE?DRV_DS1302           0017H    0002H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
 
-?PR?DRVDS1302BYTEREAD?DRV_DS1302            0017H    0002H
-  +--> ?PR?_DRVNAMEIN?DRV_GPIO
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
+?PR?DRV_DS1302BYTEREAD?DRV_DS1302             0017H    0002H
+  +--> ?PR?_DRV_NAMEIN?DRV_GPIO
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 4
 
 
-?PR?_DRVDS1302WRITEREG?DRV_DS1302           0009H    0002H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
-  +--> ?PR?_DRVDS1302BYTEWRITE?DRV_DS1302
+?PR?_DRV_DS1302WRITEREG?DRV_DS1302            0009H    0002H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
+  +--> ?PR?_DRV_DS1302BYTEWRITE?DRV_DS1302
 
-?PR?_DRVDS1302BURSTWRITE?DRV_DS1302         0009H    0004H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
-  +--> ?PR?_DRVDS1302BYTEWRITE?DRV_DS1302
+?PR?_DRV_DS1302BURSTWRITE?DRV_DS1302          0009H    0004H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
+  +--> ?PR?_DRV_DS1302BYTEWRITE?DRV_DS1302
 
-?PR?HALSYSTIMERINIT?HAL_TIMER               -----    -----
-  +--> ?PR?DRVSYSTIMERINIT?DRV_TIMER
+?PR?HAL_SYSTIMERINIT?HAL_TIMER                -----    -----
+  +--> ?PR?DRV_SYSTIMERINIT?DRV_TIMER
 
-?PR?_SYSEXITCRITICAL?HAL_PALTFORM           0008H    0001H
+?PR?_HAL_SYSEXITCRITICAL?HAL_PALTFORM         0008H    0001H
 
-?PR?SYSUPDATECALENDAR?MAIN                  -----    -----
-  +--> ?PR?_HALDIFFTIMERCNT?HAL_TIMER
-  +--> ?PR?HALGETCURSYSTIMERCNT?HAL_TIMER
-  +--> ?PR?HALUPDATESYSTIME?HAL_CALENDAR
-  +--> ?PR?HALFLASHCALENDAR?HAL_DISPLAY
+?PR?SYSUPDATECALENDAR?MAIN                    -----    -----
+  +--> ?PR?_HAL_DIFFTIMERCNT?HAL_TIMER
+  +--> ?PR?HAL_GETCURSYSTIMERCNT?HAL_TIMER
+  +--> ?PR?HAL_UPDATESYSTIME?HAL_CALENDAR
+  +--> ?PR?HAL_FLASHCALENDAR?HAL_DISPLAY
 
-?PR?_HALDIFFTIMERCNT?HAL_TIMER              0008H    0008H
-  +--> ?PR?HALGETCURSYSTIMERCNT?HAL_TIMER
+?PR?_HAL_DIFFTIMERCNT?HAL_TIMER               0008H    0008H
+  +--> ?PR?HAL_GETCURSYSTIMERCNT?HAL_TIMER
 
-?PR?HALGETCURSYSTIMERCNT?HAL_TIMER          0010H    0004H
+?PR?HAL_GETCURSYSTIMERCNT?HAL_TIMER           0010H    0004H
 
-?PR?HALUPDATESYSTIME?HAL_CALENDAR           0008H    000BH
+?PR?HAL_UPDATESYSTIME?HAL_CALENDAR            0008H    000BH
   +--> ?CO?HAL_CALENDAR
-  +--> ?PR?_DRVDS1302BURSTREAD?DRV_DS1302
+  +--> ?PR?_DRV_DS1302BURSTREAD?DRV_DS1302
 
-?PR?_DRVDS1302BURSTREAD?DRV_DS1302          0013H    0004H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
-  +--> ?PR?_DRVDS1302BYTEWRITE?DRV_DS1302
-  +--> ?PR?DRVDS1302BYTEREAD?DRV_DS1302
+?PR?_DRV_DS1302BURSTREAD?DRV_DS1302           0013H    0004H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
+  +--> ?PR?_DRV_DS1302BYTEWRITE?DRV_DS1302
+  +--> ?PR?DRV_DS1302BYTEREAD?DRV_DS1302
 
-?PR?HALFLASHCALENDAR?HAL_DISPLAY            0008H    0008H
+?PR?HAL_FLASHCALENDAR?HAL_DISPLAY             0008H    0008H
   +--> ?CO?HAL_DISPLAY
-  +--> ?PR?_HALGETSYSTIME?HAL_CALENDAR
-  +--> ?PR?_HALDISPLAYCALENDAR?HAL_DISPLAY
+  +--> ?PR?_HAL_GETSYSTIME?HAL_CALENDAR
+  +--> ?PR?_HAL_DISPLAYCALENDAR?HAL_DISPLAY
 
-?PR?_HALGETSYSTIME?HAL_CALENDAR             0010H    0006H
+?PR?_HAL_GETSYSTIME?HAL_CALENDAR              0010H    0006H
 
-?PR?_HALDISPLAYCALENDAR?HAL_DISPLAY         0010H    000EH
+?PR?_HAL_DISPLAYCALENDAR?HAL_DISPLAY          0010H    000EH
   +--> ?CO?HAL_DISPLAY
-  +--> ?PR?_HALDISPLAYSTR?HAL_DISPLAY
+  +--> ?PR?_HAL_DISPLAYSTR?HAL_DISPLAY
 
-?PR?_HALDISPLAYSTR?HAL_DISPLAY              001EH    0006H
-  +--> ?PR?_DRVLCDWRITECMD?DRV_LCD
-  +--> ?PR?_DRVLCDWRITEDAT?DRV_LCD
+?PR?_HAL_DISPLAYSTR?HAL_DISPLAY               001EH    0006H
+  +--> ?PR?_DRV_LCDWRITECMD?DRV_LCD
+  +--> ?PR?_DRV_LCDWRITEDAT?DRV_LCD
 
-?PR?_DRVLCDWRITEDAT?DRV_LCD                 0024H    0001H
-  +--> ?PR?DRVLCDWAITREADY?DRV_LCD
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
+?PR?_DRV_LCDWRITEDAT?DRV_LCD                  0024H    0001H
+  +--> ?PR?DRV_LCDWAITREADY?DRV_LCD
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
 
-?PR?SYSIOCTRL?MAIN                          -----    -----
-  +--> ?PR?_HALDIFFTIMERCNT?HAL_TIMER
-  +--> ?PR?HALGETCURSYSTIMERCNT?HAL_TIMER
-  +--> ?PR?_HALDEBUGIOCTRL?HAL_GPIO
+?PR?SYSIOCTRL?MAIN                            -----    -----
+  +--> ?PR?_HAL_DIFFTIMERCNT?HAL_TIMER
+  +--> ?PR?HAL_GETCURSYSTIMERCNT?HAL_TIMER
+  +--> ?PR?_HAL_DEBUGIOCTRL?HAL_GPIO
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 5
 
 
-?PR?_HALDEBUGIOCTRL?HAL_GPIO                0008H    0001H
-  +--> ?PR?_DRVNAMEOUT?DRV_GPIO
+?PR?_HAL_DEBUGIOCTRL?HAL_GPIO                 0008H    0001H
+  +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
 
 
 
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0035H         SYMBOL        ioCtrl
   -------         ENDDO         
   C:0A8FH         LINE#         50
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 6
 
 
   C:0A8FH         LINE#         51
@@ -319,20 +319,20 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
-  C:0AF7H         PUBLIC        _DrvGroupGpioIn
-  C:0B7FH         PUBLIC        _DrvGroupGpioOut
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   C:0CABH         SYMBOL        gpioConfigArry
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0631H         PUBLIC        _DrvSingleGpioIn
-  C:04B1H         PUBLIC        _DrvSingleGpioOut
+  C:0631H         PUBLIC        _Drv_SingleGpioIn
+  C:04B1H         PUBLIC        _Drv_SingleGpioOut
+  C:07DEH         PUBLIC        _Drv_NameIn
+  C:0843H         PUBLIC        _Drv_NameOut
   D:00C8H         PUBLIC        T2CON
-  C:07DEH         PUBLIC        _DrvNameIn
-  C:0843H         PUBLIC        _DrvNameOut
+  C:0AF7H         PUBLIC        _Drv_GroupGpioIn
+  C:0B7FH         PUBLIC        _Drv_GroupGpioOut
   D:00D0H         PUBLIC        PSW
-  -------         PROC          _DRVSINGLEGPIOIN
+  -------         PROC          _DRV_SINGLEGPIOIN
   D:002AH         SYMBOL        group
   D:002BH         SYMBOL        bits
   -------         DO            
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0699H         LINE#         40
   C:06BAH         LINE#         41
   C:06BAH         LINE#         42
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 7
 
 
   C:06BDH         LINE#         43
@@ -375,8 +375,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:06E3H         LINE#         58
   C:06E3H         LINE#         59
   C:06E5H         LINE#         60
-  -------         ENDPROC       _DRVSINGLEGPIOIN
-  -------         PROC          _DRVGROUPGPIOIN
+  -------         ENDPROC       _DRV_SINGLEGPIOIN
+  -------         PROC          _DRV_GROUPGPIOIN
   D:002AH         SYMBOL        group
   -------         DO            
   D:002BH         SYMBOL        inTtl
@@ -403,8 +403,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0B23H         LINE#         89
   C:0B23H         LINE#         90
   C:0B25H         LINE#         91
-  -------         ENDPROC       _DRVGROUPGPIOIN
-  -------         PROC          _DRVSINGLEGPIOOUT
+  -------         ENDPROC       _DRV_GROUPGPIOIN
+  -------         PROC          _DRV_SINGLEGPIOOUT
   D:002AH         SYMBOL        group
   D:002BH         SYMBOL        bits
   D:002CH         SYMBOL        sig
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:04E4H         LINE#         101
   C:04E5H         LINE#         103
   C:04E5H         LINE#         104
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 8
 
 
   C:04F6H         LINE#         105
@@ -455,8 +455,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0577H         LINE#         142
   C:0577H         LINE#         143
   C:0577H         LINE#         144
-  -------         ENDPROC       _DRVSINGLEGPIOOUT
-  -------         PROC          _DRVGROUPGPIOOUT
+  -------         ENDPROC       _DRV_SINGLEGPIOOUT
+  -------         PROC          _DRV_GROUPGPIOOUT
   D:002AH         SYMBOL        group
   D:002BH         SYMBOL        sig
   C:0B7FH         LINE#         146
@@ -479,11 +479,11 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0BA7H         LINE#         168
   C:0BA7H         LINE#         169
   C:0BA7H         LINE#         170
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 9
 
 
-  -------         ENDPROC       _DRVGROUPGPIOOUT
-  -------         PROC          _DRVNAMEOUT
+  -------         ENDPROC       _DRV_GROUPGPIOOUT
+  -------         PROC          _DRV_NAMEOUT
   D:0028H         SYMBOL        name
   D:0029H         SYMBOL        sig
   C:0843H         LINE#         172
@@ -496,8 +496,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:088BH         LINE#         181
   C:08A3H         LINE#         182
   C:08A3H         LINE#         183
-  -------         ENDPROC       _DRVNAMEOUT
-  -------         PROC          _DRVNAMEIN
+  -------         ENDPROC       _DRV_NAMEOUT
+  -------         PROC          _DRV_NAMEIN
   D:0028H         SYMBOL        name
   -------         DO            
   D:0029H         SYMBOL        inTtl
@@ -514,14 +514,13 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0840H         LINE#         196
   C:0840H         LINE#         198
   C:0842H         LINE#         199
-  -------         ENDPROC       _DRVNAMEIN
+  -------         ENDPROC       _DRV_NAMEIN
   -------         ENDMOD        DRV_GPIO
 
   -------         MODULE        DRV_TIMER
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
-  C:0CF0H         PUBLIC        DrvSysTimerInit
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:0098H         PUBLIC        SCON
@@ -532,20 +531,21 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:008AH         PUBLIC        TL0
   B:0088H.4       PUBLIC        TR0
   D:00C8H         PUBLIC        T2CON
+  C:0CF0H         PUBLIC        Drv_SysTimerInit
   D:00D0H         PUBLIC        PSW
-  -------         PROC          DRVSYSTIMERINIT
+  -------         PROC          DRV_SYSTIMERINIT
   C:0CF0H         LINE#         10
   C:0CF0H         LINE#         11
   C:0CF0H         LINE#         12
   C:0CF3H         LINE#         13
   C:0CF6H         LINE#         14
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 10
 
 
   C:0CFCH         LINE#         15
   C:0CFEH         LINE#         16
   C:0D00H         LINE#         17
-  -------         ENDPROC       DRVSYSTIMERINIT
+  -------         ENDPROC       DRV_SYSTIMERINIT
   -------         ENDMOD        DRV_TIMER
 
   -------         MODULE        DRV_PALTFORM
@@ -565,19 +565,19 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
+  C:0D0DH         PUBLIC        _Hal_DebugIOCtrl
   D:00B8H         PUBLIC        IP
-  C:0D0DH         PUBLIC        _HalDebugIOCtrl
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
-  -------         PROC          _HALDEBUGIOCTRL
+  -------         PROC          _HAL_DEBUGIOCTRL
   D:0008H         SYMBOL        sig
   C:0D0DH         LINE#         7
   C:0D0FH         LINE#         8
   C:0D0FH         LINE#         9
   C:0D16H         LINE#         10
-  -------         ENDPROC       _HALDEBUGIOCTRL
+  -------         ENDPROC       _HAL_DEBUGIOCTRL
   -------         ENDMOD        HAL_GPIO
 
   -------         MODULE        HAL_TIMER
@@ -585,29 +585,29 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:003EH         SYMBOL        halSysTimerOverflowCnt
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
-  C:08A4H         PUBLIC        HalSysTimerIsr
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
+  C:0772H         PUBLIC        _Hal_DiffTimerCnt
+  C:0BA8H         PUBLIC        Hal_GetCurSysTimerCnt
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0772H         PUBLIC        _HalDiffTimerCnt
   B:00A8H.1       PUBLIC        ET0
   D:008CH         PUBLIC        TH0
   D:008AH         PUBLIC        TL0
-  C:0BA8H         PUBLIC        HalGetCurSysTimerCnt
+  C:0D28H         PUBLIC        Hal_SysTimerInit
   D:00C8H         PUBLIC        T2CON
-  C:0D28H         PUBLIC        HalSysTimerInit
+  C:08A4H         PUBLIC        Hal_SysTimerIsr
   D:00D0H         PUBLIC        PSW
-  -------         PROC          HALSYSTIMERINIT
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 11
+  -------         PROC          HAL_SYSTIMERINIT
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 11
 
 
   C:0D28H         LINE#         12
   C:0D28H         LINE#         13
   C:0D28H         LINE#         14
   C:0D2BH         LINE#         15
-  -------         ENDPROC       HALSYSTIMERINIT
-  -------         PROC          HALGETCURSYSTIMERCNT
+  -------         ENDPROC       HAL_SYSTIMERINIT
+  -------         PROC          HAL_GETCURSYSTIMERCNT
   -------         DO            
   D:0010H         SYMBOL        cnt
   -------         ENDDO         
@@ -619,8 +619,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0BC6H         LINE#         23
   C:0BC8H         LINE#         25
   C:0BD0H         LINE#         26
-  -------         ENDPROC       HALGETCURSYSTIMERCNT
-  -------         PROC          _HALDIFFTIMERCNT
+  -------         ENDPROC       HAL_GETCURSYSTIMERCNT
+  -------         PROC          _HAL_DIFFTIMERCNT
   D:0008H         SYMBOL        last
   -------         DO            
   D:000CH         SYMBOL        tim
@@ -637,41 +637,41 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:07D5H         LINE#         39
   C:07D5H         LINE#         41
   C:07DDH         LINE#         42
-  -------         ENDPROC       _HALDIFFTIMERCNT
-  -------         PROC          HALSYSTIMERISR
+  -------         ENDPROC       _HAL_DIFFTIMERCNT
+  -------         PROC          HAL_SYSTIMERISR
   C:08A4H         LINE#         45
   C:08BBH         LINE#         47
   C:08C1H         LINE#         48
   C:08E1H         LINE#         49
-  -------         ENDPROC       HALSYSTIMERISR
+  -------         ENDPROC       HAL_SYSTIMERISR
   -------         ENDMOD        HAL_TIMER
 
   -------         MODULE        HAL_DISPLAY
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
-  C:0D2CH         PUBLIC        HalDisplayInit
+  C:09D0H         PUBLIC        Hal_FlashCalendar
+  C:08F6H         PUBLIC        _Hal_DisplayStr
   D:00A8H         PUBLIC        IE
-  C:01FBH         SYMBOL        _HalDisplayCalendar
   D:00B8H         PUBLIC        IP
-  C:09D0H         PUBLIC        HalFlashCalendar
-  C:08F6H         PUBLIC        _HalDisplayStr
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:0CC8H         SYMBOL        _?ix1000
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 12
-
-
   C:0CD3H         SYMBOL        _?ix1001
   D:00C8H         PUBLIC        T2CON
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 12
+
+
+  C:0D2CH         PUBLIC        Hal_DisplayInit
+  C:01FBH         SYMBOL        _Hal_DisplayCalendar
   D:00D0H         PUBLIC        PSW
-  -------         PROC          HALDISPLAYINIT
+  -------         PROC          HAL_DISPLAYINIT
   C:0D2CH         LINE#         12
   C:0D2CH         LINE#         13
   C:0D2CH         LINE#         14
   C:0D2FH         LINE#         15
-  -------         ENDPROC       HALDISPLAYINIT
-  -------         PROC          _HALDISPLAYCALENDAR
+  -------         ENDPROC       HAL_DISPLAYINIT
+  -------         PROC          _HAL_DISPLAYCALENDAR
   D:0010H         SYMBOL        pCalendar
   -------         DO            
   D:0013H         SYMBOL        str
@@ -706,8 +706,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:03B5H         LINE#         47
   C:03B8H         LINE#         48
   C:03C5H         LINE#         49
-  -------         ENDPROC       _HALDISPLAYCALENDAR
-  -------         PROC          HALFLASHCALENDAR
+  -------         ENDPROC       _HAL_DISPLAYCALENDAR
+  -------         PROC          HAL_FLASHCALENDAR
   -------         DO            
   D:0042H         SYMBOL        secBak
   D:0008H         SYMBOL        tCalendar
@@ -719,14 +719,14 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:09FEH         LINE#         58
   C:0A04H         LINE#         59
   C:0A04H         LINE#         60
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 13
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 13
 
 
   C:0A07H         LINE#         61
   C:0A10H         LINE#         62
   C:0A10H         LINE#         63
-  -------         ENDPROC       HALFLASHCALENDAR
-  -------         PROC          _HALDISPLAYSTR
+  -------         ENDPROC       HAL_FLASHCALENDAR
+  -------         PROC          _HAL_DISPLAYSTR
   D:001EH         SYMBOL        x
   D:001FH         SYMBOL        y
   D:0020H         SYMBOL        str
@@ -750,7 +750,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0934H         LINE#         83
   C:093FH         LINE#         84
   C:0941H         LINE#         85
-  -------         ENDPROC       _HALDISPLAYSTR
+  -------         ENDPROC       _HAL_DISPLAYSTR
   -------         ENDMOD        HAL_DISPLAY
 
   -------         MODULE        HAL_CALENDAR
@@ -758,28 +758,28 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0036H         PUBLIC        sysCalendar
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
-  C:03C6H         PUBLIC        _HalGetSysTime
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
+  C:0D30H         PUBLIC        Hal_CalendarInit
+  C:0578H         PUBLIC        Hal_UpdateSysTime
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:0003H         SYMBOL        _?ix1000
-  C:0D30H         PUBLIC        HalCalendarInit
-  C:0578H         PUBLIC        HalUpdateSysTime
   D:00C8H         PUBLIC        T2CON
+  C:03C6H         PUBLIC        _Hal_GetSysTime
   D:00D0H         PUBLIC        PSW
-  -------         PROC          HALCALENDARINIT
+  -------         PROC          HAL_CALENDARINIT
   C:0D30H         LINE#         13
   C:0D30H         LINE#         14
   C:0D30H         LINE#         15
   C:0D33H         LINE#         16
-  -------         ENDPROC       HALCALENDARINIT
-  -------         PROC          _HALGETSYSTIME
+  -------         ENDPROC       HAL_CALENDARINIT
+  -------         PROC          _HAL_GETSYSTIME
   D:0010H         SYMBOL        pSysTmr
   -------         DO            
   D:0013H         SYMBOL        pCalendar
   -------         ENDDO         
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 14
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 14
 
 
   C:03C6H         LINE#         18
@@ -793,8 +793,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0470H         LINE#         27
   C:0490H         LINE#         28
   C:04B0H         LINE#         29
-  -------         ENDPROC       _HALGETSYSTIME
-  -------         PROC          HALUPDATESYSTIME
+  -------         ENDPROC       _HAL_GETSYSTIME
+  -------         PROC          HAL_UPDATESYSTIME
   -------         DO            
   D:0008H         SYMBOL        time
   D:0010H         SYMBOL        pCalendar
@@ -812,23 +812,23 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:060EH         LINE#         42
   C:061FH         LINE#         43
   C:0630H         LINE#         44
-  -------         ENDPROC       HALUPDATESYSTIME
+  -------         ENDPROC       HAL_UPDATESYSTIME
   -------         ENDMOD        HAL_CALENDAR
 
   -------         MODULE        HAL_PALTFORM
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
+  C:0D17H         PUBLIC        _Hal_SysExitCritical
   B:00A8H.7       PUBLIC        EA
   D:00A8H         PUBLIC        IE
-  C:0D17H         PUBLIC        _SysExitCritical
   D:00B8H         PUBLIC        IP
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00C8H         PUBLIC        T2CON
-  C:0D01H         PUBLIC        SysEnterCritical
+  C:0D01H         PUBLIC        Hal_SysEnterCritical
   D:00D0H         PUBLIC        PSW
-  -------         PROC          SYSENTERCRITICAL
+  -------         PROC          HAL_SYSENTERCRITICAL
   -------         DO            
   D:0008H         SYMBOL        sta
   -------         ENDDO         
@@ -838,17 +838,17 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0D08H         LINE#         8
   C:0D0AH         LINE#         10
   C:0D0CH         LINE#         11
-  -------         ENDPROC       SYSENTERCRITICAL
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 15
+  -------         ENDPROC       HAL_SYSENTERCRITICAL
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 15
 
 
-  -------         PROC          _SYSEXITCRITICAL
+  -------         PROC          _HAL_SYSEXITCRITICAL
   D:0008H         SYMBOL        sta
   C:0D17H         LINE#         13
   C:0D19H         LINE#         14
   C:0D19H         LINE#         15
   C:0D1FH         LINE#         16
-  -------         ENDPROC       _SYSEXITCRITICAL
+  -------         ENDPROC       _HAL_SYSEXITCRITICAL
   -------         ENDMOD        HAL_PALTFORM
 
   -------         MODULE        DRV_DS1302
@@ -857,19 +857,19 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
+  C:0A50H         PUBLIC        _Drv_Ds1302BurstRead
+  C:0AC5H         SYMBOL        Drv_Ds1302ByteRead
+  C:0B26H         PUBLIC        Drv_Ds1302Init
+  C:0C23H         SYMBOL        _Drv_Ds1302ReadReg
+  C:0A11H         PUBLIC        _Drv_Ds1302BurstWrite
+  C:098EH         SYMBOL        _Drv_Ds1302ByteWrite
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0A50H         PUBLIC        _DrvDs1302BurstRead
-  C:0AC5H         SYMBOL        DrvDs1302ByteRead
-  C:0B26H         PUBLIC        DrvDs1302Init
-  C:0C23H         SYMBOL        _DrvDs1302ReadReg
-  C:0A11H         PUBLIC        _DrvDs1302BurstWrite
-  C:098EH         SYMBOL        _DrvDs1302ByteWrite
+  C:0C4AH         SYMBOL        _Drv_Ds1302WriteReg
   C:0D20H         SYMBOL        initTimerDat
-  C:0C4AH         SYMBOL        _DrvDs1302WriteReg
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
-  -------         PROC          DRVDS1302INIT
+  -------         PROC          DRV_DS1302INIT
   -------         DO            
   D:0008H         SYMBOL        dat
   -------         ENDDO         
@@ -885,8 +885,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0B4AH         LINE#         23
   C:0B53H         LINE#         24
   C:0B53H         LINE#         25
-  -------         ENDPROC       DRVDS1302INIT
-  -------         PROC          _DRVDS1302BYTEWRITE
+  -------         ENDPROC       DRV_DS1302INIT
+  -------         PROC          _DRV_DS1302BYTEWRITE
   D:0017H         SYMBOL        dat
   -------         DO            
   D:0018H         SYMBOL        mask
@@ -899,7 +899,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:099AH         LINE#         33
   C:09A2H         LINE#         34
   C:09A2H         LINE#         35
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 16
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 16
 
 
   C:09A9H         LINE#         36
@@ -911,8 +911,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:09C0H         LINE#         43
   C:09C8H         LINE#         45
   C:09CFH         LINE#         46
-  -------         ENDPROC       _DRVDS1302BYTEWRITE
-  -------         PROC          DRVDS1302BYTEREAD
+  -------         ENDPROC       _DRV_DS1302BYTEWRITE
+  -------         PROC          DRV_DS1302BYTEREAD
   -------         DO            
   D:0017H         SYMBOL        mask
   D:0018H         SYMBOL        dat
@@ -932,8 +932,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0AECH         LINE#         61
   C:0AF4H         LINE#         63
   C:0AF6H         LINE#         64
-  -------         ENDPROC       DRVDS1302BYTEREAD
-  -------         PROC          _DRVDS1302WRITEREG
+  -------         ENDPROC       DRV_DS1302BYTEREAD
+  -------         PROC          _DRV_DS1302WRITEREG
   D:0009H         SYMBOL        reg
   D:000AH         SYMBOL        dat
   C:0C4AH         LINE#         66
@@ -943,8 +943,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0C61H         LINE#         70
   C:0C66H         LINE#         71
   C:0C6DH         LINE#         72
-  -------         ENDPROC       _DRVDS1302WRITEREG
-  -------         PROC          _DRVDS1302READREG
+  -------         ENDPROC       _DRV_DS1302WRITEREG
+  -------         PROC          _DRV_DS1302READREG
   D:0009H         SYMBOL        reg
   -------         DO            
   D:000AH         SYMBOL        dat
@@ -958,11 +958,11 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0C40H         LINE#         81
   C:0C47H         LINE#         83
   C:0C49H         LINE#         84
-  -------         ENDPROC       _DRVDS1302READREG
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 17
+  -------         ENDPROC       _DRV_DS1302READREG
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 17
 
 
-  -------         PROC          _DRVDS1302BURSTWRITE
+  -------         PROC          _DRV_DS1302BURSTWRITE
   D:0009H         SYMBOL        dat
   -------         DO            
   D:000CH         SYMBOL        i
@@ -978,8 +978,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0A44H         LINE#         96
   C:0A48H         LINE#         98
   C:0A4FH         LINE#         99
-  -------         ENDPROC       _DRVDS1302BURSTWRITE
-  -------         PROC          _DRVDS1302BURSTREAD
+  -------         ENDPROC       _DRV_DS1302BURSTWRITE
+  -------         PROC          _DRV_DS1302BURSTREAD
   D:0013H         SYMBOL        dat
   -------         DO            
   D:0016H         SYMBOL        i
@@ -995,7 +995,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0A83H         LINE#         111
   C:0A87H         LINE#         113
   C:0A8EH         LINE#         114
-  -------         ENDPROC       _DRVDS1302BURSTREAD
+  -------         ENDPROC       _DRV_DS1302BURSTREAD
   -------         ENDMOD        DRV_DS1302
 
   -------         MODULE        DRV_LCD
@@ -1004,27 +1004,27 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
+  C:0942H         SYMBOL        Drv_LcdWaitReady
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:0942H         SYMBOL        DrvLcdWaitReady
-  C:0CDBH         PUBLIC        DrvLcdInit
-  C:0BD1H         PUBLIC        _DrvLcdWriteCmd
+  C:0CDBH         PUBLIC        Drv_LcdInit
+  C:0BD1H         PUBLIC        _Drv_LcdWriteCmd
+  C:0BFAH         PUBLIC        _Drv_LcdWriteDat
   D:00C8H         PUBLIC        T2CON
-  C:0BFAH         PUBLIC        _DrvLcdWriteDat
   D:00D0H         PUBLIC        PSW
-  -------         PROC          DRVLCDINIT
+  -------         PROC          DRV_LCDINIT
   C:0CDBH         LINE#         11
   C:0CDBH         LINE#         12
   C:0CDBH         LINE#         13
   C:0CE0H         LINE#         14
   C:0CE5H         LINE#         15
   C:0CEAH         LINE#         16
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 18
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 18
 
 
   C:0CEFH         LINE#         17
-  -------         ENDPROC       DRVLCDINIT
-  -------         PROC          DRVLCDWAITREADY
+  -------         ENDPROC       DRV_LCDINIT
+  -------         PROC          DRV_LCDWAITREADY
   -------         DO            
   D:0025H         SYMBOL        sta
   D:0026H         SYMBOL        tryCnt
@@ -1043,8 +1043,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0975H         LINE#         33
   C:097DH         LINE#         34
   C:098DH         LINE#         35
-  -------         ENDPROC       DRVLCDWAITREADY
-  -------         PROC          _DRVLCDWRITECMD
+  -------         ENDPROC       DRV_LCDWAITREADY
+  -------         PROC          _DRV_LCDWRITECMD
   D:0024H         SYMBOL        cmd
   C:0BD1H         LINE#         37
   C:0BD3H         LINE#         38
@@ -1055,8 +1055,8 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0BEBH         LINE#         43
   C:0BF2H         LINE#         44
   C:0BF9H         LINE#         45
-  -------         ENDPROC       _DRVLCDWRITECMD
-  -------         PROC          _DRVLCDWRITEDAT
+  -------         ENDPROC       _DRV_LCDWRITECMD
+  -------         PROC          _DRV_LCDWRITEDAT
   D:0024H         SYMBOL        dat
   C:0BFAH         LINE#         47
   C:0BFCH         LINE#         48
@@ -1067,7 +1067,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0C14H         LINE#         53
   C:0C1BH         LINE#         54
   C:0C22H         LINE#         55
-  -------         ENDPROC       _DRVLCDWRITEDAT
+  -------         ENDPROC       _DRV_LCDWRITEDAT
   -------         ENDMOD        DRV_LCD
 
   -------         MODULE        ?C?COPY
@@ -1079,7 +1079,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   -------         ENDMOD        ?C?CLDPTR
 
   -------         MODULE        ?C?CLDOPTR
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2019  21:40:16  PAGE 19
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/30/2019  19:01:15  PAGE 19
 
 
   C:011DH         PUBLIC        ?C?CLDOPTR
