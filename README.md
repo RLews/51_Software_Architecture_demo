@@ -13,6 +13,4 @@ application layer
 
 hardware abstract layer  
 
-complex driver layer
-
 hardware driver layer
