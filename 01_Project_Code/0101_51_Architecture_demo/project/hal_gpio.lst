@@ -1,0 +1,35 @@
+C51 COMPILER V9.00   HAL_GPIO                                                              06/29/2019 16:01:31 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE HAL_GPIO
+OBJECT MODULE PLACED IN ..\output\hal_gpio.obj
+COMPILER INVOKED BY: D:\Keil\C51\C51\BIN\C51.EXE ..\source\hal\hal_gpio.c OPTIMIZE(2,SPEED) BROWSE INCDIR(..\source\app;
+                    -..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_gpio.lst) OBJECT(..\output\hal_gpio.obj)
+
+line level    source
+
+   1          
+   2          
+   3          #include "hal_gpio.h"
+   4          
+   5          
+   6          
+   7          void Hal_DebugIOCtrl(uint8_t sig)
+   8          {
+   9   1              Drv_NameOut(EN_DEBUG_IO, sig);
+  10   1      }
+  11          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     10    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,45 @@
+C51 COMPILER V9.00   DRV_TIMER                                                             06/29/2019 16:01:33 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE DRV_TIMER
+OBJECT MODULE PLACED IN ..\output\drv_timer.obj
+COMPILER INVOKED BY: D:\Keil\C51\C51\BIN\C51.EXE ..\source\driver\drv_timer.c OPTIMIZE(2,SPEED) BROWSE INCDIR(..\source\
+                    -app;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\drv_timer.lst) OBJECT(..\output\drv_timer.obj)
+
+line level    source
+
+   1          
+   2          
+   3          #include "drv_timer.h"
+   4          
+   5          
+   6          
+   7          
+   8          
+   9          
+  10          void Drv_SysTimerInit(void)
+  11          {
+  12   1              TMOD &= 0xF0; //清零 T0 的控制位
+  13   1              TMOD |= 0x01; //配置 T0 为模式 1
+  14   1              D_DRV_RELOAD_SYSTIME_CNT();
+  15   1              D_DRV_ENABLE_SYSTIME_INT();
+  16   1              D_DRV_ENABLE_SYSTIME(); //启动 T0       
+  17   1      }
+  18          
+  19          
+  20          
+  21          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     17    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

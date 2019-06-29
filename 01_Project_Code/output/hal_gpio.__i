@@ -1,1 +1,0 @@
-"..\source\hal\hal_gpio.c" OPTIMIZE (2,SPEED) BROWSE INCDIR(..\source\app;..\source\complex_driver;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_gpio.lst) OBJECT(..\output\hal_gpio.obj)

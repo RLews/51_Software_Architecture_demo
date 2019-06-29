@@ -1,0 +1,89 @@
+C51 COMPILER V9.00   MAIN                                                                  06/29/2019 16:01:31 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\output\main.obj
+COMPILER INVOKED BY: D:\Keil\C51\C51\BIN\C51.EXE ..\source\app\main.c OPTIMIZE(2,SPEED) BROWSE INCDIR(..\source\app;..\s
+                    -ource\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(..\output\main.obj)
+
+line level    source
+
+   1          /*
+   2                  万年历 —— V1.6
+   3                  基于V1.5版本
+   4                  引入全新架构
+   5          */
+   6          
+   7          #include "main.h"
+   8          #include "hal_paltform.h"
+   9          #include "hal_gpio.h"
+  10          #include "hal_timer.h"
+  11          #include "hal_display.h"
+  12          #include "hal_calendar.h"
+  13          
+  14          #define D_SYS_ABSOLUTE_EXIT_CRITICAL                    1
+  15          
+  16          static void SysUpdateCalendar(void);
+  17          static void SysIoCtrl(void);
+  18          
+  19          
+  20          void main()
+  21          {
+  22   1      
+  23   1              (void)D_SYSTEM_ENTER_CRITICAL();
+  24   1              Hal_DisplayInit();
+  25   1              Hal_CalendarInit();
+  26   1              Hal_SysTimerInit();
+  27   1              D_SYSTEM_EXIT_CRITICAL(D_SYS_ABSOLUTE_EXIT_CRITICAL);
+  28   1      
+  29   1              while(1)
+  30   1              {
+  31   2                      SysUpdateCalendar();
+  32   2                      
+  33   2                      SysIoCtrl();
+  34   2              }
+  35   1      }
+  36          
+  37          static void SysUpdateCalendar(void)
+  38          {
+  39   1              static uint32_t updateTim = 0;
+  40   1      
+  41   1              if (Hal_DiffTimerCnt(updateTim) >= (uint32_t)D_SYS_TIME_10MS)
+  42   1              {
+  43   2                      updateTim = Hal_GetCurSysTimerCnt();
+  44   2                      Hal_UpdateSysTime();
+  45   2              }
+  46   1              
+  47   1              Hal_FlashCalendar();
+  48   1      }
+  49          
+  50          static void SysIoCtrl(void)
+  51          {
+  52   1              static uint32_t ctrlTim = 0;
+  53   1              static bool_t ioCtrl = 0;
+  54   1      
+C51 COMPILER V9.00   MAIN                                                                  06/29/2019 16:01:31 PAGE 2   
+
+  55   1              if (Hal_DiffTimerCnt(ctrlTim) >= (uint32_t)D_SYS_TIME_100MS)
+  56   1              {
+  57   2                      ctrlTim = Hal_GetCurSysTimerCnt();
+  58   2                      Hal_DebugIOCtrl(ioCtrl);
+  59   2                      ioCtrl = (ioCtrl == 0)?(1):(0);
+  60   2              }
+  61   1      }
+  62          
+  63          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    123    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      9    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
