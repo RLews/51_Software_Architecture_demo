@@ -1,7 +1,7 @@
 
 
-#ifndef __HAL_GPIO_H
-#define __HAL_GPIO_H
+#ifndef HAL_GPIO_H
+#define HAL_GPIO_H
 
 
 #include "drv_gpio.h"

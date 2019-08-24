@@ -1,7 +1,7 @@
 
 
-#ifndef __HAL_DISPLAY_H
-#define __HAL_DISPLAY_H
+#ifndef HAL_DISPLAY_H
+#define HAL_DISPLAY_H
 
 #include "drv_lcd.h"
 #include "hal_calendar.h"

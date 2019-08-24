@@ -1,0 +1,1 @@
+"..\source\hal\hal_calendar.c" OPTIMIZE (2,SPEED) BROWSE INCDIR(..\source\app;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_calendar.lst) OBJECT(..\output\hal_calendar.obj)

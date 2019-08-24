@@ -17,7 +17,7 @@ static void SysUpdateCalendar(void);
 static void SysIoCtrl(void);
 
 
-void main()
+int main(void)
 {
 
 	(void)D_SYSTEM_ENTER_CRITICAL();
@@ -32,6 +32,7 @@ void main()
 		
 		SysIoCtrl();
 	}
+
 }
 
 static void SysUpdateCalendar(void)
@@ -56,7 +57,7 @@ static void SysIoCtrl(void)
 	{
 		ctrlTim = Hal_GetCurSysTimerCnt();
 		Hal_DebugIOCtrl(ioCtrl);
-		ioCtrl = (ioCtrl == 0)?(1):(0);
+		ioCtrl = (ioCtrl == 0)?(1U):(0U);
 	}
 }
 

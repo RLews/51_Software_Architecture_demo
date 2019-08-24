@@ -1,0 +1,1359 @@
+Remark: Option -float-rounding-mode has no effect in Polyspace Bug Finder
+Remark: Option -O2 has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-calls has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-writes-variables has no effect in Polyspace Bug
+|       Finder
+Remark: Option -check-subnormal has no effect in Polyspace Bug Finder
+Remark: Option -uncalled-function-checks has no effect in Polyspace Bug Finder
+<polyspace-bug-finder-nodesktop R2018b PID5488 PGID5488>
+
+Polyspace verification of c51 project.
+Starting at 08/24/2019, 14h29.
+
+Option -signed-integer-overflows has no effect in Polyspace Bug Finder.
+Option -unsigned-integer-overflows has no effect in Polyspace Bug Finder.
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_STD_LIB, FLOAT_STD_LIB, OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, FUNC_CAST, PTR_CAST, 
+  MEM_STD_LIB, STR_STD_LIB, FREED_PTR, DOUBLE_DEALLOCATION, BAD_FREE, BAD_EQUAL_USE, 
+  BAD_EQUAL_EQUAL_USE, DECL_MISMATCH, MISSING_NULL_CHAR, PTR_SIZEOF_MISMATCH, TYPEDEF_MISMATCH, 
+  USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, MISSING_RETURN, RESOURCE_LEAK, 
+  UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, USELESS_IF, DEADLOCK, BAD_LOCK, DOUBLE_LOCK, 
+  DATA_RACE, DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, ASSERT, STRING_FORMAT, IMPROPER_ARRAY_INIT, 
+  BAD_PTR_SCALING, SIZEOF_MISUSE, FLOAT_ABSORPTION, LOCAL_ADDR_ESCAPE, STR_FORMAT_BUFFER_OVERFLOW, 
+  STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, PUTENV_AUTO_VAR, PTR_TO_DIFF_ARRAY, 
+  ALIGNMENT_CHANGE, READ_ONLY_RESOURCE_WRITE, CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, 
+  DOUBLE_RESOURCE_OPEN, OPERATOR_PRECEDENCE, STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, 
+  CONSTANT_OBJECT_WRITE, INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, MEMCMP_STRINGS, 
+  MEMCMP_PADDING_DATA, INVALID_ENV_POINTER, ERRNO_MISUSE, MISSING_ERRNO_RESET, CHARACTER_MISUSE, 
+  CHAR_EOF_CONFUSED, IO_INTERLEAVING, SIG_HANDLER_COMP_EXCP_RETURN, SIG_HANDLER_CALLING_SIGNAL, 
+  UNPROTOTYPED_FUNC_CALL, FILE_OBJECT_MISUSE, FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE, 
+  SIG_HANDLER_SHARED_OBJECT, MACRO_USED_AS_OBJECT, SIDE_EFFECT_IGNORED, PRE_UCNAME_JOIN_TOKENS, 
+  PRE_DIRECTIVE_MACRO_ARG, INLINE_CONSTRAINT_NOT_RESPECTED, VA_ARG_INCORRECT_TYPE, 
+  TOO_MANY_VA_ARG_CALLS, STREAM_WITH_SIDE_EFFECT, TEMP_OBJECT_ACCESS, SIG_HANDLER_ERRNO_MISUSE, 
+  DATA_RACE_STD_LIB, ATOMIC_VAR_ACCESS_TWICE, ATOMIC_VAR_SEQUENCE_NOT_ATOMIC
+
+Remark: By default, some results are not generated for headers.
+|       Search for '-generate-results-for' in user documentation to generate results for these headers.
+
+Verifying sources compliance ...
+
+Options used with Verifier:
+-lang=C
+-polyspace-version=2.6 (R2018b)
+-date=24/08/2019
+
+User:
+-bug-finder=true (non-official option)
+-I1=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source
+-I2=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app
+-I3=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver
+-I4=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal
+-I5=D:\Keil\C51\C51\INC
+-target=i386
+-compiler=keil
+-c-version=c11
+-dos=true
+-report-output-format=HTML
+-report-template=Polyspace-Doc\BugFinderSummary.rpt
+-to=Software Safety Analysis level 2
+-import-comments=C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\comments_bak
+-results-dir=C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result
+-verif-version=1.0
+-author=HP
+-prog=c51
+
+
+Verifying host configuration:
+Number of cores:                2
+Processor type:                 amd64
+Processor model:                Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+Processor frequency:            2.400 GHz
+Memory > 4 GB:                                            15.88 GB
+Tmp space available in C:\Users\HP\AppData\Local\Temp:    30.41 GB
+
+Remark: 2 core(s) detected. The verification creates 2 process(es).
+*** Configuration of the host :	OK
+
+
+Type C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\kill-rte-kernel.bat on host ENVY to halt Verifier process
+
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:29:23 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Verifying Keil C sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying drv_ds1302.c (1/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c, line 5: error: expected a ";"
+|  static const uint8_t code initTimerDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
+|                            ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c, line 23: error: identifier "initTimerDat" is undefined
+|                  Drv_Ds1302BurstWrite(initTimerDat);
+|                                       ^
+
+28 errors detected in the compilation of "drv_ds1302.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c: warning: Failed compilation.
+Verifying drv_gpio.c (2/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 8: error: expected a ";"
+|  static const gpioConfig_t code gpioConfigArry[EN_ALL_GPIO_COUNTER] = {
+|                                 ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 175: error: identifier "gpioConfigArry" is undefined
+|          if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+|              ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 189: error: identifier "gpioConfigArry" is undefined
+|          if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+|              ^
+
+29 errors detected in the compilation of "drv_gpio.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c: warning: Failed compilation.
+Verifying drv_lcd.c (3/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "drv_lcd.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_lcd.c: warning: Failed compilation.
+Verifying drv_paltform.c (4/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "drv_paltform.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.c: warning: Failed compilation.
+Verifying drv_timer.c (5/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "drv_timer.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c: warning: Failed compilation.
+Verifying hal_calendar.c (6/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "hal_calendar.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_calendar.c: warning: Failed compilation.
+Verifying hal_display.c (7/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "hal_display.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_display.c: warning: Failed compilation.
+Verifying hal_gpio.c (8/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "hal_gpio.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_gpio.c: warning: Failed compilation.
+Verifying hal_paltform.c (9/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "hal_paltform.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_paltform.c: warning: Failed compilation.
+Verifying hal_timer.c (10/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "hal_timer.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c: warning: Failed compilation.
+Verifying main.c (11/11)
+D:\Keil\C51\C51\INC\REG52.H, line 13: error: identifier "sfr" is undefined
+|  sfr P0    = 0x80;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 14: error: identifier "sfr" is undefined
+|  sfr P1    = 0x90;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 15: error: identifier "sfr" is undefined
+|  sfr P2    = 0xA0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 16: error: identifier "sfr" is undefined
+|  sfr P3    = 0xB0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 17: error: identifier "sfr" is undefined
+|  sfr PSW   = 0xD0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 18: error: identifier "sfr" is undefined
+|  sfr ACC   = 0xE0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 19: error: identifier "sfr" is undefined
+|  sfr B     = 0xF0;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 20: error: identifier "sfr" is undefined
+|  sfr SP    = 0x81;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 21: error: identifier "sfr" is undefined
+|  sfr DPL   = 0x82;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 22: error: identifier "sfr" is undefined
+|  sfr DPH   = 0x83;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 23: error: identifier "sfr" is undefined
+|  sfr PCON  = 0x87;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 24: error: identifier "sfr" is undefined
+|  sfr TCON  = 0x88;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 25: error: identifier "sfr" is undefined
+|  sfr TMOD  = 0x89;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 26: error: identifier "sfr" is undefined
+|  sfr TL0   = 0x8A;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 27: error: identifier "sfr" is undefined
+|  sfr TL1   = 0x8B;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 28: error: identifier "sfr" is undefined
+|  sfr TH0   = 0x8C;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 29: error: identifier "sfr" is undefined
+|  sfr TH1   = 0x8D;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 30: error: identifier "sfr" is undefined
+|  sfr IE    = 0xA8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 31: error: identifier "sfr" is undefined
+|  sfr IP    = 0xB8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 32: error: identifier "sfr" is undefined
+|  sfr SCON  = 0x98;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 33: error: identifier "sfr" is undefined
+|  sfr SBUF  = 0x99;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 36: error: identifier "sfr" is undefined
+|  sfr T2CON  = 0xC8;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 37: error: identifier "sfr" is undefined
+|  sfr RCAP2L = 0xCA;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 38: error: identifier "sfr" is undefined
+|  sfr RCAP2H = 0xCB;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 39: error: identifier "sfr" is undefined
+|  sfr TL2    = 0xCC;
+|  ^
+
+D:\Keil\C51\C51\INC\REG52.H, line 40: error: identifier "sfr" is undefined
+|  sfr TH2    = 0xCD;
+|  ^
+
+26 errors detected in the compilation of "main.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.c: warning: Failed compilation.
+Global compilation phase...
+
+Packing compilation data
+done.
+
+Importing comments from C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\comments_bak folder
+
+Operation completed:
+--------------------
+
+
+**********************************************************
+***
+*** Keil C sources verification done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:29:32 2019
+User time for compilation: 00:00:08.78 (8.79real, 8.79u + 0s (0.05gc))
+
+
+-------------------------------------------------------------------
+---                                                             ---
+---  Verifier has detected compilation error(s) in the code.    ---
+---  Please correct them and launch the analysis again.         ---
+---                                                             ---
+-------------------------------------------------------------------
+
+
+Failure at: Sat Aug 24 14:29:32 2019
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:29:32 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Report generation
+***
+**********************************************************
+Polyspace Report Generator
+Generating Report
+Template    : BugFinderSummary.rpt
+Results-dir : C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result
+Format      : dom-htmx
+Output-Name : C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\PolySpace-Doc\c51_BugFinderSummary\root.html
+    Beginning report
+      Processing Summary
+      Processing Defects Summary
+      Processing Configuration 
+      Processing Abbreviations and Acronyms
+    Converting report
+    Report complete
+    Generated: C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\PolySpace-Doc\c51_BugFinderSummary (164 rows)
+ 
+**********************************************************
+***
+*** Bug-finder - Report generation done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:29:52 2019
+User time for report-generator: 00:00:20.71 (20.72real, 20.72u + 0s)
+Error: Exiting because of previous error
+User time for polyspace-bug-finder-nodesktop: 00:00:30.2 (30.02real, 30.02u + 0s (0.05gc))

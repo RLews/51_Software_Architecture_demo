@@ -1,7 +1,7 @@
 
 
-#ifndef __HAL_CALENDAR_H
-#define __HAL_CALENDAR_H
+#ifndef HAL_CALENDAR_H
+#define HAL_CALENDAR_H
 
 
 #include "drv_ds1302.h"

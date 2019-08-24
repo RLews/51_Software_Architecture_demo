@@ -442,11 +442,6 @@
               <FilePath>..\source\driver\drv_timer.h</FilePath>
             </File>
             <File>
-              <FileName>drv_ds1302.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\source\complex_driver\drv_ds1302.h</FilePath>
-            </File>
-            <File>
               <FileName>drv_ds1302.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\driver\drv_ds1302.c</FilePath>
@@ -470,6 +465,11 @@
               <FileName>drv_paltform.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\source\driver\drv_paltform.h</FilePath>
+            </File>
+            <File>
+              <FileName>drv_ds1302.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\driver\drv_ds1302.h</FilePath>
             </File>
           </Files>
         </Group>

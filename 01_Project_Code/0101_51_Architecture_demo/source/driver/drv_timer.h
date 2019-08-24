@@ -1,7 +1,7 @@
 
 
-#ifndef __DRV_TIMER_H
-#define __DRV_TIMER_H
+#ifndef DRV_TIMER_H
+#define DRV_TIMER_H
 
 
 #include "drv_paltform.h"

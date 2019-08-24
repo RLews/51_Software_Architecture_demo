@@ -1,9 +1,9 @@
 
 
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 
-#define D_SYS_PER_TIMES					(1ul)
+#define D_SYS_PER_TIMES					(1u)
 
 #define D_SYS_TIME_5MS					(5*D_SYS_PER_TIMES)
 #define D_SYS_TIME_10MS					(10*D_SYS_PER_TIMES)

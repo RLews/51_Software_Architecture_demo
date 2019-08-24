@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   HAL_CALENDAR                                                          06/29/2019 16:01:32 PAGE 1   
+C51 COMPILER V9.00   HAL_CALENDAR                                                          08/24/2019 15:42:40 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE HAL_CALENDAR
@@ -40,17 +40,17 @@ line level    source
   30          
   31          void Hal_UpdateSysTime(void)
   32          {
-  33   1              uint8_t time[8] = {0};
+  33   1              uint8_t tTime[8] = {0};
   34   1              calendar_t * pCalendar = &sysCalendar;
   35   1      
-  36   1              Drv_Ds1302BurstRead(time);
-  37   1              pCalendar->year = time[6] + 0x2000;
-  38   1              pCalendar->mon = time[4];
-  39   1              pCalendar->day = time[3];
-  40   1              pCalendar->hour = time[2];
-  41   1              pCalendar->min = time[1];
-  42   1              pCalendar->sec = time[0];
-  43   1              pCalendar->week = time[5];
+  36   1              Drv_Ds1302BurstRead(tTime);
+  37   1              pCalendar->year = (uint16_t)((uint16_t)tTime[6] + 0x2000U);
+  38   1              pCalendar->mon = tTime[4];
+  39   1              pCalendar->day = tTime[3];
+  40   1              pCalendar->hour = tTime[2];
+  41   1              pCalendar->min = tTime[1];
+  42   1              pCalendar->sec = tTime[0];
+  43   1              pCalendar->week = tTime[5];
   44   1      }
   45          
   46          
@@ -62,7 +62,7 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    CONSTANT SIZE    =      8    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-C51 COMPILER V9.00   HAL_CALENDAR                                                          06/29/2019 16:01:32 PAGE 2   
+C51 COMPILER V9.00   HAL_CALENDAR                                                          08/24/2019 15:42:40 PAGE 2   
 
    DATA SIZE        =      8      17
    IDATA SIZE       =   ----    ----

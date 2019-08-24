@@ -17,7 +17,7 @@ void Drv_Ds1302Init(void)
 	Drv_NameOut(EN_DS1302_CE, 0);
 	Drv_NameOut(EN_DS1302_CK, 0);
 	dat = Drv_Ds1302ReadReg(0);
-	if ( (dat & 0x80) != 0 )
+	if ( (dat & 0x80u) != 0 )
 	{
 		Drv_Ds1302WriteReg(7, 0x00);/* undo write protect */
 		Drv_Ds1302BurstWrite(initTimerDat);
@@ -28,7 +28,7 @@ static void Drv_Ds1302ByteWrite(uint8_t dat)
 {
 	uint8_t mask = 0;
 
-	for (mask = 0x01; mask!=0; mask <<= 1)
+	for (mask = 0x01; mask!=0; mask <<= 1u)
 	{
 		if ( (mask&dat) != 0 )
 		{
@@ -66,7 +66,7 @@ static uint8_t Drv_Ds1302ByteRead(void)
 static void Drv_Ds1302WriteReg(uint8_t reg, uint8_t dat)
 {
 	Drv_NameOut(EN_DS1302_CE, 1);
-	Drv_Ds1302ByteWrite((reg<<1) | 0x80);		//发送写指令
+	Drv_Ds1302ByteWrite((reg << 1u) | 0x80u);		//发送写指令
 	Drv_Ds1302ByteWrite(dat);
 	Drv_NameOut(EN_DS1302_CE, 0);
 }
@@ -76,14 +76,14 @@ static uint8_t Drv_Ds1302ReadReg(uint8_t reg)
 	uint8_t dat = 0;
 	
 	Drv_NameOut(EN_DS1302_CE, 1);
-	Drv_Ds1302ByteWrite((reg<<1) | 0x81);		//发送读指令
+	Drv_Ds1302ByteWrite((reg << 1u) | 0x81u);		//发送读指令
 	dat = Drv_Ds1302ByteRead();
 	Drv_NameOut(EN_DS1302_CE, 0);
 	
 	return dat;	
 }
 
-void Drv_Ds1302BurstWrite(uint8_t dat[])
+void Drv_Ds1302BurstWrite(const uint8_t dat[])
 {
 	uint8_t i = 0;
 

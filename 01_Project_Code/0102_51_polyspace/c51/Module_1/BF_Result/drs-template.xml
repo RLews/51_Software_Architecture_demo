@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--EDRS Version 2.0-->
+<global>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\app\\main.c" comment="">
+      <function name="SysIoCtrl" comment="" line="51" main_generator_called="MAIN_GENERATOR" attributes="static"/>
+      <function name="SysUpdateCalendar" comment="" line="38" main_generator_called="MAIN_GENERATOR" attributes="static"/>
+      <function name="main" comment="" line="20" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="20" base_type="int32" complete_type="int32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\driver\\drv_ds1302.c" comment="">
+      <function name="Drv_Ds1302BurstRead" comment="" line="101" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Drv_Ds1302BurstWrite" comment="" line="86" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Drv_Ds1302ByteRead" comment="" line="48" main_generator_called="MAIN_GENERATOR" attributes="static">
+         <scalar name="return" comment="" line="48" base_type="uint8" attributes="static" complete_type="uint8" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_Ds1302ByteWrite" comment="" line="27" main_generator_called="MAIN_GENERATOR" attributes="static">
+         <scalar name="arg1" comment="" line="27" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_Ds1302Init" comment="" line="13" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Drv_Ds1302ReadReg" comment="" line="74" main_generator_called="MAIN_GENERATOR" attributes="static">
+         <scalar name="arg1" comment="" line="74" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="return" comment="" line="74" base_type="uint8" attributes="static" complete_type="uint8" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_Ds1302WriteReg" comment="" line="66" main_generator_called="MAIN_GENERATOR" attributes="static">
+         <scalar name="arg1" comment="" line="66" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg2" comment="" line="66" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <array name="initTimerDat" comment="" line="5" complete_type="const uint8 [8]" attributes="static">
+         <scalar comment="" line="5" base_type="uint8" attributes="static const" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      </array>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\driver\\drv_gpio.c" comment="">
+      <function name="Drv_GroupGpioIn" comment="" line="62" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="62" base_type="int32" complete_type="enum __PORT_GROUP_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="return" comment="" line="62" base_type="uint8" complete_type="uint8" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_GroupGpioOut" comment="" line="146" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="146" base_type="int32" complete_type="enum __PORT_GROUP_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg2" comment="" line="146" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_NameIn" comment="" line="185" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="185" base_type="int32" complete_type="enum __GPIO_NAME_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="return" comment="" line="185" base_type="uint8" complete_type="uint8" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_NameOut" comment="" line="172" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="172" base_type="int32" complete_type="enum __GPIO_NAME_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg2" comment="" line="172" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_SingleGpioIn" comment="" line="16" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="16" base_type="int32" complete_type="enum __PORT_GROUP_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg2" comment="" line="16" base_type="int32" complete_type="enum __GPIO_BIT_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="return" comment="" line="16" base_type="uint8" complete_type="uint8" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_SingleGpioOut" comment="" line="93" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="93" base_type="int32" complete_type="enum __PORT_GROUP_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg2" comment="" line="93" base_type="int32" complete_type="enum __GPIO_BIT_T" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg3" comment="" line="93" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <array name="gpioConfigArry" comment="" line="8" complete_type="const struct __GPIO_CONFIG_T [8]" attributes="static">
+         <struct comment="" line="8" complete_type="struct __GPIO_CONFIG_T" attributes="static const">
+            <scalar name="gpioBit" comment="" line="8" base_type="int32" attributes="static const" complete_type="enum __GPIO_BIT_T" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+            <scalar name="name" comment="" line="8" base_type="int32" attributes="static const" complete_type="enum __GPIO_NAME_T" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+            <scalar name="portGroup" comment="" line="8" base_type="int32" attributes="static const" complete_type="enum __PORT_GROUP_T" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+         </struct>
+      </array>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\driver\\drv_lcd.c" comment="">
+      <function name="Drv_LcdInit" comment="" line="11" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Drv_LcdWaitReady" comment="" line="19" main_generator_called="MAIN_GENERATOR" attributes="static"/>
+      <function name="Drv_LcdWriteCmd" comment="" line="37" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="37" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Drv_LcdWriteDat" comment="" line="47" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="47" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\driver\\drv_timer.c" comment="">
+      <function name="Drv_SysTimerInit" comment="" line="10" main_generator_called="MAIN_GENERATOR"/>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\hal\\hal_calendar.c" comment="">
+      <function name="Hal_CalendarInit" comment="" line="13" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Hal_GetSysTime" comment="" line="18" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Hal_UpdateSysTime" comment="" line="31" main_generator_called="MAIN_GENERATOR"/>
+      <struct name="sysCalendar" comment="" line="5" complete_type="struct __CALENDAR_T" attributes="static">
+         <scalar name="day" comment="" line="5" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+         <scalar name="hour" comment="" line="5" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+         <scalar name="min" comment="" line="5" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+         <scalar name="mon" comment="" line="5" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+         <scalar name="sec" comment="" line="5" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+         <scalar name="week" comment="" line="5" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+         <scalar name="year" comment="" line="5" base_type="uint32" attributes="static" complete_type="uint32" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      </struct>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\hal\\hal_display.c" comment="">
+      <function name="Hal_DisplayCalendar" comment="" line="15" main_generator_called="MAIN_GENERATOR" attributes="static"/>
+      <function name="Hal_DisplayInit" comment="" line="10" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Hal_DisplayStr" comment="" line="64" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="64" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="arg2" comment="" line="64" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Hal_FlashCalendar" comment="" line="49" main_generator_called="MAIN_GENERATOR"/>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\hal\\hal_gpio.c" comment="">
+      <function name="Hal_DebugIOCtrl" comment="" line="7" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="7" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\hal\\hal_paltform.c" comment="">
+      <function name="Hal_SysEnterCritical" comment="" line="5" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="5" base_type="uint8" complete_type="uint8" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Hal_SysExitCritical" comment="" line="13" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="13" base_type="uint8" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+   </file>
+   <file name="E:\\git\\51_Software_Architecture_demo\\01_Project_Code\\0101_51_Architecture_demo\\source\\hal\\hal_timer.c" comment="">
+      <function name="Hal_DiffTimerCnt" comment="" line="28" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="28" base_type="uint32" complete_type="uint32" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+         <scalar name="return" comment="" line="28" base_type="uint32" complete_type="uint32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Hal_GetCurSysTimerCnt" comment="" line="17" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="17" base_type="uint32" complete_type="uint32" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Hal_SysTimerInit" comment="" line="12" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Hal_SysTimerIsr" comment="" line="45" main_generator_called="MAIN_GENERATOR"/>
+      <scalar name="halSysTimerOverflowCnt" comment="" line="7" base_type="uint32" attributes="volatile static" complete_type="uint32" init_mode="MAIN_GENERATOR" init_modes_allowed="12" init_range="" global_assert="disabled" assert_range="disabled"/>
+   </file>
+</global>

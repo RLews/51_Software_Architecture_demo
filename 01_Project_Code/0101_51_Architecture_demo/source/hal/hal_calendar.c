@@ -30,17 +30,17 @@ void Hal_GetSysTime(calendar_t *pSysTmr)
 
 void Hal_UpdateSysTime(void)
 {
-	uint8_t time[8] = {0};
+	uint8_t tTime[8] = {0};
 	calendar_t * pCalendar = &sysCalendar;
 
-	Drv_Ds1302BurstRead(time);
-	pCalendar->year = time[6] + 0x2000;
-	pCalendar->mon = time[4];
-	pCalendar->day = time[3];
-	pCalendar->hour = time[2];
-	pCalendar->min = time[1];
-	pCalendar->sec = time[0];
-	pCalendar->week = time[5];
+	Drv_Ds1302BurstRead(tTime);
+	pCalendar->year = (uint16_t)((uint16_t)tTime[6] + 0x2000U);
+	pCalendar->mon = tTime[4];
+	pCalendar->day = tTime[3];
+	pCalendar->hour = tTime[2];
+	pCalendar->min = tTime[1];
+	pCalendar->sec = tTime[0];
+	pCalendar->week = tTime[5];
 }
 
 

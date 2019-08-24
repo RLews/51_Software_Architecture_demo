@@ -1,7 +1,7 @@
 
 
-#ifndef __DRV_PALTFORM_H
-#define __DRV_PALTFORM_H
+#ifndef DRV_PALTFORM_H
+#define DRV_PALTFORM_H
 
 
 #include <reg52.h>

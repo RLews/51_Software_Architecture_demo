@@ -20,7 +20,7 @@ uint8_t Drv_SingleGpioIn(portGroup_t group, gpioBit_t bits)
 	switch (group)
 	{
 		case EN_PORT_0:
-			if ( 0 != ( P0 & (0x01 << bits) ) )
+			if ( 0 != ( P0 & (0x01u << (uint8_t)bits) ) )
 			{
 				inTtl = 1;
 			}
@@ -28,7 +28,7 @@ uint8_t Drv_SingleGpioIn(portGroup_t group, gpioBit_t bits)
 			
 		case EN_PORT_1:
 			
-			if ( 0 != ( P1 & (0x01 << bits) ) )
+			if ( 0 != ( P1 & (0x01u << (uint8_t)bits) ) )
 			{
 				inTtl = 1;
 			}
@@ -37,7 +37,7 @@ uint8_t Drv_SingleGpioIn(portGroup_t group, gpioBit_t bits)
 			
 		case EN_PORT_2:
 			
-			if ( 0 != ( P2 & (0x01 << bits) ) )
+			if ( 0 != ( P2 & (0x01u << (uint8_t)bits) ) )
 			{
 				inTtl = 1;
 			}
@@ -46,14 +46,14 @@ uint8_t Drv_SingleGpioIn(portGroup_t group, gpioBit_t bits)
 			
 		case EN_PORT_3:
 			
-			if ( 0 != ( P3 & (0x01 << bits) ) )
+			if ( 0 != ( P3 & (0x01u << (uint8_t)bits) ) )
 			{
 				inTtl = 1;
 			}
 			
 			break;
 			
-		default:
+		default: //exception
 			break;
 	}
 	return inTtl;
@@ -84,7 +84,7 @@ uint8_t Drv_GroupGpioIn(portGroup_t group)
 			
 			break;
 			
-		default:
+		default:   //exception
 			break;
 	}
 	return inTtl;
@@ -97,48 +97,48 @@ void Drv_SingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig)
 		case EN_PORT_0:
 			if (sig == 0)
 			{
-				D_BYTE_CLR_BITS(P0,bits);
+				D_BYTE_CLR_BITS(P0,(uint8_t)bits);
 			}
 			else
 			{
-				D_BYTE_SET_BITS(P0,bits);
+				D_BYTE_SET_BITS(P0,(uint8_t)bits);
 			}
 			break;
 			
 		case EN_PORT_1:
 			if (sig == 0)
 			{
-				D_BYTE_CLR_BITS(P1,bits);
+				D_BYTE_CLR_BITS(P1,(uint8_t)bits);
 			}
 			else
 			{
-				D_BYTE_SET_BITS(P1,bits);
+				D_BYTE_SET_BITS(P1,(uint8_t)bits);
 			}
 			break;
 			
 		case EN_PORT_2:
 			if (sig == 0)
 			{
-				D_BYTE_CLR_BITS(P2,bits);
+				D_BYTE_CLR_BITS(P2,(uint8_t)bits);
 			}
 			else
 			{
-				D_BYTE_SET_BITS(P2,bits);
+				D_BYTE_SET_BITS(P2,(uint8_t)bits);
 			}
 			break;
 			
 		case EN_PORT_3:
 			if (sig == 0)
 			{
-				D_BYTE_CLR_BITS(P3,bits);
+				D_BYTE_CLR_BITS(P3,(uint8_t)bits);
 			}
 			else
 			{
-				D_BYTE_SET_BITS(P3,bits);
+				D_BYTE_SET_BITS(P3,(uint8_t)bits);
 			}
 			break;
 			
-		default:
+		default: //exception
 			break;
 	}
 }
@@ -164,7 +164,7 @@ void Drv_GroupGpioOut(portGroup_t group, uint8_t sig)
 			P3 = sig;
 			break;
 			
-		default:
+		default: //exception
 			break;
 	}
 }

@@ -31,7 +31,7 @@ static void Drv_LcdWaitReady(void)
 		sta = Drv_NameIn(EN_LCD_DATA_BUS);
 		Drv_NameOut(EN_LCD_E, 0);
 		tryCnt++;
-	} while ((tryCnt < 10000) && (sta & 0x80)); //bit7 等于 1 表示液晶正忙，重复检测直到其等于 0 为止
+	} while ((tryCnt < 10000UL) && (0 != (sta & 0x80U))); //bit7 等于 1 表示液晶正忙，重复检测直到其等于 0 为止
 }
 
 void Drv_LcdWriteCmd(uint8_t cmd)

@@ -1,0 +1,244 @@
+@import url(hole.css);
+@import url(docpart_templates.css);
+
+ol.toc > li {
+  list-style:none;
+}
+
+table.rgUnruledTable  p {
+  text-align: left;
+}
+
+table.rgUnruledTable {
+  border-collapse: collapse;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: normal;
+  text-align: start;
+  white-space: normal;
+}
+
+table.rgUnruledTable > thead {
+  background-color: #6A80BF;
+  color: white;
+}
+
+table.rgUnruledTable>tfoot> tr> td {
+  background-color: #D5DFF6;
+}
+
+table.rgUnruledTable  td {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #D3D3D3;
+}
+
+
+p.rgTableTitle {
+	font-weight:bold;
+    height:auto;
+	width:auto
+}
+
+span.rgTableTitlePrefix,
+span.rgTableTitleNumber,
+span.rgTableTitleText {
+	font-weight:bold;
+    height:auto;
+	width:auto
+}
+
+p.rgFigureTitle {
+	font-weight:bold;
+    height:auto;
+	width:auto
+}
+
+span.rgFigureTitlePrefix,
+span.rgFigureTitleNumber,
+span.rgFigureTitleText {
+	font-weight:bold;
+    height:auto;
+	width:auto
+}
+
+p.rgListTitle {
+	font-weight:bold;
+    height:auto;
+	width:auto
+}
+
+span.rgListTitlePrefix,
+span.rgListTitleNumber,
+span.rgListTitleText {
+	font-weight:bold;
+    height:auto;
+	width:auto
+}
+
+
+
+h1.rgTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+p.rgTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24.5pt;
+	font-style: normal;
+	font-weight: bold;
+}
+
+
+h2.rgSubtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20.5pt;
+	font-weight: bold;
+}
+
+p.rgSubtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20.5pt;
+	font-weight: bold;
+}
+
+p.rgAbstractTitle,
+span.rgTOCSectionTitle {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+}
+
+div.rgAuthor {
+}
+
+h3.rgAuthor {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17pt;
+	font-weight: bold;
+}
+
+h2.rgSect1Title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17pt;
+}
+
+span.rgSect1TitlePrefix,
+span.rgSect1TitleNumber,
+span.rgSect1TitleText {
+	font-weight: bold;
+}
+
+h3.rgSect2Title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+}
+
+span.rgSect2TitlePrefix,
+span.rgSect2TitleNumber,
+span.rgSect2TitleText {
+	font-weight: bold;
+}
+
+h4.rgSect3Title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+span.rgSect3TitlePrefix,
+span.rgSect3TitleNumber,
+span.rgSect3TitleText {
+	font-weight: bold;
+}
+
+h5.rgSect4Title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+span.rgSect4TitlePrefix,
+span.rgSect4TitleNumber,
+span.rgSect4TitleText {
+	font-style:italic
+}
+
+h6.rgSect5Title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+
+}
+
+span.rgSect5TitlePrefix,
+span.rgSect5TitleNumber,
+span.rgSect5TitleText {
+    font-style: italic;
+    font-weight: bold;
+}
+
+p.rgSimpleSectTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+span.rgProgramListing{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 9pt;
+}
+
+span.rgLiteralLayout {
+
+}
+
+pre.rgLiteralLayout {
+
+}
+
+span.MWSHComments {
+    color:green;
+}
+
+span.MWSHKeywords {
+    color:blue;
+}
+
+span.MWSHStrings {
+    color:#B20000;
+}
+
+p.rgBody {
+
+}
+
+p.rgParagraph,
+p.rgTableBody {
+}
+
+p.rgTableHeader,
+p.rgTableFooter {
+    font-weight: bold;
+}
+
+p.rgTableFooter {
+    font-weight: bold;
+}
+
+
+span.rgParagraphTitle {
+    font-weight: bold;
+}

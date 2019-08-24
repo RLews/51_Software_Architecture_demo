@@ -1,7 +1,7 @@
 
 
-#ifndef __DRV_LCD_H
-#define __DRV_LCD_H
+#ifndef DRV_LCD_H
+#define DRV_LCD_H
 
 #include "drv_gpio.h"
 

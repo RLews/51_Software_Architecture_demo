@@ -1,0 +1,523 @@
+Remark: Option -float-rounding-mode has no effect in Polyspace Bug Finder
+Remark: Option -O2 has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-calls has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-writes-variables has no effect in Polyspace Bug
+|       Finder
+Remark: Option -check-subnormal has no effect in Polyspace Bug Finder
+Remark: Option -uncalled-function-checks has no effect in Polyspace Bug Finder
+<polyspace-bug-finder-nodesktop R2018b PID9292 PGID9292>
+
+Polyspace verification of c51 project.
+Starting at 08/24/2019, 15h29.
+
+Option -signed-integer-overflows has no effect in Polyspace Bug Finder.
+Option -unsigned-integer-overflows has no effect in Polyspace Bug Finder.
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_STD_LIB, FLOAT_STD_LIB, OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, FUNC_CAST, PTR_CAST, 
+  MEM_STD_LIB, STR_STD_LIB, FREED_PTR, DOUBLE_DEALLOCATION, BAD_FREE, BAD_EQUAL_USE, 
+  BAD_EQUAL_EQUAL_USE, DECL_MISMATCH, MISSING_NULL_CHAR, PTR_SIZEOF_MISMATCH, TYPEDEF_MISMATCH, 
+  USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, MISSING_RETURN, RESOURCE_LEAK, 
+  UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, USELESS_IF, DEADLOCK, BAD_LOCK, DOUBLE_LOCK, 
+  DATA_RACE, DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, ASSERT, STRING_FORMAT, IMPROPER_ARRAY_INIT, 
+  BAD_PTR_SCALING, SIZEOF_MISUSE, FLOAT_ABSORPTION, LOCAL_ADDR_ESCAPE, STR_FORMAT_BUFFER_OVERFLOW, 
+  STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, PUTENV_AUTO_VAR, PTR_TO_DIFF_ARRAY, 
+  ALIGNMENT_CHANGE, READ_ONLY_RESOURCE_WRITE, CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, 
+  DOUBLE_RESOURCE_OPEN, OPERATOR_PRECEDENCE, STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, 
+  CONSTANT_OBJECT_WRITE, INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, MEMCMP_STRINGS, 
+  MEMCMP_PADDING_DATA, INVALID_ENV_POINTER, ERRNO_MISUSE, MISSING_ERRNO_RESET, CHARACTER_MISUSE, 
+  CHAR_EOF_CONFUSED, IO_INTERLEAVING, SIG_HANDLER_COMP_EXCP_RETURN, SIG_HANDLER_CALLING_SIGNAL, 
+  UNPROTOTYPED_FUNC_CALL, FILE_OBJECT_MISUSE, FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE, 
+  SIG_HANDLER_SHARED_OBJECT, MACRO_USED_AS_OBJECT, SIDE_EFFECT_IGNORED, PRE_UCNAME_JOIN_TOKENS, 
+  PRE_DIRECTIVE_MACRO_ARG, INLINE_CONSTRAINT_NOT_RESPECTED, VA_ARG_INCORRECT_TYPE, 
+  TOO_MANY_VA_ARG_CALLS, STREAM_WITH_SIDE_EFFECT, TEMP_OBJECT_ACCESS, SIG_HANDLER_ERRNO_MISUSE, 
+  DATA_RACE_STD_LIB, ATOMIC_VAR_ACCESS_TWICE, ATOMIC_VAR_SEQUENCE_NOT_ATOMIC
+
+Remark: By default, some results are not generated for headers.
+|       Search for '-generate-results-for' in user documentation to generate results for these headers.
+
+Verifying sources compliance ...
+Warning: MISRA C:2012 checker: the rule 17.3 has been disabled because it applies to the C90 standard and the selected standard is C99.
+Warning: MISRA C:2012 checker: the rule 8.1 has been disabled because it applies to the C90 standard and the selected standard is C99.
+
+Options used with Verifier:
+-lang=C
+-polyspace-version=2.6 (R2018b)
+-date=24/08/2019
+
+User:
+-D1=code=
+-bug-finder=true (non-official option)
+-I1=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source
+-I2=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app
+-I3=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver
+-I4=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal
+-I5=D:\Keil\C51\C51\INC
+-target=i386
+-compiler=keil
+-c-version=c11
+-dos=true
+-sfr-types=[sfr=8]
+-report-output-format=HTML
+-report-template=Polyspace-Doc\BugFinderSummary.rpt
+-to=Software Safety Analysis level 2
+-import-comments=E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\BF_Result\comments_bak
+-results-dir=E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\BF_Result
+-verif-version=1.0
+-author=HP
+-prog=c51
+-code-metrics=true
+-misra3=mandatory-required
+
+
+Verifying host configuration:
+Number of cores:                2
+Processor type:                 amd64
+Processor model:                Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+Processor frequency:            2.400 GHz
+Memory > 4 GB:                                            15.88 GB
+Tmp space available in C:\Users\HP\AppData\Local\Temp:    30.41 GB
+
+Remark: 2 core(s) detected. The verification creates 2 process(es).
+*** Configuration of the host :	OK
+
+
+Type E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\BF_Result\kill-rte-kernel.bat on host ENVY to halt Verifier process
+
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 15:29:41 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Verifying Keil C sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying drv_ds1302.c (1/11)
+Verifying drv_gpio.c (2/11)
+Verifying drv_lcd.c (3/11)
+Verifying drv_paltform.c (4/11)
+Verifying drv_timer.c (5/11)
+Verifying hal_calendar.c (6/11)
+Verifying hal_display.c (7/11)
+Verifying hal_gpio.c (8/11)
+Verifying hal_paltform.c (9/11)
+Verifying hal_timer.c (10/11)
+Verifying main.c (11/11)
+Global compilation phase...
+
+Number of files                  : 11
+Number of lines                  : 750
+Number of lines without comments : 535
+
+Verifying cross-files ANSI C compliance
+
+Stubbing standard library functions ...
+Remark: The generated default DRS XML file "drs-template.xml" can be found in <result_dir> folder.
+Doing code transformations ...
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+Coding rules checking might not be complete. Some rule violations
+ are detected after the source compliance checking phase.
+**********************************************************
+Summary per file:
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.c: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c: 
+    8 rules violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_lcd.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\typedefs.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_calendar.c: 
+    2 rules violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_calendar.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_display.c: 
+    13 rules violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_display.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_gpio.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_paltform.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.h: 
+    1 rule violated
+**********************************************************
+Summary per rule:
+  rule 10.3 violated 13 times
+  rule 21.1 violated 12 times
+  rule 16.1 violated 4 times
+  rule 16.4 violated 4 times
+  rule 8.4 violated 2 times
+  rule 10.8 violated 1 time
+  rule 21.2 violated 1 time
+
+
+
+
+Packing compilation data
+
+Defects statistics:
+  - Total number of defects: 0
+done.
+
+**********************************************************
+***
+*** Keil C sources verification done
+***
+**********************************************************
+Ending at: Sat Aug 24 15:29:57 2019
+User time for compilation: 00:00:15.90 (15.91real, 15.91u + 0s (0.22gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 15:29:57 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Pre-analysis
+***
+**********************************************************
+**** Bug-finder - Pre-analysis - 1 (P_AL)
+Total complexity = 4795
+**** Bug-finder - Pre-analysis - 1 (P_AL) took 0.22real, 0.22u + 0s
+**** Bug-finder - Pre-analysis - 2 (P_ACP)
+* n-acp-t = 0 n-epp' = 0 n-acp-l = 0
+**** Bug-finder - Pre-analysis - 2 (P_ACP) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 3 (P_O)
+**** Bug-finder - Pre-analysis - 3 (P_O) took 0.01real, 0.01u + 0s
+**** Bug-finder - Pre-analysis - 4 (P_MA)
+**** Bug-finder - Pre-analysis - 4 (P_MA) took 0.01real, 0.01u + 0s
+**** Bug-finder - Pre-analysis - 5 (P_G)
+**** Bug-finder - Pre-analysis - 5 (P_G) took 0.02real, 0.02u + 0s
+**** Bug-finder - Pre-analysis - 6 (P_DRC)
+**** Bug-finder - Pre-analysis - 6 (P_DRC) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 7 (P_TT)
+**** Bug-finder - Pre-analysis - 7 (P_TT) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 8 (P_FI)
+**** Bug-finder - Pre-analysis - 8 (P_FI) took 0.52real, 0.52u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.61real
+
+**********************************************************
+***
+*** Bug-finder - Pre-analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 15:29:59 2019
+User time for pre-analysis: 00:00:02.73 (2.73real, 2.73u + 0s (0.19gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 15:29:59 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Function Analysis
+***
+**********************************************************
+**** Bug-finder - Function Analysis - (Verifying function #1 / 35: Hal_GetSysTime)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 35: Drv_Ds1302BurstRead)
+**** Bug-finder - Function Analysis - (Verifying function #3 / 35: Drv_SingleGpioOut)
+**** Bug-finder - Function Analysis - (Verifying function #4 / 35: Hal_DisplayInit)
+**** Bug-finder - Function Analysis - (Verifying function #5 / 35: Hal_FlashCalendar)
+**** Bug-finder - Function Analysis - (Verifying function #6 / 35: Drv_LcdWriteCmd)
+**** Bug-finder - Function Analysis - (Verifying function #7 / 35: Drv_Ds1302ByteRead)
+**** Bug-finder - Function Analysis - (Verifying function #8 / 35: Hal_SysExitCritical)
+**** Bug-finder - Function Analysis - (Verifying function #9 / 35: SysUpdateCalendar)
+**** Bug-finder - Function Analysis - (Verifying function #10 / 35: Drv_LcdWaitReady)
+**** Bug-finder - Function Analysis - (Verifying function #11 / 35: Hal_SysEnterCritical)
+**** Bug-finder - Function Analysis - (Verifying function #12 / 35: Drv_SysTimerInit)
+**** Bug-finder - Function Analysis - (Verifying function #13 / 35: Hal_DisplayStr)
+**** Bug-finder - Function Analysis - (Verifying function #14 / 35: SysIoCtrl)
+**** Bug-finder - Function Analysis - (Verifying function #15 / 35: Hal_GetCurSysTimerCnt)
+**** Bug-finder - Function Analysis - (Verifying function #16 / 35: Drv_LcdWriteDat)
+**** Bug-finder - Function Analysis - (Verifying function #17 / 35: Drv_Ds1302ByteWrite)
+**** Bug-finder - Function Analysis - (Verifying function #18 / 35: Hal_SysTimerIsr)
+**** Bug-finder - Function Analysis - (Verifying function #19 / 35: Hal_CalendarInit)
+**** Bug-finder - Function Analysis - (Verifying function #20 / 35: main)
+**** Bug-finder - Function Analysis - (Verifying function #21 / 35: Drv_LcdInit)
+**** Bug-finder - Function Analysis - (Verifying function #22 / 35: Hal_DebugIOCtrl)
+**** Bug-finder - Function Analysis - (Verifying function #23 / 35: Drv_Ds1302ReadReg)
+**** Bug-finder - Function Analysis - (Verifying function #24 / 35: Drv_SingleGpioIn)
+**** Bug-finder - Function Analysis - (Verifying function #25 / 35: Drv_GroupGpioOut)
+**** Bug-finder - Function Analysis - (Verifying function #26 / 35: Drv_NameOut)
+**** Bug-finder - Function Analysis - (Verifying function #27 / 35: Drv_Ds1302Init)
+**** Bug-finder - Function Analysis - (Verifying function #28 / 35: Drv_Ds1302BurstWrite)
+**** Bug-finder - Function Analysis - (Verifying function #29 / 35: Hal_DiffTimerCnt)
+**** Bug-finder - Function Analysis - (Verifying function #30 / 35: Drv_GroupGpioIn)
+**** Bug-finder - Function Analysis - (Verifying function #31 / 35: Hal_SysTimerInit)
+**** Bug-finder - Function Analysis - (Verifying function #32 / 35: Drv_Ds1302WriteReg)
+**** Bug-finder - Function Analysis - (Verifying function #33 / 35: Hal_UpdateSysTime)
+**** Bug-finder - Function Analysis - (Verifying function #34 / 35: Hal_DisplayCalendar)
+**** Bug-finder - Function Analysis - (Verifying function #35 / 35: Drv_NameIn)
+**** Bug-finder - Function Analysis - (Verifying function #1 / 35: Hal_GetSysTime) took 1.74real
+**** Bug-finder - Function Analysis - (Verifying function #2 / 35: Drv_Ds1302BurstRead) took 1.39real
+**** Bug-finder - Function Analysis - (Verifying function #4 / 35: Hal_DisplayInit) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #5 / 35: Hal_FlashCalendar) took 0.35real
+**** Bug-finder - Function Analysis - (Verifying function #3 / 35: Drv_SingleGpioOut) took 0.99real
+**** Bug-finder - Function Analysis - (Verifying function #6 / 35: Drv_LcdWriteCmd) took 0.36real
+**** Bug-finder - Function Analysis - (Verifying function #8 / 35: Hal_SysExitCritical) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #7 / 35: Drv_Ds1302ByteRead) took 0.57real
+**** Bug-finder - Function Analysis - (Verifying function #9 / 35: SysUpdateCalendar) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #10 / 35: Drv_LcdWaitReady) took 0.38real
+**** Bug-finder - Function Analysis - (Verifying function #11 / 35: Hal_SysEnterCritical) took 0.28real
+**** Bug-finder - Function Analysis - (Verifying function #12 / 35: Drv_SysTimerInit) took 0.42real
+**** Bug-finder - Function Analysis - (Verifying function #13 / 35: Hal_DisplayStr) took 0.46real
+**** Bug-finder - Function Analysis - (Verifying function #14 / 35: SysIoCtrl) took 0.35real
+**** Bug-finder - Function Analysis - (Verifying function #15 / 35: Hal_GetCurSysTimerCnt) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #16 / 35: Drv_LcdWriteDat) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #18 / 35: Hal_SysTimerIsr) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #17 / 35: Drv_Ds1302ByteWrite) took 0.49real
+**** Bug-finder - Function Analysis - (Verifying function #19 / 35: Hal_CalendarInit) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #20 / 35: main) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #21 / 35: Drv_LcdInit) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #22 / 35: Hal_DebugIOCtrl) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #23 / 35: Drv_Ds1302ReadReg) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #25 / 35: Drv_GroupGpioOut) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #24 / 35: Drv_SingleGpioIn) took 0.49real
+**** Bug-finder - Function Analysis - (Verifying function #26 / 35: Drv_NameOut) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #27 / 35: Drv_Ds1302Init) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #29 / 35: Hal_DiffTimerCnt) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #28 / 35: Drv_Ds1302BurstWrite) took 0.45real
+**** Bug-finder - Function Analysis - (Verifying function #30 / 35: Drv_GroupGpioIn) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #31 / 35: Hal_SysTimerInit) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #32 / 35: Drv_Ds1302WriteReg) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #33 / 35: Hal_UpdateSysTime) took 0.35real
+**** Bug-finder - Function Analysis - (Verifying function #35 / 35: Drv_NameIn) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #34 / 35: Hal_DisplayCalendar) took 0.71real
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.45real
+
+* Total IL complexity: 6250
+
+**********************************************************
+***
+*** Bug-finder - Function Analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 15:30:10 2019
+User time for function: 00:00:11.11 (11.12real, 11.12u + 0s (0.06gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 15:30:10 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Module Analysis
+***
+**********************************************************
+**** Bug-finder - Module Analysis - 1 (Computing modules)
+* Created 1 module
+**** Bug-finder - Module Analysis - 1 (Computing modules) took 0.01real, 0.01u + 0s (0.02gc)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 34 functions)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 34 functions) took 1.99real
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.51real
+
+**********************************************************
+***
+*** Bug-finder - Module Analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 15:30:14 2019
+User time for module: 00:00:03.20 (3.2real, 3.2u + 0s (0.08gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 15:30:14 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Global analysis
+***
+**********************************************************
+**** Bug-finder - Global analysis - 1 (P_CCG)
+**** Bug-finder - Global analysis - 1 (P_CCG) took 0real, 0u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.51real
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+**********************************************************
+Summary per file:
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.c: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c: 
+    8 rules violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_lcd.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\typedefs.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_calendar.c: 
+    2 rules violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_calendar.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_display.c: 
+    13 rules violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_display.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_gpio.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_paltform.h: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.h: 
+    1 rule violated
+**********************************************************
+Summary per rule:
+  rule 10.3 violated 13 times
+  rule 21.1 violated 12 times
+  rule 16.1 violated 4 times
+  rule 16.4 violated 4 times
+  rule 8.4 violated 2 times
+  rule 10.8 violated 1 time
+  rule 21.2 violated 1 time
+
+Importing comments from E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\BF_Result\comments_bak folder
+
+Operation completed:
+--------------------
+
+Diff statistics for MISRA C:2012 results:
+-----------------------------------------
+| Number of backuped comments attached to disappeared results                : 0
+| Number of unmatched uncommented results                                    : 19
+| Number of results comments not imported because a more recent one was found: 0
+| Number of partially imported results comments (due to a result change)     : 0
+| Number of fully imported results comments                                  : 0
+| Number of matched results without comment                                  : 37
+| Number of matched results with a comment coming from source code annotation: 0
+| Total number of results                                                    : 56
+
+Diff statistics for Code Metric results:
+----------------------------------------
+| Number of backuped comments attached to disappeared results                : 0
+| Number of unmatched uncommented results                                    : 0
+| Number of results comments not imported because a more recent one was found: 0
+| Number of partially imported results comments (due to a result change)     : 0
+| Number of fully imported results comments                                  : 0
+| Number of matched results without comment                                  : 667
+| Number of matched results with a comment coming from source code annotation: 0
+| Total number of results                                                    : 667
+
+
+**********************************************************
+***
+*** Bug-finder - Global analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 15:30:15 2019
+User time for global: 00:00:01.33 (1.33real, 1.33u + 0s (0.08gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 15:30:16 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Report generation
+***
+**********************************************************
+Polyspace Report Generator
+Generating Report
+Template    : BugFinderSummary.rpt
+Results-dir : E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\BF_Result
+Format      : dom-htmx
+Output-Name : E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\BF_Result\PolySpace-Doc\c51_BugFinderSummary\root.html
+    Beginning report
+      Processing Summary
+      Processing Metrics Summary
+      Processing MISRA2012 summary
+      Processing MISRA2012 summary
+      Processing Defects Summary
+      Processing Configuration 
+      Processing Abbreviations and Acronyms
+    Converting report
+    Report complete
+    Generated: E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\BF_Result\PolySpace-Doc\c51_BugFinderSummary (480 rows)
+ 
+**********************************************************
+***
+*** Bug-finder - Report generation done
+***
+**********************************************************
+Ending at: Sat Aug 24 15:30:45 2019
+User time for report-generator: 00:00:28.94 (28.94real, 28.94u + 0s)
+User time for polyspace-bug-finder-nodesktop: 00:01:04 (64.72real, 64.72u + 0s (0.64gc))
+
+***
+*** End of Polyspace analysis
+***

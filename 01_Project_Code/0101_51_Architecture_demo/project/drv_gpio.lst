@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   DRV_GPIO                                                              06/29/2019 16:01:32 PAGE 1   
+C51 COMPILER V9.00   DRV_GPIO                                                              08/24/2019 15:36:11 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE DRV_GPIO
@@ -30,7 +30,7 @@ line level    source
   20   1              switch (group)
   21   1              {
   22   2                      case EN_PORT_0:
-  23   2                              if ( 0 != ( P0 & (0x01 << bits) ) )
+  23   2                              if ( 0 != ( P0 & (0x01u << (uint8_t)bits) ) )
   24   2                              {
   25   3                                      inTtl = 1;
   26   3                              }
@@ -38,7 +38,7 @@ line level    source
   28   2                              
   29   2                      case EN_PORT_1:
   30   2                              
-  31   2                              if ( 0 != ( P1 & (0x01 << bits) ) )
+  31   2                              if ( 0 != ( P1 & (0x01u << (uint8_t)bits) ) )
   32   2                              {
   33   3                                      inTtl = 1;
   34   3                              }
@@ -47,7 +47,7 @@ line level    source
   37   2                              
   38   2                      case EN_PORT_2:
   39   2                              
-  40   2                              if ( 0 != ( P2 & (0x01 << bits) ) )
+  40   2                              if ( 0 != ( P2 & (0x01u << (uint8_t)bits) ) )
   41   2                              {
   42   3                                      inTtl = 1;
   43   3                              }
@@ -56,16 +56,16 @@ line level    source
   46   2                              
   47   2                      case EN_PORT_3:
   48   2                              
-  49   2                              if ( 0 != ( P3 & (0x01 << bits) ) )
+  49   2                              if ( 0 != ( P3 & (0x01u << (uint8_t)bits) ) )
   50   2                              {
   51   3                                      inTtl = 1;
   52   3                              }
   53   2                              
   54   2                              break;
-C51 COMPILER V9.00   DRV_GPIO                                                              06/29/2019 16:01:32 PAGE 2   
+C51 COMPILER V9.00   DRV_GPIO                                                              08/24/2019 15:36:11 PAGE 2   
 
   55   2                              
-  56   2                      default:
+  56   2                      default: //exception
   57   2                              break;
   58   2              }
   59   1              return inTtl;
@@ -96,7 +96,7 @@ line level    source
   84   2                              
   85   2                              break;
   86   2                              
-  87   2                      default:
+  87   2                      default:   //exception
   88   2                              break;
   89   2              }
   90   1              return inTtl;
@@ -109,50 +109,50 @@ line level    source
   97   2                      case EN_PORT_0:
   98   2                              if (sig == 0)
   99   2                              {
- 100   3                                      D_BYTE_CLR_BITS(P0,bits);
+ 100   3                                      D_BYTE_CLR_BITS(P0,(uint8_t)bits);
  101   3                              }
  102   2                              else
  103   2                              {
- 104   3                                      D_BYTE_SET_BITS(P0,bits);
+ 104   3                                      D_BYTE_SET_BITS(P0,(uint8_t)bits);
  105   3                              }
  106   2                              break;
  107   2                              
  108   2                      case EN_PORT_1:
  109   2                              if (sig == 0)
  110   2                              {
- 111   3                                      D_BYTE_CLR_BITS(P1,bits);
+ 111   3                                      D_BYTE_CLR_BITS(P1,(uint8_t)bits);
  112   3                              }
  113   2                              else
  114   2                              {
- 115   3                                      D_BYTE_SET_BITS(P1,bits);
+ 115   3                                      D_BYTE_SET_BITS(P1,(uint8_t)bits);
  116   3                              }
-C51 COMPILER V9.00   DRV_GPIO                                                              06/29/2019 16:01:32 PAGE 3   
+C51 COMPILER V9.00   DRV_GPIO                                                              08/24/2019 15:36:11 PAGE 3   
 
  117   2                              break;
  118   2                              
  119   2                      case EN_PORT_2:
  120   2                              if (sig == 0)
  121   2                              {
- 122   3                                      D_BYTE_CLR_BITS(P2,bits);
+ 122   3                                      D_BYTE_CLR_BITS(P2,(uint8_t)bits);
  123   3                              }
  124   2                              else
  125   2                              {
- 126   3                                      D_BYTE_SET_BITS(P2,bits);
+ 126   3                                      D_BYTE_SET_BITS(P2,(uint8_t)bits);
  127   3                              }
  128   2                              break;
  129   2                              
  130   2                      case EN_PORT_3:
  131   2                              if (sig == 0)
  132   2                              {
- 133   3                                      D_BYTE_CLR_BITS(P3,bits);
+ 133   3                                      D_BYTE_CLR_BITS(P3,(uint8_t)bits);
  134   3                              }
  135   2                              else
  136   2                              {
- 137   3                                      D_BYTE_SET_BITS(P3,bits);
+ 137   3                                      D_BYTE_SET_BITS(P3,(uint8_t)bits);
  138   3                              }
  139   2                              break;
  140   2                              
- 141   2                      default:
+ 141   2                      default: //exception
  142   2                              break;
  143   2              }
  144   1      }
@@ -178,7 +178,7 @@ line level    source
  164   2                              P3 = sig;
  165   2                              break;
  166   2                              
- 167   2                      default:
+ 167   2                      default: //exception
  168   2                              break;
  169   2              }
  170   1      }
@@ -190,7 +190,7 @@ line level    source
  176   1              {
  177   2                      Drv_SingleGpioOut(gpioConfigArry[(uint8_t)name].portGroup, gpioConfigArry[(uint8_t)name].gpioBit, sig);
  178   2              }
-C51 COMPILER V9.00   DRV_GPIO                                                              06/29/2019 16:01:32 PAGE 4   
+C51 COMPILER V9.00   DRV_GPIO                                                              08/24/2019 15:36:11 PAGE 4   
 
  179   1              else
  180   1              {

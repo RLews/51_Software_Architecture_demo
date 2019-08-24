@@ -294,7 +294,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\source\app;..\source\complex_driver;..\source\driver;..\source\hal</IncludePath>
+              <IncludePath>..\source\app;..\source\driver;..\source\hal</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -359,46 +359,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>driver</GroupName>
-          <Files>
-            <File>
-              <FileName>drv_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\driver\drv_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>drv_gpio.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\source\driver\drv_gpio.h</FilePath>
-            </File>
-            <File>
-              <FileName>typedefs.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\source\driver\typedefs.h</FilePath>
-            </File>
-            <File>
-              <FileName>drv_timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\driver\drv_timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>drv_timer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\source\driver\drv_timer.h</FilePath>
-            </File>
-            <File>
-              <FileName>drv_paltform.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\driver\drv_paltform.c</FilePath>
-            </File>
-            <File>
-              <FileName>drv_paltform.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\source\driver\drv_paltform.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>hal</GroupName>
           <Files>
             <File>
@@ -442,24 +402,44 @@
               <FilePath>..\source\hal\hal_calendar.c</FilePath>
             </File>
             <File>
-              <FileName>hal_paltform.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\source\hal\hal_paltform.h</FilePath>
-            </File>
-            <File>
               <FileName>hal_paltform.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\hal\hal_paltform.c</FilePath>
             </File>
+            <File>
+              <FileName>hal_paltform.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\hal\hal_paltform.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>complex_driver</GroupName>
+          <GroupName>driver</GroupName>
           <Files>
             <File>
-              <FileName>drv_ds1302.c</FileName>
+              <FileName>drv_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\complex_driver\drv_ds1302.c</FilePath>
+              <FilePath>..\source\driver\drv_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\driver\drv_gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>typedefs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\driver\typedefs.h</FilePath>
+            </File>
+            <File>
+              <FileName>drv_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\driver\drv_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\driver\drv_timer.h</FilePath>
             </File>
             <File>
               <FileName>drv_ds1302.h</FileName>
@@ -467,14 +447,29 @@
               <FilePath>..\source\complex_driver\drv_ds1302.h</FilePath>
             </File>
             <File>
+              <FileName>drv_ds1302.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\driver\drv_ds1302.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_paltform.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\driver\drv_paltform.c</FilePath>
+            </File>
+            <File>
               <FileName>drv_lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\source\complex_driver\drv_lcd.c</FilePath>
+              <FilePath>..\source\driver\drv_lcd.c</FilePath>
             </File>
             <File>
               <FileName>drv_lcd.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\source\complex_driver\drv_lcd.h</FilePath>
+              <FilePath>..\source\driver\drv_lcd.h</FilePath>
+            </File>
+            <File>
+              <FileName>drv_paltform.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\driver\drv_paltform.h</FilePath>
             </File>
           </Files>
         </Group>

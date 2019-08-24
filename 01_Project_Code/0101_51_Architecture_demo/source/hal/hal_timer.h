@@ -1,7 +1,7 @@
 
 
-#ifndef __HAL_TIMER_H
-#define __HAL_TIMER_H
+#ifndef HAL_TIMER_H
+#define HAL_TIMER_H
 
 #include "drv_timer.h"
 #include "hal_paltform.h"

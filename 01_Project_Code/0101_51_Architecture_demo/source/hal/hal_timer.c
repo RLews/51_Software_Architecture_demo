@@ -42,7 +42,7 @@ uint32_t Hal_DiffTimerCnt(uint32_t last)
 }
 
 
-void Hal_SysTimerIsr()	interrupt	1
+void Hal_SysTimerIsr(void)	interrupt	1
 {
 	D_DRV_RELOAD_SYSTIME_CNT();
 	halSysTimerOverflowCnt++;
@@ -112,7 +112,7 @@ uint32_t Hal_DiffTimerCnt(uint32_t last)
 	return tim;
 }
 
-void Hal_SysTimerIsr()	interrupt	1
+void Hal_SysTimerIsr(void)	interrupt	1
 {
 	D_DRV_RELOAD_SYSTIME_CNT();
 	halSysTimerOverflowCnt++;

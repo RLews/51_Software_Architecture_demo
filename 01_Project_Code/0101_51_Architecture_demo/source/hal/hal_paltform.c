@@ -4,7 +4,7 @@
 
 bool_t Hal_SysEnterCritical(void)
 {
-	bool_t sta = EA;
+	bool_t sta = (bool_t)EA;
 	EA = 0;
 
 	return sta;

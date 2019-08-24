@@ -1,0 +1,543 @@
+Remark: Option -float-rounding-mode has no effect in Polyspace Bug Finder
+Remark: Option -O2 has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-calls has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-writes-variables has no effect in Polyspace Bug
+|       Finder
+Remark: Option -check-subnormal has no effect in Polyspace Bug Finder
+Remark: Option -uncalled-function-checks has no effect in Polyspace Bug Finder
+<polyspace-bug-finder-nodesktop R2018b PID10492 PGID10492>
+
+Polyspace verification of c51 project.
+Starting at 08/24/2019, 14h25.
+
+Option -signed-integer-overflows has no effect in Polyspace Bug Finder.
+Option -unsigned-integer-overflows has no effect in Polyspace Bug Finder.
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_STD_LIB, FLOAT_STD_LIB, OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, FUNC_CAST, PTR_CAST, 
+  MEM_STD_LIB, STR_STD_LIB, FREED_PTR, DOUBLE_DEALLOCATION, BAD_FREE, BAD_EQUAL_USE, 
+  BAD_EQUAL_EQUAL_USE, DECL_MISMATCH, MISSING_NULL_CHAR, PTR_SIZEOF_MISMATCH, TYPEDEF_MISMATCH, 
+  USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, MISSING_RETURN, RESOURCE_LEAK, 
+  UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, USELESS_IF, DEADLOCK, BAD_LOCK, DOUBLE_LOCK, 
+  DATA_RACE, DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, ASSERT, STRING_FORMAT, IMPROPER_ARRAY_INIT, 
+  BAD_PTR_SCALING, SIZEOF_MISUSE, FLOAT_ABSORPTION, LOCAL_ADDR_ESCAPE, STR_FORMAT_BUFFER_OVERFLOW, 
+  STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, PUTENV_AUTO_VAR, PTR_TO_DIFF_ARRAY, 
+  ALIGNMENT_CHANGE, READ_ONLY_RESOURCE_WRITE, CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, 
+  DOUBLE_RESOURCE_OPEN, OPERATOR_PRECEDENCE, STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, 
+  CONSTANT_OBJECT_WRITE, INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, MEMCMP_STRINGS, 
+  MEMCMP_PADDING_DATA, INVALID_ENV_POINTER, ERRNO_MISUSE, MISSING_ERRNO_RESET, CHARACTER_MISUSE, 
+  CHAR_EOF_CONFUSED, IO_INTERLEAVING, SIG_HANDLER_COMP_EXCP_RETURN, SIG_HANDLER_CALLING_SIGNAL, 
+  UNPROTOTYPED_FUNC_CALL, FILE_OBJECT_MISUSE, FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE, 
+  SIG_HANDLER_SHARED_OBJECT, MACRO_USED_AS_OBJECT, SIDE_EFFECT_IGNORED, PRE_UCNAME_JOIN_TOKENS, 
+  PRE_DIRECTIVE_MACRO_ARG, INLINE_CONSTRAINT_NOT_RESPECTED, VA_ARG_INCORRECT_TYPE, 
+  TOO_MANY_VA_ARG_CALLS, STREAM_WITH_SIDE_EFFECT, TEMP_OBJECT_ACCESS, SIG_HANDLER_ERRNO_MISUSE, 
+  DATA_RACE_STD_LIB, ATOMIC_VAR_ACCESS_TWICE, ATOMIC_VAR_SEQUENCE_NOT_ATOMIC
+
+Remark: By default, some results are not generated for headers.
+|       Search for '-generate-results-for' in user documentation to generate results for these headers.
+
+Verifying sources compliance ...
+
+Options used with Verifier:
+-lang=C
+-polyspace-version=2.6 (R2018b)
+-date=24/08/2019
+
+User:
+-bug-finder=true (non-official option)
+-I1=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source
+-I2=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app
+-I3=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver
+-I4=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal
+-target=i386
+-compiler=keil
+-c-version=c11
+-dos=true
+-report-output-format=HTML
+-report-template=Polyspace-Doc\BugFinderSummary.rpt
+-to=Software Safety Analysis level 2
+-results-dir=C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result
+-verif-version=1.0
+-author=HP
+-prog=c51
+
+
+Verifying host configuration:
+Number of cores:                2
+Processor type:                 amd64
+Processor model:                Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+Processor frequency:            2.400 GHz
+Memory > 4 GB:                                            15.88 GB
+Tmp space available in C:\Users\HP\AppData\Local\Temp:    30.41 GB
+
+Remark: 2 core(s) detected. The verification creates 2 process(es).
+*** Configuration of the host :	OK
+
+
+Type C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\kill-rte-kernel.bat on host ENVY to halt Verifier process
+
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:25:57 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Verifying Keil C sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying drv_ds1302.c (1/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c, line 5: error: expected a ";"
+|  static const uint8_t code initTimerDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
+|                            ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c, line 23: error: identifier "initTimerDat" is undefined
+|                  Drv_Ds1302BurstWrite(initTimerDat);
+|                                       ^
+
+2 errors detected in the compilation of "drv_ds1302.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c: warning: Failed compilation.
+Verifying drv_gpio.c (2/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 8: error: expected a ";"
+|  static const gpioConfig_t code gpioConfigArry[EN_ALL_GPIO_COUNTER] = {
+|                                 ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 23: error: identifier "P0" is undefined
+|                          if ( 0 != ( P0 & (0x01 << bits) ) )
+|                                      ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 31: error: identifier "P1" is undefined
+|                          if ( 0 != ( P1 & (0x01 << bits) ) )
+|                                      ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 40: error: identifier "P2" is undefined
+|                          if ( 0 != ( P2 & (0x01 << bits) ) )
+|                                      ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 49: error: identifier "P3" is undefined
+|                          if ( 0 != ( P3 & (0x01 << bits) ) )
+|                                      ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 69: error: identifier "P0" is undefined
+|                          inTtl = P0;
+|                                  ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 73: error: identifier "P1" is undefined
+|                          inTtl = P1;
+|                                  ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 78: error: identifier "P2" is undefined
+|                          inTtl = P2;
+|                                  ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 83: error: identifier "P3" is undefined
+|                          inTtl = P3;
+|                                  ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 100: error: identifier "P0" is undefined
+|                                  do{ (P0) &= ~(uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 104: error: identifier "P0" is undefined
+|                                  do{ (P0) |= (uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 111: error: identifier "P1" is undefined
+|                                  do{ (P1) &= ~(uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 115: error: identifier "P1" is undefined
+|                                  do{ (P1) |= (uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 122: error: identifier "P2" is undefined
+|                                  do{ (P2) &= ~(uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 126: error: identifier "P2" is undefined
+|                                  do{ (P2) |= (uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 133: error: identifier "P3" is undefined
+|                                  do{ (P3) &= ~(uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 137: error: identifier "P3" is undefined
+|                                  do{ (P3) |= (uint8_t)(1 << (bits)); }while(0);
+|                                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 152: error: identifier "P0" is undefined
+|                          P0 = sig;
+|                          ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 156: error: identifier "P1" is undefined
+|                          P1 = sig;
+|                          ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 160: error: identifier "P2" is undefined
+|                          P2 = sig;
+|                          ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 164: error: identifier "P3" is undefined
+|                          P3 = sig;
+|                          ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 175: error: identifier "gpioConfigArry" is undefined
+|          if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+|              ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 189: error: identifier "gpioConfigArry" is undefined
+|          if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+|              ^
+
+23 errors detected in the compilation of "drv_gpio.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c: warning: Failed compilation.
+Verifying drv_lcd.c (3/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+Verifying drv_paltform.c (4/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+Verifying drv_timer.c (5/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c, line 12: error: identifier "TMOD" is undefined
+|          TMOD &= 0xF0; //清零 T0 的控制位
+|          ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c, line 14: error: identifier "TH0" is undefined
+|          do { TH0 = (0xFCu); TL0 = (0x92u); }while (0);
+|               ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c, line 14: error: identifier "TL0" is undefined
+|          do { TH0 = (0xFCu); TL0 = (0x92u); }while (0);
+|                              ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c, line 15: error: identifier "ET0" is undefined
+|          do { ET0 = 1; }while (0);
+|               ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c, line 16: error: identifier "TR0" is undefined
+|          do { TR0 = 1; }while (0); //启动 T0       
+|               ^
+
+5 errors detected in the compilation of "drv_timer.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c: warning: Failed compilation.
+Verifying hal_calendar.c (6/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+Verifying hal_display.c (7/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+Verifying hal_gpio.c (8/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+Verifying hal_paltform.c (9/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_paltform.c, line 7: error: identifier "EA" is undefined
+|          bool_t sta = EA;
+|                       ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_paltform.c, line 15: error: identifier "EA" is undefined
+|          EA = sta;
+|          ^
+
+2 errors detected in the compilation of "hal_paltform.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_paltform.c: warning: Failed compilation.
+Verifying hal_timer.c (10/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c, line 20: error: identifier "ET0" is undefined
+|          do { ET0 = 0; }while (0);
+|               ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c, line 23: error: identifier "ET0" is undefined
+|          do { ET0 = 1; }while (0);
+|               ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c, line 47: error: identifier "TH0" is undefined
+|          do { TH0 = (0xFCu); TL0 = (0x92u); }while (0);
+|               ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c, line 47: error: identifier "TL0" is undefined
+|          do { TH0 = (0xFCu); TL0 = (0x92u); }while (0);
+|                              ^
+
+4 errors detected in the compilation of "hal_timer.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c: warning: Failed compilation.
+Verifying main.c (11/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.h, line 7: warning: could not find include file "reg52.h"
+|  #include <reg52.h>
+|                    ^
+
+Global compilation phase...
+
+Warning: 5 files failed to compile (45% of all files).
+|        Trying to link compiled files anyway.
+
+Number of files                  : 11
+Number of lines                  : 751
+Number of lines without comments : 536
+
+Verifying cross-files ANSI C compliance
+
+Stubbing standard library functions ...
+Remark: The generated default DRS XML file "drs-template.xml" can be found in <result_dir> folder.
+Doing code transformations ...
+
+
+
+
+Packing compilation data
+
+Defects statistics:
+  - Total number of defects: 0
+done.
+
+**********************************************************
+***
+*** Keil C sources verification done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:26:07 2019
+User time for compilation: 00:00:09.74 (9.74real, 9.74u + 0s (0.23gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:26:07 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Pre-analysis
+***
+**********************************************************
+**** Bug-finder - Pre-analysis - 1 (P_AL)
+Total complexity = 2705
+**** Bug-finder - Pre-analysis - 1 (P_AL) took 0.09real, 0.09u + 0s (0.03gc)
+**** Bug-finder - Pre-analysis - 2 (P_ACP)
+* n-acp-t = 0 n-epp' = 0 n-acp-l = 0
+**** Bug-finder - Pre-analysis - 2 (P_ACP) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 3 (P_O)
+**** Bug-finder - Pre-analysis - 3 (P_O) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 4 (P_MA)
+**** Bug-finder - Pre-analysis - 4 (P_MA) took 0.01real, 0.01u + 0s
+**** Bug-finder - Pre-analysis - 5 (P_G)
+**** Bug-finder - Pre-analysis - 5 (P_G) took 0.01real, 0.01u + 0s
+**** Bug-finder - Pre-analysis - 6 (P_DRC)
+**** Bug-finder - Pre-analysis - 6 (P_DRC) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 7 (P_TT)
+**** Bug-finder - Pre-analysis - 7 (P_TT) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 8 (P_FI)
+**** Bug-finder - Pre-analysis - 8 (P_FI) took 0.3real, 0.3u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.36real
+
+**********************************************************
+***
+*** Bug-finder - Pre-analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:26:08 2019
+User time for pre-analysis: 00:00:01.63 (1.63real, 1.63u + 0s (0.16gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:26:08 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Function Analysis
+***
+**********************************************************
+**** Bug-finder - Function Analysis - (Verifying function #1 / 15: Hal_GetSysTime)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 15: Hal_DisplayInit)
+**** Bug-finder - Function Analysis - (Verifying function #3 / 15: Hal_FlashCalendar)
+**** Bug-finder - Function Analysis - (Verifying function #4 / 15: Drv_LcdWriteCmd)
+**** Bug-finder - Function Analysis - (Verifying function #5 / 15: SysUpdateCalendar)
+**** Bug-finder - Function Analysis - (Verifying function #6 / 15: Drv_LcdWaitReady)
+**** Bug-finder - Function Analysis - (Verifying function #7 / 15: Hal_DisplayStr)
+**** Bug-finder - Function Analysis - (Verifying function #8 / 15: SysIoCtrl)
+**** Bug-finder - Function Analysis - (Verifying function #9 / 15: Drv_LcdWriteDat)
+**** Bug-finder - Function Analysis - (Verifying function #10 / 15: Hal_CalendarInit)
+**** Bug-finder - Function Analysis - (Verifying function #11 / 15: main)
+**** Bug-finder - Function Analysis - (Verifying function #12 / 15: Drv_LcdInit)
+**** Bug-finder - Function Analysis - (Verifying function #13 / 15: Hal_DebugIOCtrl)
+**** Bug-finder - Function Analysis - (Verifying function #14 / 15: Hal_UpdateSysTime)
+**** Bug-finder - Function Analysis - (Verifying function #15 / 15: Hal_DisplayCalendar)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 15: Hal_DisplayInit) took 1.76real
+**** Bug-finder - Function Analysis - (Verifying function #1 / 15: Hal_GetSysTime) took 1.85real
+**** Bug-finder - Function Analysis - (Verifying function #3 / 15: Hal_FlashCalendar) took 0.41real
+**** Bug-finder - Function Analysis - (Verifying function #4 / 15: Drv_LcdWriteCmd) took 0.39real
+**** Bug-finder - Function Analysis - (Verifying function #5 / 15: SysUpdateCalendar) took 0.38real
+**** Bug-finder - Function Analysis - (Verifying function #6 / 15: Drv_LcdWaitReady) took 0.5real
+**** Bug-finder - Function Analysis - (Verifying function #7 / 15: Hal_DisplayStr) took 0.53real
+**** Bug-finder - Function Analysis - (Verifying function #8 / 15: SysIoCtrl) took 0.38real
+**** Bug-finder - Function Analysis - (Verifying function #9 / 15: Drv_LcdWriteDat) took 0.35real
+**** Bug-finder - Function Analysis - (Verifying function #10 / 15: Hal_CalendarInit) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #11 / 15: main) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #12 / 15: Drv_LcdInit) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #13 / 15: Hal_DebugIOCtrl) took 0.35real
+**** Bug-finder - Function Analysis - (Verifying function #14 / 15: Hal_UpdateSysTime) took 0.43real
+**** Bug-finder - Function Analysis - (Verifying function #15 / 15: Hal_DisplayCalendar) took 0.56real
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.38real
+
+* Total IL complexity: 2050
+
+**********************************************************
+***
+*** Bug-finder - Function Analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:26:15 2019
+User time for function: 00:00:06.85 (6.86real, 6.86u + 0s (0.11gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:26:15 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Module Analysis
+***
+**********************************************************
+**** Bug-finder - Module Analysis - 1 (Computing modules)
+* Created 1 module
+**** Bug-finder - Module Analysis - 1 (Computing modules) took 0.02real, 0.02u + 0s
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 15 functions)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 15 functions) took 1.19real
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.37real
+
+**********************************************************
+***
+*** Bug-finder - Module Analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:26:17 2019
+User time for module: 00:00:02.23 (2.24real, 2.24u + 0s (0.08gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:26:17 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Global analysis
+***
+**********************************************************
+**** Bug-finder - Global analysis - 1 (P_CCG)
+**** Bug-finder - Global analysis - 1 (P_CCG) took 0real, 0u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.37real
+
+**********************************************************
+***
+*** Bug-finder - Global analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:26:18 2019
+User time for global: 00:00:00.67 (0.67real, 0.67u + 0s (0.08gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:26:18 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Report generation
+***
+**********************************************************
+Polyspace Report Generator
+Generating Report
+Template    : BugFinderSummary.rpt
+Results-dir : C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result
+Format      : dom-htmx
+Output-Name : C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\PolySpace-Doc\c51_BugFinderSummary\root.html
+    Beginning report
+      Processing Summary
+      Processing Defects Summary
+      Processing Configuration 
+      Processing Abbreviations and Acronyms
+    Converting report
+    Report complete
+    Generated: C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\PolySpace-Doc\c51_BugFinderSummary (152 rows)
+ 
+**********************************************************
+***
+*** Bug-finder - Report generation done
+***
+**********************************************************
+Ending at: Sat Aug 24 14:26:39 2019
+User time for report-generator: 00:00:21.6 (21.06real, 21.06u + 0s)
+User time for polyspace-bug-finder-nodesktop: 00:00:43.57 (43.58real, 43.58u + 0s (0.66gc))
+
+***
+*** End of Polyspace analysis
+***

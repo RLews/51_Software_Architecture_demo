@@ -1,17 +1,17 @@
 
 
-#ifndef __DRV_GPIO_H
-#define __DRV_GPIO_H
+#ifndef DRV_GPIO_H
+#define DRV_GPIO_H
 
 /* 51 register headfile */
 #include "drv_paltform.h"
 
 #define D_BYTE_SET_BITS(byte, bits) do{ \
-	(byte) |= (uint8_t)(1 << (bits)); \
+	(byte) |= (uint8_t)(1u << (bits)); \
 }while(0)
 
 #define D_BYTE_CLR_BITS(byte, bits) do{ \
-	(byte) &= ~(uint8_t)(1 << (bits)); \
+	(byte) &= ~(uint8_t)(1u << (bits)); \
 }while(0)
 
 typedef enum __PORT_GROUP_T

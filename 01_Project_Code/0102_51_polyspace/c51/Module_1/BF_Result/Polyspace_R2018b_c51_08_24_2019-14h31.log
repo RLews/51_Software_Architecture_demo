@@ -1,0 +1,124 @@
+Remark: Option -float-rounding-mode has no effect in Polyspace Bug Finder
+Remark: Option -O2 has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-calls has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-writes-variables has no effect in Polyspace Bug
+|       Finder
+Remark: Option -check-subnormal has no effect in Polyspace Bug Finder
+Remark: Option -uncalled-function-checks has no effect in Polyspace Bug Finder
+<polyspace-bug-finder-nodesktop R2018b PID3612 PGID3612>
+
+Polyspace verification of c51 project.
+Starting at 08/24/2019, 14h31.
+
+Option -signed-integer-overflows has no effect in Polyspace Bug Finder.
+Option -unsigned-integer-overflows has no effect in Polyspace Bug Finder.
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_STD_LIB, FLOAT_STD_LIB, OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, FUNC_CAST, PTR_CAST, 
+  MEM_STD_LIB, STR_STD_LIB, FREED_PTR, DOUBLE_DEALLOCATION, BAD_FREE, BAD_EQUAL_USE, 
+  BAD_EQUAL_EQUAL_USE, DECL_MISMATCH, MISSING_NULL_CHAR, PTR_SIZEOF_MISMATCH, TYPEDEF_MISMATCH, 
+  USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, MISSING_RETURN, RESOURCE_LEAK, 
+  UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, USELESS_IF, DEADLOCK, BAD_LOCK, DOUBLE_LOCK, 
+  DATA_RACE, DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, ASSERT, STRING_FORMAT, IMPROPER_ARRAY_INIT, 
+  BAD_PTR_SCALING, SIZEOF_MISUSE, FLOAT_ABSORPTION, LOCAL_ADDR_ESCAPE, STR_FORMAT_BUFFER_OVERFLOW, 
+  STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, PUTENV_AUTO_VAR, PTR_TO_DIFF_ARRAY, 
+  ALIGNMENT_CHANGE, READ_ONLY_RESOURCE_WRITE, CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, 
+  DOUBLE_RESOURCE_OPEN, OPERATOR_PRECEDENCE, STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, 
+  CONSTANT_OBJECT_WRITE, INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, MEMCMP_STRINGS, 
+  MEMCMP_PADDING_DATA, INVALID_ENV_POINTER, ERRNO_MISUSE, MISSING_ERRNO_RESET, CHARACTER_MISUSE, 
+  CHAR_EOF_CONFUSED, IO_INTERLEAVING, SIG_HANDLER_COMP_EXCP_RETURN, SIG_HANDLER_CALLING_SIGNAL, 
+  UNPROTOTYPED_FUNC_CALL, FILE_OBJECT_MISUSE, FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE, 
+  SIG_HANDLER_SHARED_OBJECT, MACRO_USED_AS_OBJECT, SIDE_EFFECT_IGNORED, PRE_UCNAME_JOIN_TOKENS, 
+  PRE_DIRECTIVE_MACRO_ARG, INLINE_CONSTRAINT_NOT_RESPECTED, VA_ARG_INCORRECT_TYPE, 
+  TOO_MANY_VA_ARG_CALLS, STREAM_WITH_SIDE_EFFECT, TEMP_OBJECT_ACCESS, SIG_HANDLER_ERRNO_MISUSE, 
+  DATA_RACE_STD_LIB, ATOMIC_VAR_ACCESS_TWICE, ATOMIC_VAR_SEQUENCE_NOT_ATOMIC
+
+Remark: By default, some results are not generated for headers.
+|       Search for '-generate-results-for' in user documentation to generate results for these headers.
+
+Verifying sources compliance ...
+
+Options used with Verifier:
+-lang=C
+-polyspace-version=2.6 (R2018b)
+-date=24/08/2019
+
+User:
+-bug-finder=true (non-official option)
+-I1=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source
+-I2=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app
+-I3=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver
+-I4=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal
+-I5=D:\Keil\C51\C51\INC
+-target=i386
+-compiler=keil
+-c-version=c11
+-dos=true
+-sfr-types=[sfr=8]
+-report-output-format=HTML
+-report-template=Polyspace-Doc\BugFinderSummary.rpt
+-to=Software Safety Analysis level 2
+-import-comments=C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\comments_bak
+-results-dir=C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result
+-verif-version=1.0
+-author=HP
+-prog=c51
+
+
+Verifying host configuration:
+Number of cores:                2
+Processor type:                 amd64
+Processor model:                Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+Processor frequency:            2.400 GHz
+Memory > 4 GB:                                            15.88 GB
+Tmp space available in C:\Users\HP\AppData\Local\Temp:    30.41 GB
+
+Remark: 2 core(s) detected. The verification creates 2 process(es).
+*** Configuration of the host :	OK
+
+
+Type C:\Users\HP\Documents\Polyspace_Workspace\c51\Module_1\BF_Result\kill-rte-kernel.bat on host ENVY to halt Verifier process
+
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 14:31:50 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Verifying Keil C sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying drv_ds1302.c (1/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c, line 5: error: expected a ";"
+|  static const uint8_t code initTimerDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
+|                            ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c, line 23: error: identifier "initTimerDat" is undefined
+|                  Drv_Ds1302BurstWrite(initTimerDat);
+|                                       ^
+
+2 errors detected in the compilation of "drv_ds1302.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c: warning: Failed compilation.
+Verifying drv_gpio.c (2/11)
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 8: error: expected a ";"
+|  static const gpioConfig_t code gpioConfigArry[EN_ALL_GPIO_COUNTER] = {
+|                                 ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 175: error: identifier "gpioConfigArry" is undefined
+|          if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+|              ^
+
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c, line 189: error: identifier "gpioConfigArry" is undefined
+|          if (gpioConfigArry[(uint8_t)name].gpioBit != EN_BIT_ALL)
+|              ^
+
+3 errors detected in the compilation of "drv_gpio.c".
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c: warning: Failed compilation.
+"Remark: Analysis stopped by envy\hp at 14:31:53 2019/08/24 ÷‹¡˘. " 

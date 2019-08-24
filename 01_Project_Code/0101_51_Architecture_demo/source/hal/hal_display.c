@@ -2,8 +2,6 @@
 
 #include "hal_display.h"
 
-extern calendar_t sysCalendar;
-
 
 static void Hal_DisplayCalendar(const calendar_t * pCalendar);
 
@@ -18,33 +16,33 @@ static void Hal_DisplayCalendar(const calendar_t * pCalendar)
 {
 	uint8_t str[11] = {0};
 	
-	str[0] = '2';
-	str[1] = '0';
-	str[2] = ((pCalendar->year >> 4) & 0x000F) + '0';//“年”高位数字转换为 ASCII 码
-	str[3] = (pCalendar->year & 0x000F) + '0';//“年”低位数字转换为 ASCII 码
-	str[4] = '-'; //添加日期分隔符
-	str[5] = (pCalendar->mon >> 4) + '0'; //“月”
-	str[6] = (pCalendar->mon & 0x0F) + '0';
-	str[7] = '-';
-	str[8] = (pCalendar->day >> 4) + '0'; //“日”
-	str[9] = (pCalendar->day & 0x0F) + '0';
-	str[10] = '\0';
+	str[0] = (uint8_t)'2';
+	str[1] = (uint8_t)'0';
+	str[2] = (uint8_t)(((pCalendar->year >> 4U) & 0x000FU) + (uint8_t)'0');//“年”高位数字转换为 ASCII 码
+	str[3] = (uint8_t)((pCalendar->year & 0x000FU) + (uint8_t)'0');//“年”低位数字转换为 ASCII 码
+	str[4] = (uint8_t)'-'; //添加日期分隔符
+	str[5] = (uint8_t)((pCalendar->mon >> 4U) + (uint8_t)'0'); //“月”
+	str[6] = (uint8_t)((pCalendar->mon & 0x0FU) + (uint8_t)'0');
+	str[7] = (uint8_t)'-';
+	str[8] = (uint8_t)((pCalendar->day >> 4U) + (uint8_t)'0'); //“日”
+	str[9] = (uint8_t)((pCalendar->day & 0x0FU) + (uint8_t)'0');
+	str[10] = (uint8_t)'\0';
 	Hal_DisplayStr(0, 0, str); //显示到液晶的第一行
 
-	str[0] = (pCalendar->week & 0x0F) + '0'; //“星期”
-	str[1] = '\0';
+	str[0] = (uint8_t)((pCalendar->week & 0x0FU) + (uint8_t)'0'); //“星期”
+	str[1] = (uint8_t)'\0';
 	Hal_DisplayStr(11, 0, "week");
 	Hal_DisplayStr(15, 0, str); //显示到液晶的第一行
 
-	str[0] = (pCalendar->hour >> 4) + '0'; //“时”
-	str[1] = (pCalendar->hour & 0x0F) + '0';
-	str[2] = ':'; //添加时间分隔符
-	str[3] = (pCalendar->min >> 4) + '0'; //“分”
-	str[4] = (pCalendar->min & 0x0F) + '0';
-	str[5] = ':';
-	str[6] = (pCalendar->sec >> 4) + '0'; //“秒”
-	str[7] = (pCalendar->sec & 0x0F) + '0';
-	str[8] = '\0';
+	str[0] = (uint8_t)((pCalendar->hour >> 4U) + (uint8_t)'0'); //“时”
+	str[1] = (uint8_t)((pCalendar->hour & 0x0FU) + (uint8_t)'0');
+	str[2] = (uint8_t)':'; //添加时间分隔符
+	str[3] = (uint8_t)((pCalendar->min >> 4U) + (uint8_t)'0'); //“分”
+	str[4] = (uint8_t)((pCalendar->min & 0x0FU) + (uint8_t)'0');
+	str[5] = (uint8_t)':';
+	str[6] = (uint8_t)((pCalendar->sec >> 4U) + (uint8_t)'0'); //“秒”
+	str[7] = (uint8_t)((pCalendar->sec & 0x0FU) + (uint8_t)'0');
+	str[8] = (uint8_t)'\0';
 	Hal_DisplayStr(4, 1, str); //显示到液晶的第二行
 }
 
@@ -76,7 +74,7 @@ void Hal_DisplayStr(uint8_t x, uint8_t y, const uint8_t *str)
 		addr = 0x40 + x; //第二行字符地址从 0x40 起始
 	}
 	//由起始显示 RAM 地址连续写入字符串
-	Drv_LcdWriteCmd(addr | 0x80); //写入起始地址
+	Drv_LcdWriteCmd(addr | 0x80U); //写入起始地址
 	while (*str != '\0') //连续写入字符串数据，直到检测到结束符
 	{
 		Drv_LcdWriteDat(*str);

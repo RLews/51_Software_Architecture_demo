@@ -1,8 +1,8 @@
 
 
 
-#ifndef __TYPEDEFS_H
-#define __TYPEDEFS_H
+#ifndef TYPEDEFS_H
+#define TYPEDEFS_H
 
 typedef unsigned char bool_t;
 typedef unsigned char uint8_t;

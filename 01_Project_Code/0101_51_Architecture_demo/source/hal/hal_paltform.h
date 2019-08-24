@@ -1,7 +1,7 @@
 
 
-#ifndef __HAL_PALTFORM_H
-#define __HAL_PALTFORM_H
+#ifndef HAL_PALTFORM_H
+#define HAL_PALTFORM_H
 
 #include "drv_paltform.h"
 
