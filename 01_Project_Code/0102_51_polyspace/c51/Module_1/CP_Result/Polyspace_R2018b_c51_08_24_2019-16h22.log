@@ -1,0 +1,1206 @@
+<polyspace-code-prover-nodesktop R2018b PID2948 PGID2948>
+
+Polyspace verification of c51 project.
+Starting at 08/24/2019, 16h22.
+
+Remark: By default, some results are not generated for headers.
+|       Search for '-generate-results-for' in user documentation to generate results for these headers.
+
+Verifying sources compliance ...
+Warning: MISRA C:2012 checker: the rule 22.10 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.9 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.8 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.7 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.6 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.4 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.3 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.2 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 22.1 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 21.20 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 21.19 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 21.18 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 21.17 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 21.14 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 21.13 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule 17.3 has been disabled because it applies to the C90 standard and the selected standard is C99.
+Warning: MISRA C:2012 checker: the rule 8.1 has been disabled because it applies to the C90 standard and the selected standard is C99.
+Warning: MISRA C:2012 checker: the rule D4.14 has been disabled because it is available in Bug Finder only.
+Warning: MISRA C:2012 checker: the rule D4.7 has been disabled because it is available in Bug Finder only.
+
+Options used with Verifier:
+-lang=C
+-polyspace-version=9.10 (R2018b)
+-date=24/08/2019
+
+User:
+-D1=code=
+-float-rounding-mode=to-nearest
+-I1=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source
+-I2=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app
+-I3=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver
+-I4=E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal
+-I5=D:\Keil\C51\C51\INC
+-target=i386
+-compiler=keil
+-c-version=c11
+-dos=true
+-sfr-types=[sfr=8]
+-report-output-format=HTML
+-report-template=Polyspace-Doc\Developer.rpt
+-O=-O2
+-to=Software Safety Analysis level 2
+-results-dir=E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\CP_Result
+-verif-version=1.0
+-author=HP
+-prog=c51
+-code-metrics=true
+-misra3=mandatory-required
+-unsigned-integer-overflows=allow
+-signed-integer-overflows=forbid
+-main-generator-calls=unused
+-main-generator-writes-variables=public
+-main-generator=true
+-check-subnormal=allow
+-uncalled-function-checks=none
+
+
+Verifying host configuration:
+Number of cores:                2
+Processor type:                 amd64
+Processor model:                Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+Processor frequency:            2.400 GHz
+Memory > 4 GB:                                            15.88 GB
+Tmp space available in C:\Users\HP\AppData\Local\Temp:    30.45 GB
+
+Remark: 2 core(s) detected. The verification creates 2 process(es).
+*** Configuration of the host :	OK
+
+
+Type E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\CP_Result\kill-rte-kernel.bat on host ENVY to halt Verifier process
+
+
+Polyspace C verification
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 16:22:36 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Verifying Keil C sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying drv_ds1302.c (1/11)
+Verifying drv_gpio.c (2/11)
+Verifying drv_lcd.c (3/11)
+Verifying drv_paltform.c (4/11)
+Verifying drv_timer.c (5/11)
+Verifying hal_calendar.c (6/11)
+Verifying hal_display.c (7/11)
+Verifying hal_gpio.c (8/11)
+Verifying hal_paltform.c (9/11)
+Verifying hal_timer.c (10/11)
+Verifying main.c (11/11)
+Global compilation phase...
+
+Number of files                  : 11
+Number of lines                  : 750
+Number of lines without comments : 535
+
+Verifying cross-files ANSI C compliance
+
+Stubbing standard library functions ...
+Stubbing unknown functions ...
+
+Generating the Main ...
+
+Warning: a main procedure already exists.
+|                 No main will be generated: the existing one will be used...
+Remark: The generated default DRS XML file "drs-template.xml" can be found in <result_dir> folder.
+Doing code transformations ...
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+Coding rules checking might not be complete. Some rule violations
+ are detected after the source compliance checking phase.
+**********************************************************
+Summary per file:
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.c: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c: 
+    1 rule violated
+**********************************************************
+Summary per rule:
+  rule 8.4 violated 2 times
+
+
+
+
+Packing compilation data
+done.
+
+**********************************************************
+***
+*** Keil C sources verification done
+***
+**********************************************************
+Ending at: Sat Aug 24 16:22:52 2019
+User time for compilation: 00:00:15.16 (15.16real, 15.16u + 0s (0.2gc))
+
+Polyspace C verification
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 16:22:52 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Keil C to intermediate language translation
+***
+**********************************************************
+**** Keil C to intermediate language translation - 1 (P_SP)
+**** Keil C to intermediate language translation - 1 (P_SP) took 0.43real, 0.43u + 0s
+Hal_SysTimerIsr is dead code
+**** Keil C to intermediate language translation - 2 (P_SIA)
+**** Keil C to intermediate language translation - 2 (P_SIA) took 0.01real, 0.01u + 0s
+**** Keil C to intermediate language translation - 3 (P_CMS)
+Total complexity = 4817
+**** Keil C to intermediate language translation - 3 (P_CMS) took 0.09real, 0.09u + 0s
+**** Keil C to intermediate language translation - 4 (P_SFNPV)
+***** Keil C to intermediate language translation - 4.1 (P_PA)
+****** Keil C to intermediate language translation - 4.1.1 (P_ATA)
+****** Keil C to intermediate language translation - 4.1.1 (P_ATA) took 0real, 0u + 0s
+Topology of the code:
+- number of globals: int=23 (addr_taken=0), float=0, struct=9, array=2, pointer=0
+- number of locals : int=38 (addr_taken=0), float=0, struct=1, array=2, pointer=7
+- number of reads  : scalars=89, floats=0, fields=11, derefs=39, direct_complex_access=10
+- number of writes : scalars=34, floats=0, fields=12, derefs=37, direct_complex_access=4
+****** Keil C to intermediate language translation - 4.1.2 (P_AP)
+****** Keil C to intermediate language translation - 4.1.2 (P_AP) took 0.01real, 0.01u + 0s
+****** Keil C to intermediate language translation - 4.1.3 (P_ITFP)
+****** Keil C to intermediate language translation - 4.1.3 (P_ITFP) took 0.01real, 0.01u + 0s
+****** Keil C to intermediate language translation - 4.1.4 (P_CA)
+******* Keil C to intermediate language translation - 4.1.4.1 (P_STS)
+******* Keil C to intermediate language translation - 4.1.4.1 (P_STS) took 0real, 0u + 0s
+******* Keil C to intermediate language translation - 4.1.4.2 (P_RR)
+******* Keil C to intermediate language translation - 4.1.4.2 (P_RR) took 0real, 0u + 0s
+Some stats on aliases computation:
+  Number of aliases sets:       23
+  Number of couples of aliases: 682
+  Number of elements in the biggest alias sets: 1st=32, 2nd=17, 3rd=9, 4th=4, 5th=3
+****** Keil C to intermediate language translation - 4.1.4 (P_CA) took 0real, 0u + 0s
+***** Keil C to intermediate language translation - 4.1 (P_PA) took 0.02real, 0.02u + 0s
+***** Keil C to intermediate language translation - 4.2 (P_AAA)
+Nb repl: 145
+1 ptr - 1 var: 7
+***** Keil C to intermediate language translation - 4.2 (P_AAA) took 0.18real, 0.18u + 0s
+***** Keil C to intermediate language translation - 4.3 (P_SL)
+Nb params removed: 1
+Nb syms removed: 2
+***** Keil C to intermediate language translation - 4.3 (P_SL) took 0.03real, 0.03u + 0s
+***** Keil C to intermediate language translation - 4.4 (P_SSet)
+***** Keil C to intermediate language translation - 4.4 (P_SSet) took 0.01real, 0.01u + 0s
+***** Keil C to intermediate language translation - 4.5 (P_GA)
+****** Keil C to intermediate language translation - 4.5.1 (P_FPGA)
+(* assert *)
+****** Keil C to intermediate language translation - 4.5.1 (P_FPGA) took 0real, 0u + 0s
+****** Keil C to intermediate language translation - 4.5.2 (P_GCPTS)
+******* Keil C to intermediate language translation - 4.5.2.1 (P_GAA3)
+******** Keil C to intermediate language translation - 4.5.2.1.1 (Loading)
+******** Keil C to intermediate language translation - 4.5.2.1.1 (Loading) took 0real, 0u + 0s
+[232 -> 557]
+****** Keil C to intermediate language translation - 4.5.2 (P_GCPTS) took 0.35real, 0.35u + 0s (0.08gc)
+****** Keil C to intermediate language translation - 4.5.3 (P_MNPV)
+****** Keil C to intermediate language translation - 4.5.3 (P_MNPV) took 0.04real, 0.04u + 0s
+******** Keil C to intermediate language translation - 4.5.2.1.2 (P_GAA_SC)
+********* Keil C to intermediate language translation - 4.5.2.1.2.1 (P_GAA_VI)
+********* Keil C to intermediate language translation - 4.5.2.1.2.1 (P_GAA_VI) took 0real, 0u + 0s
+********* Keil C to intermediate language translation - 4.5.2.1.2.2 (P_GAA_SDC)
+********* Keil C to intermediate language translation - 4.5.2.1.2.2 (P_GAA_SDC) took 0real, 0u + 0s
+********* Keil C to intermediate language translation - 4.5.2.1.2.3 (P_GAA_RS)
+********* Keil C to intermediate language translation - 4.5.2.1.2.3 (P_GAA_RS) took 0real, 0u + 0s
+********* Keil C to intermediate language translation - 4.5.2.1.2.4 (P_GAA_DGS)
+* ovw-n = 0, cut-e = 0
+********* Keil C to intermediate language translation - 4.5.2.1.2.4 (P_GAA_DGS) took 0real, 0u + 0s
+******** Keil C to intermediate language translation - 4.5.2.1.2 (P_GAA_SC) took 0real, 0u + 0s
+***** Keil C to intermediate language translation - 4.5 (P_GA) took 0.47real, 0.47u + 0s (0.08gc)
+***** Keil C to intermediate language translation - 4.6 (P_AA)
+****** Keil C to intermediate language translation - 4.6.1 (P_AC)
+Some stats on points to analysis:
+  Number of optimized point_to edges: 7
+****** Keil C to intermediate language translation - 4.6.1 (P_AC) took 0real, 0u + 0s
+***** Keil C to intermediate language translation - 4.6 (P_AA) took 0real, 0u + 0s
+***** Keil C to intermediate language translation - 4.7 (P_PFF)
+Found 7 polymorphic functions
+***** Keil C to intermediate language translation - 4.7 (P_PFF) took 0real, 0u + 0s
+***** Keil C to intermediate language translation - 4.8 (P_LGR)
+***** Keil C to intermediate language translation - 4.8 (P_LGR) took 0real, 0u + 0s
+**** Keil C to intermediate language translation - 4 (P_SFNPV) took 0.75real, 0.75u + 0s (0.08gc)
+**** Keil C to intermediate language translation - 5 (P_PA)
+***** Keil C to intermediate language translation - 5.1 (P_ATA)
+***** Keil C to intermediate language translation - 5.1 (P_ATA) took 0.02real, 0.02u + 0s
+***** Keil C to intermediate language translation - 5.2 (P_AP)
+***** Keil C to intermediate language translation - 5.2 (P_AP) took 0.07real, 0.07u + 0s
+***** Keil C to intermediate language translation - 5.3 (P_ITFP)
+***** Keil C to intermediate language translation - 5.3 (P_ITFP) took 0.02real, 0.02u + 0s
+***** Keil C to intermediate language translation - 5.4 (P_CA)
+****** Keil C to intermediate language translation - 5.4.1 (P_STS)
+****** Keil C to intermediate language translation - 5.4.1 (P_STS) took 0real, 0u + 0s
+****** Keil C to intermediate language translation - 5.4.2 (P_RR)
+****** Keil C to intermediate language translation - 5.4.2 (P_RR) took 0real, 0u + 0s
+Some stats on aliases computation:
+  Number of aliases sets:       15
+  Number of couples of aliases: 10
+  Number of elements in the biggest alias sets: 1st=3, 2nd=3, 3rd=3, 4th=2, 5th=1
+***** Keil C to intermediate language translation - 5.4 (P_CA) took 0.01real, 0.01u + 0s
+**** Keil C to intermediate language translation - 5 (P_PA) took 0.12real, 0.12u + 0s
+**** Keil C to intermediate language translation - 6 (P_SIA)
+**** Keil C to intermediate language translation - 6 (P_SIA) took 0.03real, 0.03u + 0s
+**** Keil C to intermediate language translation - 7 (P_O)
+***** Keil C to intermediate language translation - 7.1 (P_SSet)
+***** Keil C to intermediate language translation - 7.1 (P_SSet) took 0.1real, 0.1u + 0s (0.03gc)
+**** Keil C to intermediate language translation - 7 (P_O) took 0.15real, 0.15u + 0s (0.05gc)
+**** Keil C to intermediate language translation - 8 (P_CGA)
+**** Keil C to intermediate language translation - 8 (P_CGA) took 0.02real, 0.02u + 0s (0.02gc)
+**** Keil C to intermediate language translation - 9 (P_G)
+**** Keil C to intermediate language translation - 9 (P_G) took 0.07real, 0.07u + 0s (0.03gc)
+**** Keil C to intermediate language translation - 10 (P_DDTB)
+**** Keil C to intermediate language translation - 10 (P_DDTB) took 0real, 0u + 0s
+**** Keil C to intermediate language translation - 11 (P_TT)
+**** Keil C to intermediate language translation - 11 (P_TT) took 0real, 0u + 0s
+**** Keil C to intermediate language translation - 12 (P_VT)
+**** Keil C to intermediate language translation - 12 (P_VT) took 0real, 0u + 0s
+**** Keil C to intermediate language translation - 13 (P_PT)
+fawi 42
+fawma 0
+fawn 0
+ - translating procedure __PST__MAIN__ENTRY__POINT__ (1 / 43)
+ - translating procedure main (2 / 43)
+ - translating procedure SysIoCtrl (3 / 43)
+ - translating procedure SysUpdateCalendar (4 / 43)
+ - translating procedure Hal_DiffTimerCnt (5 / 43)
+ - translating procedure Hal_GetCurSysTimerCnt (6 / 43)
+ - translating procedure Hal_SysTimerInit (7 / 43)
+ - translating procedure Hal_SysExitCritical (8 / 43)
+ - translating procedure Hal_SysEnterCritical (9 / 43)
+ - translating procedure Hal_DebugIOCtrl (10 / 43)
+ - translating procedure Hal_FlashCalendar (11 / 43)
+ - translating procedure Hal_DisplayCalendar (12 / 43)
+ - translating procedure Hal_DisplayStr (13 / 43)
+ - translating procedure Hal_DisplayInit (14 / 43)
+ - translating procedure Hal_UpdateSysTime (15 / 43)
+ - translating procedure Hal_GetSysTime (16 / 43)
+ - translating procedure Hal_CalendarInit (17 / 43)
+ - translating procedure Drv_SysTimerInit (18 / 43)
+ - translating procedure Drv_LcdWriteDat (19 / 43)
+ - translating procedure Drv_LcdInit (20 / 43)
+ - translating procedure Drv_LcdWriteCmd (21 / 43)
+ - translating procedure Drv_LcdWaitReady (22 / 43)
+ - translating procedure Drv_Ds1302BurstRead (23 / 43)
+ - translating procedure Drv_Ds1302Init (24 / 43)
+ - translating procedure Drv_Ds1302BurstWrite (25 / 43)
+ - translating procedure Drv_Ds1302WriteReg (26 / 43)
+ - translating procedure Drv_Ds1302ReadReg (27 / 43)
+ - translating procedure Drv_Ds1302ByteRead (28 / 43)
+ - translating procedure Drv_NameIn (29 / 43)
+ - translating procedure Drv_GroupGpioIn (30 / 43)
+ - translating procedure Drv_SingleGpioIn (31 / 43)
+ - translating procedure Drv_Ds1302ByteWrite (32 / 43)
+ - translating unknown procedure assert (33 / 43)
+ - translating procedure Drv_NameOut (34 / 43)
+ - translating procedure Drv_GroupGpioOut (35 / 43)
+ - translating procedure Drv_SingleGpioOut (36 / 43)
+Some stats on aliases use:
+  Number of alias writes:         39
+  Number of must-alias writes:    39
+  Number of pma writes:           39
+  Number of random alias writes:  12
+  Number of top ste:              0
+  Number of top gaa:              0
+  Number of top res:              0
+  Number of improved sets:        0
+  Number of alias reads:          0 / 0
+  Number of invisibles:           2
+  Number of high-order calls:     0
+  Number of bad high-order calls: 0
+**** Keil C to intermediate language translation - 13 (P_PT) took 0.37real, 0.37u + 0s (0.19gc)
+******* Keil C to intermediate language translation - 4.5.2.1 (P_GAA3) took 1.25real, 1.25u + 0s (0.14gc)
+*mmu 90
+**********************************************************
+***
+*** Keil C to intermediate language translation done
+***
+**********************************************************
+Ending at: Sat Aug 24 16:22:55 2019
+User time for iabc-c2if: 00:00:03.30 (3.3real, 3.3u + 0s (0.06gc))
+
+Polyspace C verification
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 16:22:55 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Software Safety Analysis Level 0
+***
+**********************************************************
+**** Software Safety Analysis Level 0 - 1 (Load Program)
+**** Software Safety Analysis Level 0 - 1 (Load Program) took 0.05real, 0.05u + 0s
+**** Software Safety Analysis Level 0 - 2 (P_CSD)
+**** Software Safety Analysis Level 0 - 2 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 3 (P_NS)
+**** Software Safety Analysis Level 0 - 3 (P_NS) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 4 (P_ISP)
+**** Software Safety Analysis Level 0 - 4 (P_ISP) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 5 (P_DRP)
+**** Software Safety Analysis Level 0 - 5 (P_DRP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 6 (P_DR)
+**** Software Safety Analysis Level 0 - 6 (P_DR) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 7 (P_AG)
+0 constructions broken due to gotos
+**** Software Safety Analysis Level 0 - 7 (P_AG) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 8 (P_SENUP)
+7 empty procedure(s) removed
+**** Software Safety Analysis Level 0 - 8 (P_SENUP) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 9 (P_CSD)
+**** Software Safety Analysis Level 0 - 9 (P_CSD) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 10 (P_DAL)
+**** Software Safety Analysis Level 0 - 10 (P_DAL) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 11 (P_CSD)
+**** Software Safety Analysis Level 0 - 11 (P_CSD) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 12 (P_SULV)
+243 dv, 2 pr, 252 ad, 9 trfd, 0 dvf
+**** Software Safety Analysis Level 0 - 12 (P_SULV) took 0.04real, 0.04u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 13 (P_DGL)
+37 unused global variables deleted
+**** Software Safety Analysis Level 0 - 13 (P_DGL) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 14 (P_NS)
+**** Software Safety Analysis Level 0 - 14 (P_NS) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 15 (P_R)
+**** Software Safety Analysis Level 0 - 15 (P_R) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 16 (P_CSD)
+**** Software Safety Analysis Level 0 - 16 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 17 (P_CSE)
+* 846 cse
+**** Software Safety Analysis Level 0 - 17 (P_CSE) took 0.04real, 0.04u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 18 (P_PP)
+* 9 pp, 0 ppp.
+**** Software Safety Analysis Level 0 - 18 (P_PP) took 0.02real, 0.02u + 0s
+**** Software Safety Analysis Level 0 - 19 (P_ILA)
+**** Software Safety Analysis Level 0 - 19 (P_ILA) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 20 (P_PGC)
+* 498 tdl.
+**** Software Safety Analysis Level 0 - 20 (P_PGC) took 0.03real, 0.03u + 0s
+**** Software Safety Analysis Level 0 - 21 (P_SENUP)
+0 empty procedure(s) removed
+**** Software Safety Analysis Level 0 - 21 (P_SENUP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 22 (P_CSD)
+**** Software Safety Analysis Level 0 - 22 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 23 (P_PM)
+**** Software Safety Analysis Level 0 - 23 (P_PM) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 24 (P_CSD)
+**** Software Safety Analysis Level 0 - 24 (P_CSD) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 25 (P_SLI)
+* 12 sad
+**** Software Safety Analysis Level 0 - 25 (P_SLI) took 0.02real, 0.02u + 0s
+**** Software Safety Analysis Level 0 - 26 (P_CSE)
+* 48 cse
+**** Software Safety Analysis Level 0 - 26 (P_CSE) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 27 (P_CSD)
+**** Software Safety Analysis Level 0 - 27 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 28 (P_ICSP)
+* 58 cd, 1017 cf, 0 rc, 0 ed. 
+**** Software Safety Analysis Level 0 - 28 (P_ICSP) took 0.06real, 0.06u + 0s
+**** Software Safety Analysis Level 0 - 29 (P_ISP)
+**** Software Safety Analysis Level 0 - 29 (P_ISP) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 30 (P_CSD)
+**** Software Safety Analysis Level 0 - 30 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 31 (P_NIV)
+* i 3/35
+***** Software Safety Analysis Level 0 - 31.1 (P_RS)
+***** Software Safety Analysis Level 0 - 31.1 (P_RS) took 0real, 0u + 0s
+***** Software Safety Analysis Level 0 - 31.2 (P_I1)
+***** Software Safety Analysis Level 0 - 31.2 (P_I1) took 0.04real, 0.04u + 0s (0.02gc)
+***** Software Safety Analysis Level 0 - 31.3 (P_PS)
+***** Software Safety Analysis Level 0 - 31.3 (P_PS) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 0 - 31.4 (P_I2)
+***** Software Safety Analysis Level 0 - 31.4 (P_I2) took 0.04real, 0.04u + 0s
+**** Software Safety Analysis Level 0 - 31 (P_NIV) took 0.09real, 0.09u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 32 (P_REC)
+* nb_cc: 118
+**** Software Safety Analysis Level 0 - 32 (P_REC) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 33 (P_ILA)
+**** Software Safety Analysis Level 0 - 33 (P_ILA) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 34 (P_PGC)
+* 283 tdl.
+**** Software Safety Analysis Level 0 - 34 (P_PGC) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 35 (P_SULV)
+225 dv, 12 pr, 6 ad, 76 trfd, 0 dvf
+**** Software Safety Analysis Level 0 - 35 (P_SULV) took 0.02real, 0.02u + 0s
+**** Software Safety Analysis Level 0 - 36 (P_SENUP)
+0 empty procedure(s) removed
+**** Software Safety Analysis Level 0 - 36 (P_SENUP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 37 (P_CSD)
+**** Software Safety Analysis Level 0 - 37 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 38 (P_ISP)
+**** Software Safety Analysis Level 0 - 38 (P_ISP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 39 (P_ENVT)
+* g-ap=18, r-ap=0 lp=86 dc=0
+**** Software Safety Analysis Level 0 - 39 (P_ENVT) took 0.12real, 0.12u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 40 (P_IIP)
+* 154 cd, 120 cf, 0 rc.
+**** Software Safety Analysis Level 0 - 40 (P_IIP) took 0.39real, 0.39u + 0s (0.03gc)
+**** Software Safety Analysis Level 0 - 41 (P_ICPP)
+**** Software Safety Analysis Level 0 - 41 (P_ICPP) took 0.05real, 0.05u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 42 (P_CSD)
+**** Software Safety Analysis Level 0 - 42 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 43 (P_PP)
+* 0 pp, 0 ppp.
+**** Software Safety Analysis Level 0 - 43 (P_PP) took 0.02real, 0.02u + 0s
+**** Software Safety Analysis Level 0 - 44 (P_SRC)
+* 142 rcd, 0 tpd.
+**** Software Safety Analysis Level 0 - 44 (P_SRC) took 0.25real, 0.25u + 0s
+**** Software Safety Analysis Level 0 - 45 (P_RPTR)
+**** Software Safety Analysis Level 0 - 45 (P_RPTR) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 46 (P_NS)
+**** Software Safety Analysis Level 0 - 46 (P_NS) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 47 (P_ILA)
+**** Software Safety Analysis Level 0 - 47 (P_ILA) took 0.02real, 0.02u + 0s
+**** Software Safety Analysis Level 0 - 48 (P_PGC)
+* 417 tdl.
+* nb vres: 202
+**** Software Safety Analysis Level 0 - 48 (P_PGC) took 0.03real, 0.03u + 0s
+**** Software Safety Analysis Level 0 - 49 (P_RE)
+13 rexp for p
+6 rexp for a0
+***** Software Safety Analysis Level 0 - 49.1 (P_CSD)
+***** Software Safety Analysis Level 0 - 49.1 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 49 (P_RE) took 0.11real, 0.11u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 50 (P_CSD)
+**** Software Safety Analysis Level 0 - 50 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 51 (P_SLI)
+* 52 sad
+**** Software Safety Analysis Level 0 - 51 (P_SLI) took 0.02real, 0.02u + 0s
+**** Software Safety Analysis Level 0 - 52 (P_CSD)
+**** Software Safety Analysis Level 0 - 52 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 53 (P_NIV)
+* i 0/35
+**** Software Safety Analysis Level 0 - 53 (P_NIV) took 0.22real, 0.22u + 0s (0.05gc)
+**** Software Safety Analysis Level 0 - 54 (P_REC)
+* nb_cc: 0
+**** Software Safety Analysis Level 0 - 54 (P_REC) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 55 (P_RVA)
+**** Software Safety Analysis Level 0 - 55 (P_RVA) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 56 (P_ISP)
+**** Software Safety Analysis Level 0 - 56 (P_ISP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 57 (P_SULV)
+22 dv, 2 pr, 17 ad, 31 trfd, 0 dvf
+**** Software Safety Analysis Level 0 - 57 (P_SULV) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 58 (P_DAL)
+**** Software Safety Analysis Level 0 - 58 (P_DAL) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 59 (P_CSD)
+**** Software Safety Analysis Level 0 - 59 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 60 (P_ILOI)
+**** Software Safety Analysis Level 0 - 60 (P_ILOI) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 61 (P_ENVT)
+* g-ap=0, r-ap=0 lp=79 dc=6
+**** Software Safety Analysis Level 0 - 61 (P_ENVT) took 10.89real, 10.89u + 0s
+**** Software Safety Analysis Level 0 - 62 (P_IIP)
+* 203 cd, 313 cf, 0 rc.
+**** Software Safety Analysis Level 0 - 62 (P_IIP) took 0.35real, 0.35u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 63 (P_FTI)
+**** Software Safety Analysis Level 0 - 63 (P_FTI) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 64 (P_ICPP)
+**** Software Safety Analysis Level 0 - 64 (P_ICPP) took 0.04real, 0.04u + 0s
+**** Software Safety Analysis Level 0 - 65 (P_CSD)
+**** Software Safety Analysis Level 0 - 65 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 66 (P_ILA)
+**** Software Safety Analysis Level 0 - 66 (P_ILA) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 67 (P_PGC)
+* 281 tdl.
+**** Software Safety Analysis Level 0 - 67 (P_PGC) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 68 (P_PES)
+ii added: 0
+**** Software Safety Analysis Level 0 - 68 (P_PES) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 69 (P_SRC)
+* 20 rcd, 0 tpd.
+**** Software Safety Analysis Level 0 - 69 (P_SRC) took 0.07real, 0.07u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 70 (P_ISP)
+**** Software Safety Analysis Level 0 - 70 (P_ISP) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 71 (P_MO)
+**** Software Safety Analysis Level 0 - 71 (P_MO) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 72 (P_DAL)
+**** Software Safety Analysis Level 0 - 72 (P_DAL) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 73 (P_ICSP)
+* 354 cd, 103 cf, 0 rc, 0 ed. 
+**** Software Safety Analysis Level 0 - 73 (P_ICSP) took 0.04real, 0.04u + 0s
+**** Software Safety Analysis Level 0 - 74 (P_ICPP)
+**** Software Safety Analysis Level 0 - 74 (P_ICPP) took 0.02real, 0.02u + 0s
+**** Software Safety Analysis Level 0 - 75 (P_CSD)
+**** Software Safety Analysis Level 0 - 75 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 76 (P_ILOI)
+**** Software Safety Analysis Level 0 - 76 (P_ILOI) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 77 (P_SULV)
+33 dv, 0 pr, 32 ad, 1 trfd, 0 dvf
+**** Software Safety Analysis Level 0 - 77 (P_SULV) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 78 (P_CSE)
+* 43 cse
+**** Software Safety Analysis Level 0 - 78 (P_CSE) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 79 (P_ILA)
+**** Software Safety Analysis Level 0 - 79 (P_ILA) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 80 (P_PGC)
+* 33 tdl.
+* nb vres: 107
+**** Software Safety Analysis Level 0 - 80 (P_PGC) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 81 (P_ISP)
+**** Software Safety Analysis Level 0 - 81 (P_ISP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 82 (P_SENUP)
+0 empty procedure(s) removed
+**** Software Safety Analysis Level 0 - 82 (P_SENUP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 83 (P_CSD)
+**** Software Safety Analysis Level 0 - 83 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 84 (P_HB)
+nbc: 0
+**** Software Safety Analysis Level 0 - 84 (P_HB) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 85 (P_CSD)
+**** Software Safety Analysis Level 0 - 85 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 86 (P_ISP)
+**** Software Safety Analysis Level 0 - 86 (P_ISP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 87 (P_NS)
+**** Software Safety Analysis Level 0 - 87 (P_NS) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 88 (P_SULV)
+0 dv, 0 pr, 0 ad, 0 trfd, 0 dvf
+**** Software Safety Analysis Level 0 - 88 (P_SULV) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 89 (P_R)
+**** Software Safety Analysis Level 0 - 89 (P_R) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 90 (P_DGL)
+15 unused global variables deleted
+**** Software Safety Analysis Level 0 - 90 (P_DGL) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 91 (P_CSD)
+**** Software Safety Analysis Level 0 - 91 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 92 (P_PP)
+* 0 pp, 0 ppp.
+**** Software Safety Analysis Level 0 - 92 (P_PP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 93 (P_IIP)
+* i 3/35
+***** Software Safety Analysis Level 0 - 93.1 (P_RS)
+***** Software Safety Analysis Level 0 - 93.1 (P_RS) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 0 - 93.2 (P_I1)
+***** Software Safety Analysis Level 0 - 93.2 (P_I1) took 0.17real, 0.17u + 0s (0.02gc)
+***** Software Safety Analysis Level 0 - 93.3 (P_PS)
+***** Software Safety Analysis Level 0 - 93.3 (P_PS) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 0 - 93.4 (P_I2)
+***** Software Safety Analysis Level 0 - 93.4 (P_I2) took 0.18real, 0.18u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 93 (P_IIP) took 0.37real, 0.37u + 0s (0.03gc)
+**** Software Safety Analysis Level 0 - 94 (P_REC)
+* nb_cc: 0
+**** Software Safety Analysis Level 0 - 94 (P_REC) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 95 (P_DAL)
+**** Software Safety Analysis Level 0 - 95 (P_DAL) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 96 (P_PI)
+* 3 ps, 1 cf, 1 dr, 6 ri
+**** Software Safety Analysis Level 0 - 96 (P_PI) took 0.62real, 0.62u + 0s (0.03gc)
+**** Software Safety Analysis Level 0 - 97 (P_REC)
+* nb_cc: 0
+**** Software Safety Analysis Level 0 - 97 (P_REC) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 98 (P_ICSP)
+* 414 cd, 3 cf, 18 rc, 0 ed. 
+**** Software Safety Analysis Level 0 - 98 (P_ICSP) took 0.09real, 0.09u + 0s (0.02gc)
+**** Software Safety Analysis Level 0 - 99 (P_SRC)
+* 3 rcd, 0 tpd.
+**** Software Safety Analysis Level 0 - 99 (P_SRC) took 0.05real, 0.05u + 0s
+**** Software Safety Analysis Level 0 - 100 (P_ILA)
+**** Software Safety Analysis Level 0 - 100 (P_ILA) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 0 - 101 (P_PGC)
+* 0 tdl.
+**** Software Safety Analysis Level 0 - 101 (P_PGC) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 102 (P_ISP)
+**** Software Safety Analysis Level 0 - 102 (P_ISP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 103 (P_ILOI)
+**** Software Safety Analysis Level 0 - 103 (P_ILOI) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 104 (P_SULV)
+0 dv, 0 pr, 0 ad, 0 trfd, 0 dvf
+**** Software Safety Analysis Level 0 - 104 (P_SULV) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 105 (P_DGL)
+**** Software Safety Analysis Level 0 - 105 (P_DGL) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 106 (P_SENUP)
+0 empty procedure(s) removed
+**** Software Safety Analysis Level 0 - 106 (P_SENUP) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 107 (P_CSD)
+**** Software Safety Analysis Level 0 - 107 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 108 (P_NS)
+**** Software Safety Analysis Level 0 - 108 (P_NS) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 109 (P_C)
+**** Software Safety Analysis Level 0 - 109 (P_C) took 0real, 0u + 0s
+**** Software Safety Analysis Level 0 - 110 (P_R)
+**** Software Safety Analysis Level 0 - 110 (P_R) took 0real, 0u + 0s
+*mmu 151
+
+Generating GUI files
+
+Checks statistics: (including internal files)
+ - IRV      => Green :    12, Orange :     0, Red :     0   (100%)
+ - OVFL     => Green :    12, Orange :     0, Red :     0   (100%)
+ - NIP      => Green :    39, Orange :     0, Red :     0   (100%)
+ - NIVL     => Green :    77, Orange :     0, Red :     0   (100%)
+ - NIV      => Green :    48, Orange :     0, Red :     0   (100%)
+ - OBAI     => Green :    37, Orange :     0, Red :     0   (100%)
+ - SHF      => Green :    21, Orange :     0, Red :     0   (100%)
+ - IDP      => Green :    37, Orange :     1, Red :     0   (97%)
+
+TOTAL:    => Green :   283, Orange :     1, Red :     0   (99%)
+
+Number of NTL : 0
+Number of NTC : 0
+Number of UNR : 22
+Number of functions defined but never called    : 1 / 35
+Number of functions called from unreachable code: 0 / 35
+
+
+
+Classification of orange checks:
+  Orange checks not classified        : 1
+  Orange checks from imprecise sources: 0
+
+First orange checks to review:
+  - Number of orange checks that are path-related issues              : 0
+  - Number of orange checks that are bounded input issues             : 0
+
+GUI files generation completed in 0.81real
+
+**********************************************************
+***
+*** Software Safety Analysis Level 0 done
+***
+**********************************************************
+Ending at: Sat Aug 24 16:23:13 2019
+User time for pass0: 00:00:17.66 (17.67real, 17.67u + 0s (0.06gc))
+
+Polyspace C verification
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 16:23:13 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Software Safety Analysis Level 1
+***
+**********************************************************
+**** Software Safety Analysis Level 1 - 1 (Load Program)
+**** Software Safety Analysis Level 1 - 1 (Load Program) took 0.04real, 0.04u + 0s
+**** Software Safety Analysis Level 1 - 1 (P_ILBE)
+***** Software Safety Analysis Level 1 - 1.1 (P_CSD)
+***** Software Safety Analysis Level 1 - 1.1 (P_CSD) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.2 (P_ISP)
+***** Software Safety Analysis Level 1 - 1.2 (P_ISP) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.3 (P_IT)
+***** Software Safety Analysis Level 1 - 1.3 (P_IT) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.4 (P_BRT)
+***** Software Safety Analysis Level 1 - 1.4 (P_BRT) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.5 (P_AE)
+***** Software Safety Analysis Level 1 - 1.5 (P_AE) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.6 (P_ER)
+***** Software Safety Analysis Level 1 - 1.6 (P_ER) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.7 (P_NS)
+***** Software Safety Analysis Level 1 - 1.7 (P_NS) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.8 (P_CSD)
+***** Software Safety Analysis Level 1 - 1.8 (P_CSD) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.9 (P_AM)
+***** Software Safety Analysis Level 1 - 1.9 (P_AM) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.10 (P_ISP)
+***** Software Safety Analysis Level 1 - 1.10 (P_ISP) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.11 (P_NS)
+***** Software Safety Analysis Level 1 - 1.11 (P_NS) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.12 (P_CSD)
+***** Software Safety Analysis Level 1 - 1.12 (P_CSD) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.13 (P_DAL)
+***** Software Safety Analysis Level 1 - 1.13 (P_DAL) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.14 (P_ILB)
+***** Software Safety Analysis Level 1 - 1.14 (P_ILB) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.15 (P_CSD)
+***** Software Safety Analysis Level 1 - 1.15 (P_CSD) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.16 (P_SLI)
+* 378 sad
+***** Software Safety Analysis Level 1 - 1.16 (P_SLI) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.17 (P_SULV)
+0 dv, 0 pr, 22 ad, 111 trfd, 3 dvf
+***** Software Safety Analysis Level 1 - 1.17 (P_SULV) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.18 (P_ICSP)
+* 338 cd, 160 cf, 18 rc, 0 ed. 
+***** Software Safety Analysis Level 1 - 1.18 (P_ICSP) took 0.13real, 0.13u + 0s
+***** Software Safety Analysis Level 1 - 1.19 (P_ICPP)
+***** Software Safety Analysis Level 1 - 1.19 (P_ICPP) took 0.03real, 0.03u + 0s
+***** Software Safety Analysis Level 1 - 1.20 (P_CSD)
+***** Software Safety Analysis Level 1 - 1.20 (P_CSD) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.21 (P_SULV)
+13 dv, 0 pr, 37 ad, 13 trfd, 1 dvf
+***** Software Safety Analysis Level 1 - 1.21 (P_SULV) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.22 (P_IIP)
+* 216 cd, 228 cf, 35 rc.
+***** Software Safety Analysis Level 1 - 1.22 (P_IIP) took 0.16real, 0.16u + 0s
+***** Software Safety Analysis Level 1 - 1.23 (P_ISP)
+***** Software Safety Analysis Level 1 - 1.23 (P_ISP) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.24 (P_ILA)
+***** Software Safety Analysis Level 1 - 1.24 (P_ILA) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.25 (P_PGC)
+* 1 tdl.
+* nb vres: 91
+***** Software Safety Analysis Level 1 - 1.25 (P_PGC) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.26 (P_SR)
+***** Software Safety Analysis Level 1 - 1.26 (P_SR) took 0.02real, 0.02u + 0s
+***** Software Safety Analysis Level 1 - 1.27 (P_CSD)
+***** Software Safety Analysis Level 1 - 1.27 (P_CSD) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.28 (P_ENVT)
+* g-ap=0, r-ap=0 lp=141 dc=0
+***** Software Safety Analysis Level 1 - 1.28 (P_ENVT) took 9.01real, 9.01u + 0s
+***** Software Safety Analysis Level 1 - 1.29 (P_SULV)
+13 dv, 0 pr, 13 ad, 0 trfd, 0 dvf
+***** Software Safety Analysis Level 1 - 1.29 (P_SULV) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.30 (P_DGL)
+14 unused global variables deleted
+***** Software Safety Analysis Level 1 - 1.30 (P_DGL) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.31 (P_ISP)
+***** Software Safety Analysis Level 1 - 1.31 (P_ISP) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.32 (P_SENUP)
+0 empty procedure(s) removed
+***** Software Safety Analysis Level 1 - 1.32 (P_SENUP) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.33 (P_CSD)
+***** Software Safety Analysis Level 1 - 1.33 (P_CSD) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.34 (P_NS)
+***** Software Safety Analysis Level 1 - 1.34 (P_NS) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 1.35 (P_ILA)
+***** Software Safety Analysis Level 1 - 1.35 (P_ILA) took 0.01real, 0.01u + 0s
+***** Software Safety Analysis Level 1 - 1.36 (P_PGC)
+* 29 tdl.
+***** Software Safety Analysis Level 1 - 1.36 (P_PGC) took 0.01real, 0.01u + 0s
+**** Software Safety Analysis Level 1 - 1 (P_ILBE) took 10.23real, 10.23u + 0s (0.56gc)
+*mmu 148
+
+
+
+**** Software Safety Analysis Level 1 - 1 (P_LF)
+**** Software Safety Analysis Level 1 - 1 (P_LF) took 0.04real, 0.04u + 0s
+**** Software Safety Analysis Level 1 - 2 (P_CSD)
+**** Software Safety Analysis Level 1 - 2 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 1 - 3 (P_RI)
+***** Software Safety Analysis Level 1 - 3.1 (pass1)
+****** Software Safety Analysis Level 1 - 3.1.1 (* analyzing Drv_GroupGpioOut)
+****** Software Safety Analysis Level 1 - 3.1.1 (* analyzing Drv_GroupGpioOut) took 0.01real, 0.01u + 0s (0.02gc)
+****** Software Safety Analysis Level 1 - 3.1.2 (* analyzing Hal_SysExitCritical)
+****** Software Safety Analysis Level 1 - 3.1.2 (* analyzing Hal_SysExitCritical) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.1 (* analyzing Drv_SingleGpioIn)
+****** Software Safety Analysis Level 1 - 3.1.1 (* analyzing Drv_SingleGpioIn) took 0.01real, 0.01u + 0s (0.02gc)
+****** Software Safety Analysis Level 1 - 3.1.3 (* analyzing Drv_SysTimerInit)
+****** Software Safety Analysis Level 1 - 3.1.3 (* analyzing Drv_SysTimerInit) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.2 (* analyzing Hal_GetCurSysTimerCnt)
+****** Software Safety Analysis Level 1 - 3.1.2 (* analyzing Hal_GetCurSysTimerCnt) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.4 (* analyzing Drv_GroupGpioIn)
+****** Software Safety Analysis Level 1 - 3.1.4 (* analyzing Drv_GroupGpioIn) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.3 (* analyzing Hal_SysTimerInit)
+****** Software Safety Analysis Level 1 - 3.1.3 (* analyzing Hal_SysTimerInit) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.5 (* analyzing Hal_DiffTimerCnt)
+****** Software Safety Analysis Level 1 - 3.1.5 (* analyzing Hal_DiffTimerCnt) took 0.01real, 0.01u + 0s
+****** Software Safety Analysis Level 1 - 3.1.4 (* analyzing Drv_NameIn)
+****** Software Safety Analysis Level 1 - 3.1.4 (* analyzing Drv_NameIn) took 0.01real, 0.01u + 0s
+****** Software Safety Analysis Level 1 - 3.1.6 (* analyzing Hal_GetSysTime)
+****** Software Safety Analysis Level 1 - 3.1.6 (* analyzing Hal_GetSysTime) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.7 (* analyzing Hal_SysEnterCritical)
+****** Software Safety Analysis Level 1 - 3.1.7 (* analyzing Hal_SysEnterCritical) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.5 (* analyzing Drv_SingleGpioOut)
+****** Software Safety Analysis Level 1 - 3.1.5 (* analyzing Drv_SingleGpioOut) took 0.06real, 0.06u + 0s
+****** Software Safety Analysis Level 1 - 3.1.8 (* analyzing Drv_NameOut)
+****** Software Safety Analysis Level 1 - 3.1.8 (* analyzing Drv_NameOut) took 0.05real, 0.05u + 0s
+****** Software Safety Analysis Level 1 - 3.1.9 (* analyzing Hal_DebugIOCtrl)
+****** Software Safety Analysis Level 1 - 3.1.9 (* analyzing Hal_DebugIOCtrl) took 0.02real, 0.02u + 0s
+****** Software Safety Analysis Level 1 - 3.1.6 (* analyzing Drv_LcdWaitReady)
+****** Software Safety Analysis Level 1 - 3.1.6 (* analyzing Drv_LcdWaitReady) took 0.47real, 0.47u + 0s (0.03gc)
+****** Software Safety Analysis Level 1 - 3.1.7 (* analyzing SysIoCtrl)
+****** Software Safety Analysis Level 1 - 3.1.7 (* analyzing SysIoCtrl) took 0.02real, 0.02u + 0s
+****** Software Safety Analysis Level 1 - 3.1.8 (* analyzing Drv_LcdWriteDat)
+****** Software Safety Analysis Level 1 - 3.1.8 (* analyzing Drv_LcdWriteDat) took 0.09real, 0.09u + 0s
+****** Software Safety Analysis Level 1 - 3.1.9 (* analyzing Drv_LcdWriteCmd)
+****** Software Safety Analysis Level 1 - 3.1.9 (* analyzing Drv_LcdWriteCmd) took 0.08real, 0.08u + 0s
+****** Software Safety Analysis Level 1 - 3.1.10 (* analyzing Drv_Ds1302ByteRead)
+****** Software Safety Analysis Level 1 - 3.1.10 (* analyzing Drv_Ds1302ByteRead) took 0.85real, 0.85u + 0s (0.05gc)
+****** Software Safety Analysis Level 1 - 3.1.11 (* analyzing Hal_DisplayStr)
+****** Software Safety Analysis Level 1 - 3.1.11 (* analyzing Hal_DisplayStr) took 0.48real, 0.48u + 0s (0.09gc)
+****** Software Safety Analysis Level 1 - 3.1.12 (* analyzing Drv_LcdInit)
+****** Software Safety Analysis Level 1 - 3.1.12 (* analyzing Drv_LcdInit) took 0.02real, 0.02u + 0s
+****** Software Safety Analysis Level 1 - 3.1.10 (* analyzing Drv_Ds1302ByteWrite)
+****** Software Safety Analysis Level 1 - 3.1.10 (* analyzing Drv_Ds1302ByteWrite) took 0.82real, 0.82u + 0s (0.09gc)
+****** Software Safety Analysis Level 1 - 3.1.13 (* analyzing Hal_DisplayCalendar)
+****** Software Safety Analysis Level 1 - 3.1.13 (* analyzing Hal_DisplayCalendar) took 0.14real, 0.14u + 0s (0.05gc)
+****** Software Safety Analysis Level 1 - 3.1.11 (* analyzing Hal_DisplayInit)
+****** Software Safety Analysis Level 1 - 3.1.11 (* analyzing Hal_DisplayInit) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.12 (* analyzing Hal_FlashCalendar)
+****** Software Safety Analysis Level 1 - 3.1.12 (* analyzing Hal_FlashCalendar) took 0.02real, 0.02u + 0s
+****** Software Safety Analysis Level 1 - 3.1.14 (* analyzing Drv_Ds1302ReadReg)
+****** Software Safety Analysis Level 1 - 3.1.14 (* analyzing Drv_Ds1302ReadReg) took 0.06real, 0.06u + 0s
+****** Software Safety Analysis Level 1 - 3.1.15 (* analyzing Drv_Ds1302WriteReg)
+****** Software Safety Analysis Level 1 - 3.1.15 (* analyzing Drv_Ds1302WriteReg) took 0.07real, 0.07u + 0s (0.02gc)
+****** Software Safety Analysis Level 1 - 3.1.16 (* analyzing Drv_Ds1302BurstRead)
+****** Software Safety Analysis Level 1 - 3.1.16 (* analyzing Drv_Ds1302BurstRead) took 0.68real, 0.68u + 0s (0.16gc)
+****** Software Safety Analysis Level 1 - 3.1.13 (* analyzing Drv_Ds1302BurstWrite)
+****** Software Safety Analysis Level 1 - 3.1.13 (* analyzing Drv_Ds1302BurstWrite) took 0.85real, 0.85u + 0s (0.11gc)
+****** Software Safety Analysis Level 1 - 3.1.14 (* analyzing Drv_Ds1302Init)
+****** Software Safety Analysis Level 1 - 3.1.14 (* analyzing Drv_Ds1302Init) took 0.08real, 0.08u + 0s (0.03gc)
+****** Software Safety Analysis Level 1 - 3.1.17 (* analyzing Hal_UpdateSysTime)
+****** Software Safety Analysis Level 1 - 3.1.17 (* analyzing Hal_UpdateSysTime) took 0.14real, 0.14u + 0s (0.02gc)
+****** Software Safety Analysis Level 1 - 3.1.15 (* analyzing Hal_CalendarInit)
+****** Software Safety Analysis Level 1 - 3.1.15 (* analyzing Hal_CalendarInit) took 0real, 0u + 0s
+****** Software Safety Analysis Level 1 - 3.1.18 (* analyzing SysUpdateCalendar)
+****** Software Safety Analysis Level 1 - 3.1.18 (* analyzing SysUpdateCalendar) took 0.09real, 0.09u + 0s
+****** Software Safety Analysis Level 1 - 3.1.19 (* analyzing main)
+****** Software Safety Analysis Level 1 - 3.1.19 (* analyzing main) took 0.79real, 0.79u + 0s (0.19gc)
+****** Software Safety Analysis Level 1 - 3.1.20 (* analyzing __PST__MAIN__ENTRY__POINT__)
+****** Software Safety Analysis Level 1 - 3.1.20 (* analyzing __PST__MAIN__ENTRY__POINT__) took 0real, 0u + 0s
+***** Software Safety Analysis Level 1 - 3.1 (pass1) took 5.21real, 5.21u + 0s
+* 0 ps, 0 cf, 0 dr, 7 ri
+**** Software Safety Analysis Level 1 - 3 (P_RI) took 5.23real, 5.23u + 0s
+**** Software Safety Analysis Level 1 - 4 (P_C)
+**** Software Safety Analysis Level 1 - 4 (P_C) took 0.01real, 0.01u + 0s
+*mmu 36
+
+Generating GUI files
+
+Checks statistics: (including internal files)
+ - IRV      => Green :    12, Orange :     0, Red :     0   (100%)
+ - OVFL     => Green :    12, Orange :     0, Red :     0   (100%)
+ - NIP      => Green :    39, Orange :     0, Red :     0   (100%)
+ - NIVL     => Green :    77, Orange :     0, Red :     0   (100%)
+ - NIV      => Green :    48, Orange :     0, Red :     0   (100%)
+ - OBAI     => Green :    37, Orange :     0, Red :     0   (100%)
+ - SHF      => Green :    21, Orange :     0, Red :     0   (100%)
+ - IDP      => Green :    37, Orange :     1, Red :     0   (97%)
+
+TOTAL:    => Green :   283, Orange :     1, Red :     0   (99%)
+
+Number of NTL : 0
+Number of NTC : 0
+Number of UNR : 22
+Number of functions defined but never called    : 1 / 35
+Number of functions called from unreachable code: 0 / 35
+
+
+
+Classification of orange checks:
+  Orange checks not classified        : 1
+  Orange checks from imprecise sources: 0
+
+First orange checks to review:
+  - Number of orange checks that are path-related issues              : 0
+  - Number of orange checks that are bounded input issues             : 0
+
+GUI files generation completed in 0.88real
+
+**********************************************************
+***
+*** Software Safety Analysis Level 1 done
+***
+**********************************************************
+Ending at: Sat Aug 24 16:23:31 2019
+User time for pass1: 00:00:17.87 (17.87real, 17.87u + 0s (0.22gc))
+
+Polyspace C verification
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 16:23:31 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Software Safety Analysis Level 2
+***
+**********************************************************
+
+**** Software Safety Analysis Level 2 - 1 (P_LF)
+**** Software Safety Analysis Level 2 - 1 (P_LF) took 0.03real, 0.03u + 0s
+**** Software Safety Analysis Level 2 - 2 (P_CSD)
+**** Software Safety Analysis Level 2 - 2 (P_CSD) took 0real, 0u + 0s
+**** Software Safety Analysis Level 2 - 3 (P_RI)
+***** Software Safety Analysis Level 2 - 3.1 (pass2)
+****** Software Safety Analysis Level 2 - 3.1.1 (* analyzing main)
+****** Software Safety Analysis Level 2 - 3.1.1 (* analyzing main) took 0.68real, 0.68u + 0s (0.05gc)
+****** Software Safety Analysis Level 2 - 3.1.2 (* analyzing Hal_DisplayInit)
+****** Software Safety Analysis Level 2 - 3.1.2 (* analyzing Hal_DisplayInit) took 0.01real, 0.01u + 0s
+****** Software Safety Analysis Level 2 - 3.1.3 (* analyzing SysIoCtrl)
+****** Software Safety Analysis Level 2 - 3.1.3 (* analyzing SysIoCtrl) took 0.05real, 0.05u + 0s
+****** Software Safety Analysis Level 2 - 3.1.1 (* analyzing Drv_LcdInit)
+****** Software Safety Analysis Level 2 - 3.1.1 (* analyzing Drv_LcdInit) took 0.04real, 0.04u + 0s
+****** Software Safety Analysis Level 2 - 3.1.4 (* analyzing Hal_CalendarInit)
+****** Software Safety Analysis Level 2 - 3.1.4 (* analyzing Hal_CalendarInit) took 0.01real, 0.01u + 0s
+****** Software Safety Analysis Level 2 - 3.1.2 (* analyzing Hal_DebugIOCtrl)
+****** Software Safety Analysis Level 2 - 3.1.2 (* analyzing Hal_DebugIOCtrl) took 0.04real, 0.04u + 0s
+****** Software Safety Analysis Level 2 - 3.1.3 (* analyzing Drv_Ds1302Init)
+****** Software Safety Analysis Level 2 - 3.1.3 (* analyzing Drv_Ds1302Init) took 0.07real, 0.07u + 0s
+****** Software Safety Analysis Level 2 - 3.1.5 (* analyzing SysUpdateCalendar)
+****** Software Safety Analysis Level 2 - 3.1.5 (* analyzing SysUpdateCalendar) took 0.14real, 0.14u + 0s
+****** Software Safety Analysis Level 2 - 3.1.4 (* analyzing Drv_Ds1302ReadReg)
+****** Software Safety Analysis Level 2 - 3.1.4 (* analyzing Drv_Ds1302ReadReg) took 0.05real, 0.05u + 0s
+****** Software Safety Analysis Level 2 - 3.1.5 (* analyzing Hal_DiffTimerCnt)
+****** Software Safety Analysis Level 2 - 3.1.5 (* analyzing Hal_DiffTimerCnt) took 0.03real, 0.03u + 0s (0.02gc)
+****** Software Safety Analysis Level 2 - 3.1.6 (* analyzing Hal_FlashCalendar)
+****** Software Safety Analysis Level 2 - 3.1.6 (* analyzing Hal_FlashCalendar) took 0.07real, 0.07u + 0s (0.02gc)
+****** Software Safety Analysis Level 2 - 3.1.7 (* analyzing Hal_DisplayCalendar)
+****** Software Safety Analysis Level 2 - 3.1.7 (* analyzing Hal_DisplayCalendar) took 0.13real, 0.13u + 0s (0.03gc)
+****** Software Safety Analysis Level 2 - 3.1.8 (* analyzing Hal_GetSysTime)
+****** Software Safety Analysis Level 2 - 3.1.8 (* analyzing Hal_GetSysTime) took 0.01real, 0.01u + 0s
+****** Software Safety Analysis Level 2 - 3.1.6 (* analyzing Drv_Ds1302BurstWrite)
+****** Software Safety Analysis Level 2 - 3.1.6 (* analyzing Drv_Ds1302BurstWrite) took 0.75real, 0.75u + 0s (0.14gc)
+****** Software Safety Analysis Level 2 - 3.1.7 (* analyzing Hal_UpdateSysTime)
+****** Software Safety Analysis Level 2 - 3.1.7 (* analyzing Hal_UpdateSysTime) took 0.17real, 0.17u + 0s (0.06gc)
+****** Software Safety Analysis Level 2 - 3.1.8 (* analyzing Drv_Ds1302WriteReg)
+****** Software Safety Analysis Level 2 - 3.1.8 (* analyzing Drv_Ds1302WriteReg) took 0.07real, 0.07u + 0s
+****** Software Safety Analysis Level 2 - 3.1.9 (* analyzing Hal_DisplayStr)
+****** Software Safety Analysis Level 2 - 3.1.9 (* analyzing Hal_DisplayStr) took 0.66real, 0.66u + 0s (0.14gc)
+****** Software Safety Analysis Level 2 - 3.1.10 (* analyzing Drv_LcdWriteCmd)
+****** Software Safety Analysis Level 2 - 3.1.10 (* analyzing Drv_LcdWriteCmd) took 0.1real, 0.1u + 0s (0.03gc)
+****** Software Safety Analysis Level 2 - 3.1.11 (* analyzing Drv_LcdWriteDat)
+****** Software Safety Analysis Level 2 - 3.1.11 (* analyzing Drv_LcdWriteDat) took 0.09real, 0.09u + 0s
+****** Software Safety Analysis Level 2 - 3.1.9 (* analyzing Drv_Ds1302BurstRead)
+****** Software Safety Analysis Level 2 - 3.1.9 (* analyzing Drv_Ds1302BurstRead) took 0.63real, 0.63u + 0s (0.11gc)
+****** Software Safety Analysis Level 2 - 3.1.12 (* analyzing Drv_LcdWaitReady)
+****** Software Safety Analysis Level 2 - 3.1.12 (* analyzing Drv_LcdWaitReady) took 0.39real, 0.39u + 0s (0.03gc)
+****** Software Safety Analysis Level 2 - 3.1.13 (* analyzing Drv_Ds1302ByteWrite)
+****** Software Safety Analysis Level 2 - 3.1.13 (* analyzing Drv_Ds1302ByteWrite) took 0.87real, 0.87u + 0s (0.12gc)
+****** Software Safety Analysis Level 2 - 3.1.10 (* analyzing Drv_Ds1302ByteRead)
+****** Software Safety Analysis Level 2 - 3.1.10 (* analyzing Drv_Ds1302ByteRead) took 0.99real, 0.99u + 0s (0.31gc)
+****** Software Safety Analysis Level 2 - 3.1.11 (* analyzing Drv_NameIn)
+****** Software Safety Analysis Level 2 - 3.1.11 (* analyzing Drv_NameIn) took 0.02real, 0.02u + 0s
+****** Software Safety Analysis Level 2 - 3.1.14 (* analyzing Drv_NameOut)
+****** Software Safety Analysis Level 2 - 3.1.14 (* analyzing Drv_NameOut) took 0.05real, 0.05u + 0s (0.02gc)
+****** Software Safety Analysis Level 2 - 3.1.12 (* analyzing Drv_GroupGpioOut)
+****** Software Safety Analysis Level 2 - 3.1.12 (* analyzing Drv_GroupGpioOut) took 0real, 0u + 0s
+****** Software Safety Analysis Level 2 - 3.1.15 (* analyzing Drv_SingleGpioOut)
+****** Software Safety Analysis Level 2 - 3.1.15 (* analyzing Drv_SingleGpioOut) took 0.11real, 0.11u + 0s (0.02gc)
+***** Software Safety Analysis Level 2 - 3.1 (pass2) took 4.94real, 4.94u + 0s
+* 0 ps, 0 cf, 0 dr, 7 ri
+**** Software Safety Analysis Level 2 - 3 (P_RI) took 4.97real, 4.97u + 0s (0.02gc)
+**** Software Safety Analysis Level 2 - 4 (P_C)
+**** Software Safety Analysis Level 2 - 4 (P_C) took 0real, 0u + 0s
+*mmu 36
+
+Generating GUI files
+
+Checks statistics: (including internal files)
+ - IRV      => Green :    12, Orange :     0, Red :     0   (100%)
+ - OVFL     => Green :    12, Orange :     0, Red :     0   (100%)
+ - NIP      => Green :    39, Orange :     0, Red :     0   (100%)
+ - NIVL     => Green :    77, Orange :     0, Red :     0   (100%)
+ - NIV      => Green :    48, Orange :     0, Red :     0   (100%)
+ - OBAI     => Green :    37, Orange :     0, Red :     0   (100%)
+ - SHF      => Green :    21, Orange :     0, Red :     0   (100%)
+ - IDP      => Green :    37, Orange :     1, Red :     0   (97%)
+
+TOTAL:    => Green :   283, Orange :     1, Red :     0   (99%)
+
+Number of NTL : 0
+Number of NTC : 0
+Number of UNR : 22
+Number of functions defined but never called    : 1 / 35
+Number of functions called from unreachable code: 0 / 35
+
+
+
+Classification of orange checks:
+  Orange checks not classified        : 1
+  Orange checks from imprecise sources: 0
+
+First orange checks to review:
+  - Number of orange checks that are path-related issues              : 0
+  - Number of orange checks that are bounded input issues             : 0
+
+GUI files generation completed in 0.78real
+
+**********************************************************
+***
+*** Software Safety Analysis Level 2 done
+***
+**********************************************************
+Ending at: Sat Aug 24 16:23:37 2019
+User time for pass2: 00:00:06.34 (6.34real, 6.34u + 0s (0.12gc))
+
+Polyspace C verification
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 16:23:37 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Verification Post Analysis
+***
+**********************************************************
+**** Verification Post Analysis - 1 (Load Program)
+**** Verification Post Analysis - 1 (Load Program) took 0.04real, 0.04u + 0s
+**** Verification Post Analysis - 2 (P_CSD)
+**** Verification Post Analysis - 2 (P_CSD) took 0real, 0u + 0s
+**** Verification Post Analysis - 3 (P_ISP)
+**** Verification Post Analysis - 3 (P_ISP) took 0.02real, 0.02u + 0s (0.02gc)
+**** Verification Post Analysis - 4 (P_REC)
+**** Verification Post Analysis - 4 (P_REC) took 0.01real, 0.01u + 0s
+**** Verification Post Analysis - 5 (P_ICSP)
+* 715 cd, 805 cf, 0 rc, 0 ed. 
+**** Verification Post Analysis - 5 (P_ICSP) took 0.16real, 0.16u + 0s (0.02gc)
+**** Verification Post Analysis - 6 (P_IIP)
+* 509 cd, 32 cf, 0 rc.
+**** Verification Post Analysis - 6 (P_IIP) took 0.8real, 0.8u + 0s (0.06gc)
+**** Verification Post Analysis - 7 (P_ICPP)
+**** Verification Post Analysis - 7 (P_ICPP) took 0.05real, 0.05u + 0s (0.02gc)
+**** Verification Post Analysis - 8 (P_CSD)
+**** Verification Post Analysis - 8 (P_CSD) took 0real, 0u + 0s
+**** Verification Post Analysis - 9 (P_PP)
+* 0 pp, 0 ppp.
+**** Verification Post Analysis - 9 (P_PP) took 0.01real, 0.01u + 0s
+**** Verification Post Analysis - 10 (P_SULV)
+247 dv, 8 pr, 202 ad, 68 trfd, 0 dvf
+**** Verification Post Analysis - 10 (P_SULV) took 0.03real, 0.03u + 0s
+**** Verification Post Analysis - 11 (P_CSD)
+**** Verification Post Analysis - 11 (P_CSD) took 0real, 0u + 0s
+**** Verification Post Analysis - 12 (P_SLI)
+* 34 sad
+**** Verification Post Analysis - 12 (P_SLI) took 0.01real, 0.01u + 0s
+**** Verification Post Analysis - 13 (P_ISP)
+**** Verification Post Analysis - 13 (P_ISP) took 0.01real, 0.01u + 0s
+**** Verification Post Analysis - 14 (P_SENUP)
+0 empty procedure(s) removed
+**** Verification Post Analysis - 14 (P_SENUP) took 0real, 0u + 0s
+**** Verification Post Analysis - 15 (P_CSD)
+**** Verification Post Analysis - 15 (P_CSD) took 0real, 0u + 0s
+**** Verification Post Analysis - 16 (P_BCK)
+nc=0
+**** Verification Post Analysis - 16 (P_BCK) took 0.08real, 0.08u + 0s (0.02gc)
+**** Verification Post Analysis - 17 (P_OC)
+* i 3/35
+***** Verification Post Analysis - 17.1 (P_RS)
+***** Verification Post Analysis - 17.1 (P_RS) took 0.02real, 0.02u + 0s
+***** Verification Post Analysis - 17.2 (P_I1)
+***** Verification Post Analysis - 17.2 (P_I1) took 0.23real, 0.23u + 0s (0.03gc)
+***** Verification Post Analysis - 17.3 (P_PS)
+***** Verification Post Analysis - 17.3 (P_PS) took 0.02real, 0.02u + 0s
+***** Verification Post Analysis - 17.4 (P_I2)
+***** Verification Post Analysis - 17.4 (P_I2) took 0.3real, 0.3u + 0s (0.06gc)
+**** Verification Post Analysis - 17 (P_OC) took 0.57real, 0.57u + 0s (0.09gc)
+**** Verification Post Analysis - 18 (P_C)
+**** Verification Post Analysis - 18 (P_C) took 0.01real, 0.01u + 0s (0.02gc)
+*mmu 79
+
+Generating GUI files
+
+Checks statistics: (including internal files)
+ - IRV      => Green :    12, Orange :     0, Red :     0   (100%)
+ - OVFL     => Green :    12, Orange :     0, Red :     0   (100%)
+ - NIP      => Green :    39, Orange :     0, Red :     0   (100%)
+ - NIVL     => Green :    77, Orange :     0, Red :     0   (100%)
+ - NIV      => Green :    48, Orange :     0, Red :     0   (100%)
+ - OBAI     => Green :    37, Orange :     0, Red :     0   (100%)
+ - IDP      => Green :    37, Orange :     1, Red :     0   (97%)
+ - SHF      => Green :    21, Orange :     0, Red :     0   (100%)
+
+TOTAL:    => Green :   283, Orange :     1, Red :     0   (99%)
+
+Number of NTL : 0
+Number of NTC : 0
+Number of UNR : 14
+Number of functions defined but never called    : 1 / 35
+Number of functions called from unreachable code: 0 / 35
+
+
+
+Classification of orange checks:
+  Orange checks not classified        : 1
+  Orange checks from imprecise sources: 0
+
+First orange checks to review:
+  - Number of orange checks that are path-related issues              : 1
+  - Number of orange checks that are bounded input issues             : 0
+**** GUI Files Generation - 1 (DDT)
+**** GUI Files Generation - 1 (DDT) took 0real, 0u + 0s
+
+GUI files generation completed in 0.78real
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+**********************************************************
+Summary per file:
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.c: 
+    1 rule violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_display.c: 
+    2 rules violated
+  File E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c: 
+    1 rule violated
+**********************************************************
+Summary per rule:
+  rule 8.4 violated 2 times
+  rule 18.1 violated 1 time
+  rule D4.1 violated 1 time
+
+**********************************************************
+***
+*** Verification Post Analysis done
+***
+**********************************************************
+Ending at: Sat Aug 24 16:23:41 2019
+User time for post-analysis: 00:00:03.64 (3.64real, 3.64u + 0s (0.06gc))
+
+Polyspace C verification
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Aug 24 16:23:41 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Report generation
+***
+**********************************************************
+Polyspace Report Generator
+Generating Report
+Template    : Developer.rpt
+Results-dir : E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\CP_Result
+Format      : dom-htmx
+Output-Name : E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\CP_Result\PolySpace-Doc\c51_Developer\root.html
+    Beginning report
+      Processing Summary
+      Processing Polyspace proven
+      Processing Metrics Summary
+      Processing MISRA2012 summary
+      Processing MISRA2012 violations
+      Processing Polyspace Proven Run-Time Violations checks
+      Processing Polyspace Proven Unreachable Code Branches checks
+      Processing Polyspace unreachable functions
+      Processing Polyspace Unproven Run-Time Checks checks
+      Processing Global Variables
+      Processing Configuration 
+      Processing Abbreviations and Acronyms
+    Converting report
+    Report complete
+    Generated: E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\CP_Result\PolySpace-Doc\c51_Developer (330 rows)
+ 
+**********************************************************
+***
+*** Report generation done
+***
+**********************************************************
+Ending at: Sat Aug 24 16:24:08 2019
+User time for report-generator: 00:00:27.17 (27.17real, 27.17u + 0s)
+User time for polyspace-code-prover-nodesktop: 00:01:32 (92.13real, 92.13u + 0s (0.73gc))
+
+***
+*** End of Polyspace verification
+***

@@ -1,0 +1,11 @@
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app\main.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_ds1302.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_gpio.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_lcd.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_paltform.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver\drv_timer.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_calendar.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_display.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_gpio.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_paltform.c
+E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal\hal_timer.c

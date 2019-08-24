@@ -1,0 +1,33 @@
+# Options file
+-I E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source
+-I E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\app
+-I E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\driver
+-I E:\git\51_Software_Architecture_demo\01_Project_Code\0101_51_Architecture_demo\source\hal
+-I D:\Keil\C51\C51\INC
+-prog c51
+-verif-version 1.0
+-author HP
+-sources-list-file E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\CP_Result\.settings\source_command.txt
+-lang C
+-target i386
+-compiler keil
+-c-version c11
+-sfr-types sfr=8
+-D code=
+-dos
+-misra3 mandatory-required
+-code-metrics
+-main-generator
+-main-generator-writes-variables public
+-main-generator-calls unused
+-float-rounding-mode to-nearest
+-signed-integer-overflows forbid
+-unsigned-integer-overflows allow
+-uncalled-function-checks none
+-check-subnormal allow
+-O2
+-to Software Safety Analysis level 2
+-report-output-format HTML
+-report-template D:\MATLAB\R2018b\toolbox\polyspace\psrptgen\templates\Developer.rpt
+-import-comments E:\git\51_Software_Architecture_demo\01_Project_Code\0102_51_polyspace\c51\Module_1\CP_Result
+
