@@ -4,7 +4,7 @@
 
 #ifdef D_USE_ONEMS_INTRRUPET_MODE
 
-static volatile uint32_t halSysTimerOverflowCnt = 0;
+static volatile uint32_t SysTimerOverflowCnt = 0;
 
 
 
@@ -19,7 +19,7 @@ uint32_t Hal_GetCurSysTimerCnt(void)
 	uint32_t cnt = 0;
 	D_DRV_DISABLE_SYSTIME_INT();
 	
-	cnt = halSysTimerOverflowCnt;
+	cnt = SysTimerOverflowCnt;
 	D_DRV_ENABLE_SYSTIME_INT();
 
 	return cnt;
@@ -45,12 +45,12 @@ uint32_t Hal_DiffTimerCnt(uint32_t last)
 void Hal_SysTimerIsr(void)	interrupt	1
 {
 	D_DRV_RELOAD_SYSTIME_CNT();
-	halSysTimerOverflowCnt++;
+	SysTimerOverflowCnt++;
 }
 
 
 #else
-static volatile uint16_t halSysTimerOverflowCnt = 0;
+static volatile uint16_t SysTimerOverflowCnt = 0;
 
 static uint16_t Hal_GetSysOverflowCnt(void);
 
@@ -66,7 +66,7 @@ static uint16_t Hal_GetSysOverflowCnt(void)
 	uint16_t cnt = 0;
 	
 	D_DRV_DISABLE_SYSTIME_INT();
-	cnt = halSysTimerOverflowCnt;
+	cnt = SysTimerOverflowCnt;
 	D_DRV_ENABLE_SYSTIME_INT();
 
 	return cnt;
@@ -115,7 +115,7 @@ uint32_t Hal_DiffTimerCnt(uint32_t last)
 void Hal_SysTimerIsr(void)	interrupt	1
 {
 	D_DRV_RELOAD_SYSTIME_CNT();
-	halSysTimerOverflowCnt++;
+	SysTimerOverflowCnt++;
 }
 
 #endif

@@ -3,7 +3,7 @@
 #include "hal_display.h"
 
 
-static void Hal_DisplayCalendar(const calendar_t * pCalendar);
+static void Hal_DisplayCalendar(const Calendar_t * pCalendar);
 
 
 
@@ -12,7 +12,7 @@ void Hal_DisplayInit(void)
 	Drv_LcdInit();
 }
 
-static void Hal_DisplayCalendar(const calendar_t * pCalendar)
+static void Hal_DisplayCalendar(const Calendar_t * pCalendar)
 {
 	uint8_t str[11] = {0};
 	
@@ -49,7 +49,7 @@ static void Hal_DisplayCalendar(const calendar_t * pCalendar)
 void Hal_FlashCalendar(void)
 {
 	static uint8_t secBak = 0;
-	calendar_t tCalendar = {0};
+	Calendar_t tCalendar = {0};
 
 	Hal_GetSysTime(&tCalendar);
 

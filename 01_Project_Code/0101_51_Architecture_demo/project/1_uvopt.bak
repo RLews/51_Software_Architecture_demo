@@ -186,10 +186,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>42</ColumnNumber>
+      <ColumnNumber>41</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>38</CurrentLine>
+      <TopLine>26</TopLine>
+      <CurrentLine>60</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\app\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -216,8 +216,8 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>10</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>3</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -230,8 +230,8 @@
       <FilenameWithoutPath>hal_gpio.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>11</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>4</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -244,22 +244,22 @@
       <FilenameWithoutPath>hal_gpio.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>12</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>42</ColumnNumber>
+      <ColumnNumber>25</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>10</TopLine>
-      <CurrentLine>33</CurrentLine>
+      <TopLine>84</TopLine>
+      <CurrentLine>115</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\hal\hal_timer.c</PathWithFileName>
       <FilenameWithoutPath>hal_timer.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>13</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>6</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -272,8 +272,8 @@
       <FilenameWithoutPath>hal_timer.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>14</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>7</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -286,22 +286,22 @@
       <FilenameWithoutPath>hal_display.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>15</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>52</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5</TopLine>
-      <CurrentLine>15</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>19</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\hal\hal_display.c</PathWithFileName>
       <FilenameWithoutPath>hal_display.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>16</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>9</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -314,36 +314,36 @@
       <FilenameWithoutPath>hal_calendar.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>17</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>40</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>13</CurrentLine>
+      <TopLine>9</TopLine>
+      <CurrentLine>37</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\hal\hal_calendar.c</PathWithFileName>
       <FilenameWithoutPath>hal_calendar.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>19</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>11</CurrentLine>
+      <CurrentLine>7</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\hal\hal_paltform.c</PathWithFileName>
       <FilenameWithoutPath>hal_paltform.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>12</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -363,22 +363,22 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>3</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>38</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>69</TopLine>
-      <CurrentLine>93</CurrentLine>
+      <TopLine>164</TopLine>
+      <CurrentLine>188</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_gpio.c</PathWithFileName>
       <FilenameWithoutPath>drv_gpio.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>4</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>14</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -391,8 +391,8 @@
       <FilenameWithoutPath>drv_gpio.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>5</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>15</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -405,22 +405,22 @@
       <FilenameWithoutPath>typedefs.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>6</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>16</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>20</CurrentLine>
+      <CurrentLine>13</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_timer.c</PathWithFileName>
       <FilenameWithoutPath>drv_timer.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>7</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>17</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -433,64 +433,50 @@
       <FilenameWithoutPath>drv_timer.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>21</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\source\complex_driver\drv_ds1302.h</PathWithFileName>
-      <FilenameWithoutPath>drv_ds1302.h</FilenameWithoutPath>
-    </File>
-    <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>18</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>20</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_ds1302.c</PathWithFileName>
       <FilenameWithoutPath>drv_ds1302.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>8</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>19</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_paltform.c</PathWithFileName>
       <FilenameWithoutPath>drv_paltform.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>20</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>49</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>32</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_lcd.c</PathWithFileName>
       <FilenameWithoutPath>drv_lcd.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>21</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -503,8 +489,8 @@
       <FilenameWithoutPath>drv_lcd.h</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>22</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -515,6 +501,20 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\source\driver\drv_paltform.h</PathWithFileName>
       <FilenameWithoutPath>drv_paltform.h</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>23</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\source\driver\drv_ds1302.h</PathWithFileName>
+      <FilenameWithoutPath>drv_ds1302.h</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -1859,91 +1859,145 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>9</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
         <Doc>
-          <Name>..\source\driver\drv_timer.c</Name>
-          <ColumnNumber>0</ColumnNumber>
+          <Name>..\source\hal\hal_display.c</Name>
+          <ColumnNumber>52</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>20</CurrentLine>
+          <CurrentLine>19</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\source\driver\drv_gpio.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>69</TopLine>
-          <CurrentLine>93</CurrentLine>
+          <ColumnNumber>38</ColumnNumber>
+          <TopLine>164</TopLine>
+          <CurrentLine>188</CurrentLine>
         </Doc>
         <Doc>
-          <Name>..\source\hal\hal_timer.c</Name>
-          <ColumnNumber>42</ColumnNumber>
-          <TopLine>10</TopLine>
-          <CurrentLine>33</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\SOURCE\APP\MAIN.H</Name>
-          <ColumnNumber>37</ColumnNumber>
+          <Name>..\SOURCE\DRIVER\DRV_PALTFORM.H</Name>
+          <ColumnNumber>8</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>6</CurrentLine>
+          <CurrentLine>4</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\SOURCE\DRIVER\DRV_LCD.H</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\SOURCE\DRIVER\DRV_TIMER.H</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>18</TopLine>
-          <CurrentLine>45</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\source\hal\hal_display.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>5</TopLine>
-          <CurrentLine>15</CurrentLine>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\SOURCE\DRIVER\DRV_GPIO.H</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>44</TopLine>
-          <CurrentLine>58</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\source\hal\hal_paltform.c</Name>
-          <ColumnNumber>0</ColumnNumber>
+          <ColumnNumber>8</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>11</CurrentLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\SOURCE\HAL\HAL_PALTFORM.H</Name>
-          <ColumnNumber>82</ColumnNumber>
+          <ColumnNumber>8</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>9</CurrentLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
         <Doc>
-          <Name>..\source\app\main.c</Name>
-          <ColumnNumber>42</ColumnNumber>
+          <Name>\GIT\51_SOFTWARE_ARCHITECTURE_DEMO\01_PROJECT_CODE\0101_51_ARCHITECTURE_DEMO\SOURCE\HAL\HAL_CALENDAR.H</Name>
+          <ColumnNumber>8</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>38</CurrentLine>
+          <CurrentLine>4</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\SOURCE\HAL\HAL_DISPLAY.H</Name>
-          <ColumnNumber>39</ColumnNumber>
+          <ColumnNumber>8</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>9</CurrentLine>
+          <CurrentLine>4</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\SOURCE\HAL\HAL_TIMER.H</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\SOURCE\HAL\HAL_GPIO.H</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>3</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\SOURCE\DRIVER\DRV_DS1302.H</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\hal\hal_calendar.c</Name>
+          <ColumnNumber>40</ColumnNumber>
+          <TopLine>9</TopLine>
+          <CurrentLine>37</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\driver\drv_ds1302.c</Name>
+          <ColumnNumber>20</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\driver\drv_paltform.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>\GIT\51_SOFTWARE_ARCHITECTURE_DEMO\01_PROJECT_CODE\0101_51_ARCHITECTURE_DEMO\SOURCE\DRIVER\TYPEDEFS.H</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>5</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\driver\drv_lcd.c</Name>
+          <ColumnNumber>49</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>32</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\driver\drv_timer.c</Name>
+          <ColumnNumber>14</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>13</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\hal\hal_timer.c</Name>
+          <ColumnNumber>25</ColumnNumber>
+          <TopLine>84</TopLine>
+          <CurrentLine>115</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\SOURCE\APP\MAIN.H</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>4</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\hal\hal_paltform.c</Name>
+          <ColumnNumber>16</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>7</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\source\app\main.c</Name>
+          <ColumnNumber>41</ColumnNumber>
+          <TopLine>26</TopLine>
+          <CurrentLine>60</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\source\hal\hal_gpio.c</Name>
           <ColumnNumber>32</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>12</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\SOURCE\HAL\HAL_TIMER.H</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>7</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\source\hal\hal_calendar.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>13</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

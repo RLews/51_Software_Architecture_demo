@@ -2,7 +2,7 @@
 
 #include "drv_ds1302.h"
 
-static const uint8_t code initTimerDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
+static const uint8_t code DefTimeDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
 
 static void Drv_Ds1302ByteWrite(uint8_t dat);
 static uint8_t Drv_Ds1302ByteRead(void);
@@ -20,7 +20,7 @@ void Drv_Ds1302Init(void)
 	if ( (dat & 0x80u) != 0 )
 	{
 		Drv_Ds1302WriteReg(7, 0x00);/* undo write protect */
-		Drv_Ds1302BurstWrite(initTimerDat);
+		Drv_Ds1302BurstWrite(DefTimeDat);
 	}
 }
 

@@ -14,15 +14,15 @@
 	(byte) &= ~(uint8_t)(1u << (bits)); \
 }while(0)
 
-typedef enum __PORT_GROUP_T
+typedef enum PORT_GROUP_T
 {
 	EN_PORT_0 = 0,
 	EN_PORT_1,
 	EN_PORT_2,
 	EN_PORT_3
-}portGroup_t;
+}PortGroup_t;
 
-typedef enum __GPIO_BIT_T
+typedef enum GPIO_BIT_T
 {
 	EN_BIT_0 = 0,
     EN_BIT_1,
@@ -33,9 +33,9 @@ typedef enum __GPIO_BIT_T
     EN_BIT_6,
     EN_BIT_7,
     EN_BIT_ALL
-}gpioBit_t;
+}GpioBit_t;
 
-typedef enum __GPIO_NAME_T
+typedef enum GPIO_NAME_T
 {
 	EN_DS1302_CE = 0,
 	EN_DS1302_CK,
@@ -46,14 +46,14 @@ typedef enum __GPIO_NAME_T
 	EN_LCD_E,
 	EN_DEBUG_IO,
 	EN_ALL_GPIO_COUNTER
-}gpioName_t;
+}GpioName_t;
 
-typedef struct __GPIO_CONFIG_T
+typedef struct GPIO_CONFIG_T
 {
-	gpioName_t name;
-	portGroup_t portGroup;
-	gpioBit_t gpioBit;
-}gpioConfig_t;
+	GpioName_t name;
+	PortGroup_t portGroup;
+	GpioBit_t gpioBit;
+}GpioConfig_t;
 
 
 
@@ -69,12 +69,12 @@ typedef struct __GPIO_CONFIG_T
 
 
 
-uint8_t Drv_SingleGpioIn(portGroup_t group, gpioBit_t bits);
-uint8_t Drv_GroupGpioIn(portGroup_t group);
-void Drv_SingleGpioOut(portGroup_t group, gpioBit_t bits, uint8_t sig);
-void Drv_GroupGpioOut(portGroup_t group, uint8_t sig);
-void Drv_NameOut(gpioName_t name, uint8_t sig);
-uint8_t Drv_NameIn(gpioName_t name);
+uint8_t Drv_SingleGpioIn(PortGroup_t group, GpioBit_t bits);
+uint8_t Drv_GroupGpioIn(PortGroup_t group);
+void Drv_SingleGpioOut(PortGroup_t group, GpioBit_t bits, uint8_t sig);
+void Drv_GroupGpioOut(PortGroup_t group, uint8_t sig);
+void Drv_NameOut(GpioName_t name, uint8_t sig);
+uint8_t Drv_NameIn(GpioName_t name);
 
 
 

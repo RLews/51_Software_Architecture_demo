@@ -1,0 +1,1 @@
+"..\source\hal\hal_timer.c" OPTIMIZE (2,SPEED) BROWSE INCDIR(..\source\app;..\source\driver;..\source\hal) DEBUG OBJECTEXTEND PRINT(.\hal_timer.lst) OBJECT(..\output\hal_timer.obj)

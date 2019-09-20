@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        08/24/2019  15:45:32  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/20/2019  21:05:42  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  ..\output\1 (MAIN)
             CODE    03C6H     00EBH     UNIT         ?PR?_HAL_GETSYSTIME?HAL_CALENDAR
             CODE    04B1H     00C7H     UNIT         ?PR?_DRV_SINGLEGPIOOUT?DRV_GPIO
             CODE    0578H     00B9H     UNIT         ?PR?HAL_UPDATESYSTIME?HAL_CALENDAR
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 2
 
 
             CODE    0631H     00B5H     UNIT         ?PR?_DRV_SINGLEGPIOIN?DRV_GPIO
@@ -119,7 +119,7 @@ SEGMENT                                         DATA_GROUP
   +--> ?PR?_HAL_SYSEXITCRITICAL?HAL_PALTFORM
   +--> ?PR?SYSUPDATECALENDAR?MAIN
   +--> ?PR?SYSIOCTRL?MAIN
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 3
 
 
 
@@ -179,7 +179,7 @@ SEGMENT                                         DATA_GROUP
   +--> ?PR?_DRV_NAMEIN?DRV_GPIO
   +--> ?PR?_DRV_NAMEOUT?DRV_GPIO
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 4
 
 
 ?PR?_DRV_DS1302WRITEREG?DRV_DS1302            0009H    0002H
@@ -239,7 +239,7 @@ SEGMENT                                         DATA_GROUP
   +--> ?PR?HAL_GETCURSYSTIMERCNT?HAL_TIMER
   +--> ?PR?_HAL_DEBUGIOCTRL?HAL_GPIO
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 5
 
 
 ?PR?_HAL_DEBUGIOCTRL?HAL_GPIO                 0008H    0001H
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0035H         SYMBOL        ioCtrl
   -------         ENDDO         
   C:0A9FH         LINE#         51
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 6
 
 
   C:0A9FH         LINE#         52
@@ -335,7 +335,6 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
 
   -------         MODULE        HAL_TIMER
   C:0000H         SYMBOL        _ICE_DUMMY_
-  D:003EH         SYMBOL        halSysTimerOverflowCnt
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
@@ -344,6 +343,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0B95H         PUBLIC        Hal_GetCurSysTimerCnt
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
+  D:003EH         SYMBOL        SysTimerOverflowCnt
   B:00A8H.1       PUBLIC        ET0
   D:008CH         PUBLIC        TH0
   D:008AH         PUBLIC        TL0
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   -------         ENDPROC       HAL_SYSTIMERINIT
   -------         PROC          HAL_GETCURSYSTIMERCNT
   -------         DO            
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 7
 
 
   D:0010H         SYMBOL        cnt
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0D42H         LINE#         10
   C:0D42H         LINE#         11
   C:0D42H         LINE#         12
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 8
 
 
   C:0D45H         LINE#         13
@@ -479,7 +479,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   -------         PROC          _HAL_DISPLAYSTR
   D:001EH         SYMBOL        x
   D:001FH         SYMBOL        y
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 9
 
 
   D:0020H         SYMBOL        str
@@ -508,7 +508,6 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
 
   -------         MODULE        HAL_CALENDAR
   C:0000H         SYMBOL        _ICE_DUMMY_
-  D:0036H         PUBLIC        sysCalendar
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
@@ -518,6 +517,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:0003H         SYMBOL        _?ix1000
+  D:0036H         SYMBOL        SysCalendar
   D:00C8H         PUBLIC        T2CON
   C:03C6H         PUBLIC        _Hal_GetSysTime
   D:00D0H         PUBLIC        PSW
@@ -539,7 +539,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:03F0H         LINE#         23
   C:0410H         LINE#         24
   C:0430H         LINE#         25
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 10
 
 
   C:0450H         LINE#         26
@@ -599,7 +599,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0D2FH         LINE#         15
   C:0D35H         LINE#         16
   -------         ENDPROC       _HAL_SYSEXITCRITICAL
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 11
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 11
 
 
   -------         ENDMOD        HAL_PALTFORM
@@ -610,9 +610,9 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
+  C:0CD9H         SYMBOL        GpioConfigArry
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:0CD9H         SYMBOL        gpioConfigArry
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:0631H         PUBLIC        _Drv_SingleGpioIn
@@ -659,7 +659,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:06E3H         LINE#         52
   C:06E3H         LINE#         54
   C:06E3H         LINE#         56
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 12
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 12
 
 
   C:06E3H         LINE#         57
@@ -719,7 +719,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:050FH         LINE#         112
   C:0510H         LINE#         114
   C:0510H         LINE#         115
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 13
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 13
 
 
   C:0521H         LINE#         116
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0847H         LINE#         175
   C:085FH         LINE#         176
   C:085FH         LINE#         177
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 14
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 14
 
 
   C:088AH         LINE#         178
@@ -839,7 +839,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   -------         MODULE        DRV_DS1302
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0090H         PUBLIC        P1
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 15
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 15
 
 
   D:00B0H         PUBLIC        P3
@@ -854,7 +854,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:0C60H         SYMBOL        _Drv_Ds1302WriteReg
-  C:0D36H         SYMBOL        initTimerDat
+  C:0D36H         SYMBOL        DefTimeDat
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          DRV_DS1302INIT
@@ -899,7 +899,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   -------         ENDPROC       _DRV_DS1302BYTEWRITE
   -------         PROC          DRV_DS1302BYTEREAD
   -------         DO            
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 16
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 16
 
 
   D:0017H         SYMBOL        mask
@@ -959,7 +959,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0A31H         LINE#         91
   C:0A36H         LINE#         93
   C:0A40H         LINE#         94
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 17
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 17
 
 
   C:0A40H         LINE#         95
@@ -1019,7 +1019,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   C:0CF6H         LINE#         14
   C:0CFBH         LINE#         15
   C:0D00H         LINE#         16
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 18
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 18
 
 
   C:0D05H         LINE#         17
@@ -1079,7 +1079,7 @@ SYMBOL TABLE OF MODULE:  ..\output\1 (MAIN)
   -------         ENDMOD        ?C?CLDPTR
 
   -------         MODULE        ?C?CLDOPTR
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2019  15:45:32  PAGE 19
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/20/2019  21:05:42  PAGE 19
 
 
   C:011DH         PUBLIC        ?C?CLDOPTR

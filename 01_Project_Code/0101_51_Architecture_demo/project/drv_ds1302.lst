@@ -1,4 +1,4 @@
-C51 COMPILER V9.00   DRV_DS1302                                                            08/24/2019 15:33:40 PAGE 1   
+C51 COMPILER V9.00   DRV_DS1302                                                            09/20/2019 21:05:42 PAGE 1   
 
 
 C51 COMPILER V9.00, COMPILATION OF MODULE DRV_DS1302
@@ -12,7 +12,7 @@ line level    source
    2          
    3          #include "drv_ds1302.h"
    4          
-   5          static const uint8_t code initTimerDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
+   5          static const uint8_t code DefTimeDat[] = {0x00,0x30,0x12,0x20,0x10,0x07,0x13,0x00};
    6          
    7          static void Drv_Ds1302ByteWrite(uint8_t dat);
    8          static uint8_t Drv_Ds1302ByteRead(void);
@@ -30,7 +30,7 @@ line level    source
   20   1              if ( (dat & 0x80u) != 0 )
   21   1              {
   22   2                      Drv_Ds1302WriteReg(7, 0x00);/* undo write protect */
-  23   2                      Drv_Ds1302BurstWrite(initTimerDat);
+  23   2                      Drv_Ds1302BurstWrite(DefTimeDat);
   24   2              }
   25   1      }
   26          
@@ -62,7 +62,7 @@ line level    source
   52   1      
   53   1              for (mask = 0x01; mask != 0; mask <<= 1)
   54   1              {
-C51 COMPILER V9.00   DRV_DS1302                                                            08/24/2019 15:33:40 PAGE 2   
+C51 COMPILER V9.00   DRV_DS1302                                                            09/20/2019 21:05:42 PAGE 2   
 
   55   2                      if (Drv_NameIn(EN_DS1302_IO) != 0)
   56   2                      {
@@ -126,7 +126,7 @@ line level    source
  114   1      }
  115          
 
-C51 COMPILER V9.00   DRV_DS1302                                                            08/24/2019 15:33:40 PAGE 3   
+C51 COMPILER V9.00   DRV_DS1302                                                            09/20/2019 21:05:42 PAGE 3   
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE

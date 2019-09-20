@@ -7,7 +7,7 @@
 #include "drv_ds1302.h"
 #include "hal_display.h"
 
-typedef struct __CALENDAR_T
+typedef struct 
 {
 	uint16_t year;
 	uint8_t mon;
@@ -16,12 +16,12 @@ typedef struct __CALENDAR_T
 	uint8_t min;
 	uint8_t sec;
 	uint8_t week;
-}calendar_t;
+}Calendar_t;
 
 
 void Hal_CalendarInit(void);
 void Hal_UpdateSysTime(void);
-void Hal_GetSysTime(calendar_t *pSysTmr);
+void Hal_GetSysTime(Calendar_t *pSysTmr);
 
 
 #endif
